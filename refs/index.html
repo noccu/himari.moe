@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Himari references">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="Image reference for Himari">
+    <title>Himari references</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+        integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="/style.css">
+    <style type="text/css">
+        .card-columns {
+            column-count: 3;
+        }
+    </style>
+    <script defer type="text/javascript" src="refs.js"></script>
+</head>
+
+<template id="t-img-card">
+    <div class="card">
+        <a><img class="card-img-top"></a>
+    </div>
+</template>
+<template id="t-img-card-captioned">
+    <div class="card">
+        <a><img class="card-img-top"></a>
+        <div class="card-body">
+            <h5 class="card-title"></h5>
+            <p class="card-text"></p>
+        </div>
+    </div>
+</template>
+
+<body>
+    <div class="jumbotron">
+        <h2 class="text-center">References</h2>
+        <div id="gallery" class="card-columns">
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,9 @@
+body {
+    padding: 2vw;
+    background-color: hsl(210, 18%, 88%);
+}
+
+.jumbotron {
+    background-color: hsl(210, 15%, 83%);
+    border: 1px solid blueviolet;
+}
