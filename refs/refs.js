@@ -26,7 +26,9 @@ let g = document.getElementById("gallery")
 let t = document.getElementById("t-img-card")
 for (imgSrc of imgs) {
     n = document.importNode(t.content, true)
-    n.querySelector("a").href = imgSrc
+    // n.querySelector("a").href = imgSrc
     n.querySelector("img").src = imgSrc
     g.appendChild(n)
 }
+
+enableLightbox(g)

@@ -1,0 +1,19 @@
+.card-columns {
+    column-count: 3;
+}
+#lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.75);
+    overflow: scroll;
+}
+#gallery img {
+    cursor: pointer;
+}
+.hide {
+    display: none;
+}
