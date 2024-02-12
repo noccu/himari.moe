@@ -1,34 +1,50 @@
-let imgs = [
-    "https://i.imgur.com/iGOhH88.jpg",
-    "https://i.imgur.com/4YSkzzk.jpg",
-    "https://i.imgur.com/idYBAFY.jpg",
-    "https://i.imgur.com/EfLmn9T.jpg",
-    "https://i.imgur.com/nIsjtiq.jpg",
-    "https://i.imgur.com/KQG25gr.jpg",
-    "https://i.imgur.com/Pdj25z3.jpg",
-    "https://i.imgur.com/I2X6gN6.jpg",
-    "https://i.imgur.com/dU2Xfr6.jpg",
-    "https://i.imgur.com/QL34oUo.jpg",
-    "https://i.imgur.com/5a4AQW2.jpg",
-    "https://i.imgur.com/VynA87y.jpg",
-    "https://i.imgur.com/BIg2yuR.jpg",
-    "https://i.imgur.com/I7ZQBYp.jpg",
-    "https://i.imgur.com/TqjXMBr.jpg",
-    "https://i.imgur.com/92668Re.jpg",
-    "https://i.imgur.com/lLhPRei.jpg",
-    "https://i.imgur.com/TMF5hrH.jpg",
-    "https://i.imgur.com/zJiBsWm.png",
-    "https://i.imgur.com/MWNv0Rf.jpg",
-    "https://i.imgur.com/8Pq2vqC.jpg",
-    "https://i.imgur.com/lBCPJme.jpg"
-]
-let g = document.getElementById("gallery")
-let t = document.getElementById("t-img-card")
-for (imgSrc of imgs) {
-    n = document.importNode(t.content, true)
-    // n.querySelector("a").href = imgSrc
-    n.querySelector("img").src = imgSrc
-    g.appendChild(n)
+// import albums from "./albums.json" assert { type: 'json' }
+const imgHost = "https://i.imgur.com/"
+
+const gallery = document.getElementById("gallery")
+const t_imgCard = document.getElementById("t-img-card")
+const msg = document.getElementById("msg")
+enableLightbox(gallery)
+
+params = new URLSearchParams(document.location.search)
+
+if (params.size == 0) {
+    parseAlbum("Himari")
+}
+//albums
+else if (params.has("a")) {
+    parseAlbum(params.get("a"))
+}
+//image list
+else if (params.has("i")) {
+    parseImages(params.get("i"))
 }
 
-enableLightbox(g)
+function addImage(fn) {
+    imgSrc = imgHost + fn
+    n = document.importNode(t_imgCard.content, true)
+    n.querySelector("img").src = imgSrc
+    gallery.appendChild(n)
+}
+
+function parseImages(imgs) {
+    if (!imgs) return
+    if (!Array.isArray(imgs)) {
+        imgs = imgs.split(",")
+    }
+    for (let imgSrc of imgs) {
+        addImage(imgSrc)
+    }
+}
+
+async function parseAlbum(name) {
+    albums = await fetch("./albums.json").then(x => x.json())
+    let imgs = albums[name]
+    if (!imgs) {
+        msg.textContent = "Album doesn't exist"
+        // msg.classList.remove("hide")
+        return
+    }
+    document.getElementById("name").textContent = ` (${name})`
+    parseImages(imgs)
+}
