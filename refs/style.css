@@ -1,3 +1,7 @@
+.content {
+    padding: 1.5em, 1em;
+    background-color: #e9ecef;
+}
 .card-columns {
     column-count: 3;
 }
