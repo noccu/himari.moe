@@ -1,3 +1,6 @@
+:root {
+    --accent: #8362b4;
+}
 .content {
     padding: 1.5em 1em;
     background-color: #e9ecef;

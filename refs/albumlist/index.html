@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Himari album list">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="List of reference albums for Himari">
+    <title>Himari album list</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"
+        integrity="sha512-P5MgMn1jBN01asBgU0z60Qk4QxiXo86+wlFahKrsQf37c9cro517WzVSPPV1tDKzhku2iJ2FVgL67wG03SGnNA=="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="../style.css">
+    <script defer type="text/javascript" src="albumlist.js"></script>
+</head>
+<style>
+    #list {
+        width: fit-content;
+        min-width: 20%;
+    }
+    .badge {
+        background-color: var(--accent);
+        color: white;
+    }
+</style>
+
+<template id="t-album">
+        <a class="album-link list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+            <span class="album-name"></span>
+            <span class="album-num badge ml-3"></span>
+        </a>
+</template>
+
+<body>
+    <div class="content">
+        <h2 class="text-center">Album list</h2>
+        <div id="list" class="list-group mx-auto"></div>
+    </div>
+</body>
+
+</html>
