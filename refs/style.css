@@ -26,5 +26,23 @@
     cursor: pointer;
 }
 .hide {
-    display: none;
+    display: none !important;
+}
+#top {
+    display: grid;
+    grid-template-columns: [left] 1fr [header] 50% [right] 1fr;
+    column-gap: 1em;
+}
+#right {
+    grid-area: right;
+    place-self: center end;
+}
+button {
+    border: 0;
+    border-bottom: 2px solid var(--accent);
+    background-color: unset;
+}
+#header {
+    grid-area: header;
+    place-self: center;
 }

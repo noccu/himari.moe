@@ -20,6 +20,9 @@ else if (params.has("i")) {
     parseImages(params.get("i"))
 }
 
+document.getElementById("random").addEventListener("click", pickRandom)
+document.getElementById("reset").addEventListener("click", pickReset)
+
 function addImage(fn) {
     imgSrc = imgHost + fn
     n = document.importNode(t_imgCard.content, true)
@@ -47,4 +50,20 @@ async function parseAlbum(name) {
     }
     document.getElementById("name").textContent = ` (${name})`
     parseImages(imgs)
+}
+
+function pickRandom() {
+    let idx = Math.floor(Math. random() * gallery.children.length)
+    let choice = gallery.children[idx]
+    choice.classList.remove("hide")
+    for (var card of gallery.children) {
+        if (card == choice) continue
+        card.classList.add("hide")
+    }
+}
+
+function pickReset() {
+    for (var card of gallery.children) {
+        card.classList.remove("hide")
+    }
 }
