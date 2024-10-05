@@ -9,6 +9,10 @@
 .card-columns {
     column-count: 3;
 }
+.card {
+    max-height: 120vh;
+    overflow: hidden;
+}
 #lightbox {
     position: fixed;
     top: 0;
