@@ -1,4 +1,5 @@
-// import albums from "./albums.json" assert { type: 'json' }
+import {getAlbums, randomInt} from "./common.js"
+
 const imgHosts = {
     "im": "https://i.imgur.com/$",
     "tw": "https://pbs.twimg.com/media/$?format=jpg"
@@ -50,7 +51,7 @@ function parseImages(imgs) {
 }
 
 async function parseAlbum(name) {
-    let albums = await fetch("./albums.json").then(x => x.json())
+    let albums = await getAlbums()
     let imgs = albums[name]
     if (!imgs) {
         msg.textContent = "Album doesn't exist"
@@ -62,7 +63,7 @@ async function parseAlbum(name) {
 }
 
 function pickRandom() {
-    let idx = Math.floor(Math. random() * gallery.children.length)
+    let idx = randomInt(gallery.children.length)
     let choice = gallery.children[idx]
     choice.classList.remove("hide")
     for (var card of gallery.children) {
