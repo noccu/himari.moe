@@ -13,6 +13,9 @@
     max-height: 120vh;
     overflow: hidden;
 }
+#info {
+    margin-bottom: 1em;
+}
 #lightbox {
     position: fixed;
     top: 0;

@@ -27,6 +27,11 @@ function handleRequest() {
     else if (params.has("i")) {
         parseImages(params.get("i"))
     }
+    if (params.has("gr")) {
+        let an = params.get("an")
+        msg.innerHTML = `Image randomly selected from the <a href="?a=${an}">${an}</a> album.`
+        document.getElementById("randomizer").classList.remove("hide")
+    }
 }
 
 function addImage(fn) {
