@@ -13,7 +13,7 @@ document.getElementById("reset").addEventListener("click", pickReset)
 handleRequest()
 
 function handleRequest() {
-    params = new URLSearchParams(document.location.search)
+    let params = new URLSearchParams(document.location.search)
 
     if (params.size == 0) {
         parseAlbum("Himari")
@@ -34,7 +34,7 @@ function addImage(fn) {
         id = host
         host = "im" // Default
     }
-    n = document.importNode(t_imgCard.content, true)
+    let n = document.importNode(t_imgCard.content, true)
     n.querySelector("img").src = imgHosts[host].replace("$", id)
     gallery.appendChild(n)
 }
@@ -50,7 +50,7 @@ function parseImages(imgs) {
 }
 
 async function parseAlbum(name) {
-    albums = await fetch("./albums.json").then(x => x.json())
+    let albums = await fetch("./albums.json").then(x => x.json())
     let imgs = albums[name]
     if (!imgs) {
         msg.textContent = "Album doesn't exist"
