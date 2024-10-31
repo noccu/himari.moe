@@ -1,5 +1,6 @@
 export async function getAlbums(){
-    return (await import("./albums.json", {assert: {type: "json"}})).default
+    return fetch(`/refs/albums.json`).then(x => x.json())
+    // return (await import("./albums.json", {assert: {type: "json"}})).default
 }
 
 export function randomInt(max) {
