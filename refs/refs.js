@@ -1,6 +1,8 @@
 // import albums from "./albums.json" assert { type: 'json' }
-const imgHost = "https://i.imgur.com/"
-
+const imgHosts = {
+    "im": "https://i.imgur.com/$",
+    "tw": "https://pbs.twimg.com/media/$?format=jpg"
+}
 const gallery = document.getElementById("gallery")
 const t_imgCard = document.getElementById("t-img-card")
 const msg = document.getElementById("msg")
@@ -27,9 +29,13 @@ function handleRequest() {
 }
 
 function addImage(fn) {
-    imgSrc = imgHost + fn
+    let [host, id] = fn.split(":")
+    if (!id) {
+        id = host
+        host = "im" // Default
+    }
     n = document.importNode(t_imgCard.content, true)
-    n.querySelector("img").src = imgSrc
+    n.querySelector("img").src = imgHosts[host].replace("$", id)
     gallery.appendChild(n)
 }
 
