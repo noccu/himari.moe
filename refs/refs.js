@@ -4,24 +4,27 @@ const imgHost = "https://i.imgur.com/"
 const gallery = document.getElementById("gallery")
 const t_imgCard = document.getElementById("t-img-card")
 const msg = document.getElementById("msg")
+
 enableLightbox(gallery)
-
-params = new URLSearchParams(document.location.search)
-
-if (params.size == 0) {
-    parseAlbum("Himari")
-}
-//albums
-else if (params.has("a")) {
-    parseAlbum(params.get("a"))
-}
-//image list
-else if (params.has("i")) {
-    parseImages(params.get("i"))
-}
-
 document.getElementById("random").addEventListener("click", pickRandom)
 document.getElementById("reset").addEventListener("click", pickReset)
+handleRequest()
+
+function handleRequest() {
+    params = new URLSearchParams(document.location.search)
+
+    if (params.size == 0) {
+        parseAlbum("Himari")
+    }
+    //albums
+    else if (params.has("a")) {
+        parseAlbum(params.get("a"))
+    }
+    //image list
+    else if (params.has("i")) {
+        parseImages(params.get("i"))
+    }
+}
 
 function addImage(fn) {
     imgSrc = imgHost + fn
