@@ -35,13 +35,20 @@ function handleRequest() {
 }
 
 function addImage(fn) {
-    let [host, id] = fn.split(":")
-    if (!id) {
-        id = host
-        host = "im" // Default
+    let imgSrc
+    if (fn.startsWith("http")) {
+        imgSrc = fn
     }
+    else if (fn[2] == ":") {
+        let [host, id] = fn.split(":")
+        imgSrc = imgHosts[host].replace("$", id)
+    }
+    else {
+        imgSrc = imgHosts["im"].replace("$", fn)
+    }
+
     let n = document.importNode(t_imgCard.content, true)
-    n.querySelector("img").src = imgHosts[host].replace("$", id)
+    n.querySelector("img").src = imgSrc
     gallery.appendChild(n)
 }
 
