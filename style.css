@@ -1,6 +1,20 @@
+:root {
+    --accent: #8362b4;
+}
+
 body {
     padding: 2vw;
     background-color: hsl(210, 18%, 88%);
+}
+
+button {
+    border: 0;
+    border-bottom: 2px solid var(--accent);
+    background-color: unset;
+}
+
+.hide {
+    display: none !important;
 }
 
 .jumbotron {
