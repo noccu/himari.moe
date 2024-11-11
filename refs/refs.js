@@ -31,6 +31,8 @@ function handleRequest() {
         let an = params.get("an")
         msg.innerHTML = `Image randomly selected from the <a href="?a=${an}">${an}</a> album.`
         document.getElementById("randomizer").classList.remove("hide")
+        document.getElementById("random").classList.add("hide")
+        document.getElementById("reset").classList.add("hide")
     }
 }
 
