@@ -1,5 +1,5 @@
 :root {
-    --accent: #8362b4;
+    --accent: #8c63cb;
 }
 
 body {
@@ -19,5 +19,5 @@ button {
 
 .jumbotron {
     background-color: hsl(210, 15%, 83%);
-    border: 1px solid blueviolet;
+    border: 1px solid var(--accent);
 }
