@@ -6,6 +6,7 @@ const imgHosts = {
 }
 const gallery = document.getElementById("gallery")
 const t_imgCard = document.getElementById("t-img-card")
+const t_imgCard_captioned = document.getElementById("t-img-card-captioned")
 const msg = document.getElementById("msg")
 
 enableLightbox(gallery)
@@ -36,22 +37,35 @@ function handleRequest() {
     }
 }
 
-function addImage(fn) {
-    let imgSrc
-    if (fn.startsWith("http")) {
-        imgSrc = fn
-    }
-    else if (fn[2] == ":") {
-        let [host, id] = fn.split(":")
-        imgSrc = imgHosts[host].replace("$", id)
+function addImage(imgData) {
+    let isCaptioned = false
+    if (imgData instanceof Object) {
+        var {src: imgSrc, title: imgTitle, msg: imgMsg} = imgData
+        isCaptioned = true
     }
     else {
-        imgSrc = imgHosts["im"].replace("$", fn)
+        var imgSrc = imgData
     }
 
-    let n = document.importNode(t_imgCard.content, true)
-    n.querySelector("img").src = imgSrc
-    gallery.appendChild(n)
+    if (imgSrc[2] == ":") {
+        let [host, id] = imgSrc.split(":")
+        imgSrc = imgHosts[host].replace("$", id)
+    }
+    else if (!imgSrc.startsWith("http")) {
+        imgSrc = imgHosts["im"].replace("$", imgSrc)
+    }
+
+    let imgCard
+    if (isCaptioned) {
+        imgCard = document.importNode(t_imgCard_captioned.content, true)
+        imgCard.querySelector(".card-title").innerText = imgTitle || ""
+        imgCard.querySelector(".card-text").innerText = imgMsg || ""
+    }
+    else {
+        imgCard = document.importNode(t_imgCard.content, true)
+    }
+    imgCard.querySelector("img").src = imgSrc
+    gallery.appendChild(imgCard)
 }
 
 function parseImages(imgs) {
@@ -59,8 +73,8 @@ function parseImages(imgs) {
     if (!Array.isArray(imgs)) {
         imgs = imgs.split(",")
     }
-    for (let imgSrc of imgs) {
-        addImage(imgSrc)
+    for (let imgData of imgs) {
+        addImage(imgData)
     }
 }
 
