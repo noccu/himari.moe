@@ -2,7 +2,8 @@ import {getAlbums, randomInt} from "./common.js"
 
 const imgHosts = {
     "im": "https://i.imgur.com/$",
-    "tw": "https://pbs.twimg.com/media/$?format=jpg"
+    "tw": "https://pbs.twimg.com/media/$?format=jpg",
+    "db": "https://cdn.donmai.us/sample/%1/%2/sample-$.jpg"
 }
 const gallery = document.getElementById("gallery")
 const t_imgCard = document.getElementById("t-img-card")
@@ -50,6 +51,9 @@ function addImage(imgData) {
     if (imgSrc[2] == ":") {
         let [host, id] = imgSrc.split(":")
         imgSrc = imgHosts[host].replace("$", id)
+        if (host == "db") {
+            imgSrc = imgSrc.replace("%1", id.substring(0,2)).replace("%2", id.substring(2,4))
+        }
     }
     else if (!imgSrc.startsWith("http")) {
         imgSrc = imgHosts["im"].replace("$", imgSrc)
