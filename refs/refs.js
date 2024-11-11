@@ -7,7 +7,6 @@ const imgHosts = {
 }
 const gallery = document.getElementById("gallery")
 const t_imgCard = document.getElementById("t-img-card")
-const t_imgCard_captioned = document.getElementById("t-img-card-captioned")
 const msg = document.getElementById("msg")
 
 enableLightbox(gallery)
@@ -59,14 +58,11 @@ function addImage(imgData) {
         imgSrc = imgHosts["im"].replace("$", imgSrc)
     }
 
-    let imgCard
+    let imgCard = document.importNode(t_imgCard.content, true)
     if (isCaptioned) {
-        imgCard = document.importNode(t_imgCard_captioned.content, true)
+        imgCard.querySelector(".card").classList.add("captioned")
         imgCard.querySelector(".card-title").innerText = imgTitle || ""
         imgCard.querySelector(".card-text").innerText = imgMsg || ""
-    }
-    else {
-        imgCard = document.importNode(t_imgCard.content, true)
     }
     imgCard.querySelector("img").src = imgSrc
     gallery.appendChild(imgCard)

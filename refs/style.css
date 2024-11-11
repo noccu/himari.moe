@@ -18,6 +18,10 @@
     padding: 1rem;
 }
 
+:not(.captioned) > .card-body {
+    display: none;
+}
+
 .card-title:empty, .card-text:empty  {
     display: none;
 }
