@@ -7,6 +7,10 @@ body {
     background-color: hsl(210, 18%, 88%);
 }
 
+a {
+    color: var(--accent);
+}
+
 button {
     border: 0;
     border-bottom: 2px solid var(--accent);
