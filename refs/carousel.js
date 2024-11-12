@@ -16,3 +16,11 @@ export function enableCarouselControls(ele) {
     ele.carouselNum = ele.carouselImages.children.length
     ele.carouselCur = 0
 }
+
+function recalculate(e) {
+    for (let carousel of document.querySelectorAll(".card-images.multi")) {
+        carousel.style.height = carousel.children[0].clientHeight + "px"
+    }
+}
+
+window.addEventListener("resize", recalculate, {passive: true})
