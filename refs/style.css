@@ -29,6 +29,9 @@
 
 .card-images.multi {
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .card-images.multi > img:not(.active) {
     display: none;
