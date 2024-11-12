@@ -19,7 +19,7 @@ export function enableCarouselControls(ele) {
 
 function recalculate(e) {
     for (let carousel of document.querySelectorAll(".card-images.multi")) {
-        carousel.style.height = carousel.children[0].clientHeight + "px"
+        carousel.style.height = carousel.querySelector("img.active").clientHeight + "px"
     }
 }
 
