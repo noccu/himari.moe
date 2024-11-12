@@ -12,6 +12,7 @@
 .card {
     max-height: 120vh;
     overflow: hidden;
+    background-color: var(--panel);
 }
 
 .card-body {
