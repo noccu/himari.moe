@@ -1,4 +1,5 @@
 import {getAlbums, randomInt} from "./common.js"
+import {enableCarouselControls} from "./carousel.js"
 
 const imgHosts = {
     "im": "https://i.imgur.com/$",
@@ -37,16 +38,7 @@ function handleRequest() {
     }
 }
 
-function addImage(imgData) {
-    let isCaptioned = false
-    if (imgData instanceof Object) {
-        var {src: imgSrc, title: imgTitle, msg: imgMsg} = imgData
-        isCaptioned = true
-    }
-    else {
-        var imgSrc = imgData
-    }
-
+function parseImageSource(imgSrc) {
     if (imgSrc[2] == ":") {
         let [host, id] = imgSrc.split(":")
         imgSrc = imgHosts[host].replace("$", id)
@@ -57,14 +49,58 @@ function addImage(imgData) {
     else if (!imgSrc.startsWith("http")) {
         imgSrc = imgHosts["im"].replace("$", imgSrc)
     }
+    return imgSrc
+}
 
+function parseImageData(imgData) {
+    let src, title, msg, isCaptioned = false, isCarousel = false
+    if (Array.isArray(imgData)) {
+        src = imgData.map(parseImageSource)
+        isCarousel = true
+    }
+    else if (imgData instanceof Object) {
+        ({src, isCarousel} = parseImageData(imgData.src))
+        title = imgData.title
+        msg = imgData.msg
+        isCaptioned = true
+    }
+    else {
+        src = parseImageSource(imgData)
+    }
+    return {src, title, msg, isCaptioned, isCarousel}
+}
+
+function addImage(imgData) {
+    let {src, title, msg, isCaptioned, isCarousel} = parseImageData(imgData)
     let imgCard = document.importNode(t_imgCard.content, true)
+    if (isCarousel) {
+        imgCard.querySelector(".carousel-controls").classList.remove("hide")
+        let imageList = imgCard.querySelector(".card-images")
+        let t_image = imgCard.querySelector(".card-img-top")
+        let newImages = []
+        for (let imgSrc of src) {
+            let newImage = t_image.cloneNode()
+            newImage.src = imgSrc
+            newImages.push(newImage)
+        }
+        imageList.classList.add("multi")
+        newImages[0].classList.add("active")
+        newImages[0].addEventListener(
+            "load",
+            e => { e.target.parentElement.style.height = e.target.clientHeight + "px" },
+            { once: true, passive:true }
+        )
+        imageList.replaceChildren(...newImages)
+        enableCarouselControls(imgCard.firstElementChild)
+    }
+    else {
+        imgCard.querySelector("img").src = src
+    }
     if (isCaptioned) {
         imgCard.querySelector(".card").classList.add("captioned")
-        imgCard.querySelector(".card-title").innerText = imgTitle || ""
-        imgCard.querySelector(".card-text").innerText = imgMsg || ""
+        imgCard.querySelector(".card-title").innerText = title || ""
+        imgCard.querySelector(".card-text").innerText = msg || ""
     }
-    imgCard.querySelector("img").src = imgSrc
     gallery.appendChild(imgCard)
 }
 

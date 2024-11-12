@@ -26,6 +26,18 @@
     display: none;
 }
 
+.card-images.multi {
+    overflow: hidden;
+}
+.card-images.multi > img:not(.active) {
+    display: none;
+}
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    height: auto;
+    width: 10%;
+    cursor: pointer;
+}
+
 #info {
     margin-bottom: 1em;
 }
