@@ -17,13 +17,12 @@
     padding: 1rem;
 }
 
-:not(.captioned) > .card-body {
+:not(.captioned)>.card-body,
+.card-title:empty,
+.card-text:empty {
     display: none;
 }
 
-.card-title:empty, .card-text:empty  {
-    display: none;
-}
 .card-images {
     max-height: 120vh;
     overflow: hidden;
@@ -34,10 +33,13 @@
     justify-content: center;
     flex-direction: column;
 }
-.card-images.multi > img:not(.active) {
+
+.card-images.multi>img:not(.active) {
     display: none;
 }
-.carousel-control-next-icon, .carousel-control-prev-icon {
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
     height: auto;
     width: 10%;
     cursor: pointer;
