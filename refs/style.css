@@ -10,8 +10,6 @@
 }
 
 .card {
-    max-height: 120vh;
-    overflow: hidden;
     background-color: var(--panel);
 }
 
@@ -26,9 +24,12 @@
 .card-title:empty, .card-text:empty  {
     display: none;
 }
+.card-images {
+    max-height: 120vh;
+    overflow: hidden;
+}
 
 .card-images.multi {
-    overflow: hidden;
     display: flex;
     justify-content: center;
     flex-direction: column;
