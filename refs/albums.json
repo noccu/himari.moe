@@ -46,9 +46,11 @@
         "tw:GbxXGOLaAAAI0lm",
         "GvBvlcM.jpeg",
         "tw:Gb2tLv_bwAAAHUp",
-        "https://cdn.donmai.us/sample/e1/c2/__shigure_and_shigure_blue_archive__sample-e1c27f66687c923e875d7450be74755d.jpg",
-        "https://cdn.donmai.us/sample/13/47/__kayoko_blue_archive_drawn_by_void4516__sample-1347b60ad72fe971d63463ae6565b172.jpg",
-        "Pfo2Bg2.jpeg"
+        "db:e1c27f66687c923e875d7450be74755d",
+        "db:1347b60ad72fe971d63463ae6565b172",
+        "db:75632dd9c7d64e969430a4ca1be7cfd7",
+        {"src": "tw:F-Y5ffXaoAAW6EZ", "msg": "Cute/silly phone selfies or purikura with little additions like drawings, stickers, etc!"},
+        {"src": "tw:GcFM9kDa4AAFpOB", "msg": "Anything in this sort of colour style."}
     ],
     "scenic": [
         "GubCi11.jpg",
@@ -59,10 +61,14 @@
         "Lz1o55Q.jpg",
         "Bh7IN2B.jpg",
         "5QHP2Rb.jpg",
-        "ksqPCzb.jpeg",
-        "https://cdn.donmai.us/sample/13/47/__kayoko_blue_archive_drawn_by_void4516__sample-1347b60ad72fe971d63463ae6565b172.jpg",
-        "https://cdn.donmai.us/sample/7e/59/__aki_original_drawn_by_maenoo__sample-7e5940c0103fba746963ab582fa96b52.jpg",
-        "https://cdn.donmai.us/sample/b0/0f/__ellen_joe_zenless_zone_zero_drawn_by_usagi_786113654__sample-b00f511dbc08cbec22226e891a6a2921.jpg"
+        [
+            "db:7327a1569b8d514be74e3b289d3c13f6",
+            "db:d04888bd68b443550783f036c29e1eb0",
+            "db:310b4d2a7d3dc462cd6db8e5d0a825bb",
+            "db:850875d1777cc86cfbe092da8ee7de4a"
+        ],
+        ["db:1347b60ad72fe971d63463ae6565b172", "db:b00f511dbc08cbec22226e891a6a2921"],
+        "db:7e5940c0103fba746963ab582fa96b52"
     ],
     "spring": [
         "q2pIqNI.jpeg",
@@ -125,14 +131,13 @@
         "tw:GYbzDK_a4AAQRkL",
         "tw:F8uh617boAABmmY",
         "tw:GcCIy-QaMAAiDua",
-        "u5xbshO.png",
+        ["db:bcd8d0e07be5ffb0b7c6ccf385b770a7", "db:9486963854e2d089fd60729a9b9581c5"],
         "c0rrqnB.jpeg"
     ],
     "halloween (ecchi)": [
-        "2tni6JU.jpeg",
+        {"src": ["2tni6JU.jpeg", "tw:GbNAm_SakAMi7R0"], "msg": "Any sort of mummy style with enough squish and wrap is fine."},
         "UBqO89A.png",
-        "CmgDtoV.png",
-        "tw:GbNAm_SakAMi7R0"
+        "CmgDtoV.png"
     ],
     "fashion": [
         "R5EAksl.jpg",
@@ -160,8 +165,7 @@
         "szUB8tn.jpg",
         "CZQHjaE.jpg",
         "96h18aw.jpg",
-        "kGmuOeA.jpeg",
-        "qOdhKhm.jpeg",
+        ["qOdhKhm.jpeg", "kGmuOeA.jpeg"],
         "3b8XEvW.jpeg",
         "gmwXrTx.png",
         "https://arknights.wiki.gg/images/f/f2/Ho%27olheyak_Skin_1.png",
@@ -179,6 +183,7 @@
         "GvBvlcM.jpeg"
     ],
     "birthday": [
-        "tw:GcASVzka0AAhfG7"
+        "tw:GcASVzka0AAhfG7",
+        "tw:GcEdsmlbMAAN80T"
     ]
 }
