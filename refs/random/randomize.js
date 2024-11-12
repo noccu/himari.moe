@@ -6,8 +6,7 @@ async function selectGlobalRandom() {
     albumNames.splice(albumNames.indexOf("Himari"), 1)
     let chosenAlbum = albumNames[randomInt(albumNames.length)]
     let albumImgs = albums[chosenAlbum]
-    let chosenImg = albumImgs[randomInt(albumImgs.length)]
-    location.href = `${location.origin}/refs?i=${chosenImg}&gr=1&an=${chosenAlbum}`
+    location.href = `${location.origin}/refs?gr=${randomInt(albumImgs.length)}&an=${chosenAlbum}`
 }
 
 selectGlobalRandom()

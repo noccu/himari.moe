@@ -29,8 +29,9 @@ function handleRequest() {
     else if (params.has("i")) {
         parseImages(params.get("i"))
     }
-    if (params.has("gr")) {
+    else if (params.has("gr")) {
         let an = params.get("an")
+        getAlbums().then(data => addImage(data[an][params.get("gr")]))
         msg.innerHTML = `Image randomly selected from the <a href="?a=${an}">${an}</a> album.`
         document.getElementById("randomizer").classList.remove("hide")
         document.getElementById("random").classList.add("hide")
