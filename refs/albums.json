@@ -43,14 +43,18 @@
         "JANQ8ao.jpg",
         "tw:GS2ZVTOaEAAeQnL",
         "tw:GbskVK1awAErUNY",
-        "tw:GbxXGOLaAAAI0lm",
+        "sxaoR7e.jpeg",
         "GvBvlcM.jpeg",
         "tw:Gb2tLv_bwAAAHUp",
         "db:e1c27f66687c923e875d7450be74755d",
         "db:1347b60ad72fe971d63463ae6565b172",
         "db:75632dd9c7d64e969430a4ca1be7cfd7",
         {"src": "tw:F-Y5ffXaoAAW6EZ", "msg": "Cute/silly phone selfies or purikura with little additions like drawings, stickers, etc!"},
-        {"src": "tw:GcFM9kDa4AAFpOB", "msg": "Anything in this sort of colour style."}
+        {"src": "tw:GcFM9kDa4AAFpOB", "msg": "Anything in this sort of colour style."},
+        "tw:GcVlMWfXQAED3RJ",
+        "tw:GcQMHSBaYAAkKP_",
+        "tw:GcOWOdwa8AA7TqW",
+        "tw:GOhhZZQWQAAQAk5"
     ],
     "scenic": [
         "GubCi11.jpg",
@@ -97,7 +101,8 @@
         "DJx8Hd5.jpg",
         "UkbDPsU.jpeg",
         "tw:GSxRH8gaYAAVJN8",
-        "tw:GVRCWXdbYAEWQ0m"
+        "tw:GVRCWXdbYAEWQ0m",
+        "tw:GcONumZWIAA-Fft"
     ],
     "boobs": [
         "sMctd0l.jpg",
@@ -108,11 +113,14 @@
         "b5RALoF.jpeg",
         "tw:Gb15o1XbEAAkhsK",
         "tw:Gb0F22HbsAASSoc",
-        "tw:GbSdc3masAAkles",
+        "2hbavDX.jpeg",
         "tw:Gb181S_bwAEr1K7",
         "xcPyAX1.png",
         "8NG0cq9.jpeg",
-        "tw:F8uh617boAABmmY"
+        "tw:F8uh617boAABmmY",
+        "tw:Gb67nn8a8AATewL",
+        "tw:GYOZNxRakAArAtz",
+        "db:3b3a36bae24bad7eb42168a1c1a06f5d"
     ],
     "ecchi": [
         "NdMZ4rB.jpeg",
@@ -132,12 +140,13 @@
         "tw:F8uh617boAABmmY",
         "tw:GcCIy-QaMAAiDua",
         ["db:bcd8d0e07be5ffb0b7c6ccf385b770a7", "db:9486963854e2d089fd60729a9b9581c5"],
-        "c0rrqnB.jpeg"
+        "c0rrqnB.jpeg",
+        "tw:GcRYLRUbsAARhG5"
     ],
     "halloween (ecchi)": [
         {"src": ["2tni6JU.jpeg", "tw:GbNAm_SakAMi7R0"], "msg": "Any sort of mummy style with enough squish and wrap is fine."},
         "UBqO89A.png",
-        "CmgDtoV.png"
+        ["CmgDtoV.png", "tw:GbYFCKrbUAIA0B3"]
     ],
     "fashion": [
         "R5EAksl.jpg",
@@ -159,7 +168,10 @@
         "OpEIViC.jpeg",
         "1YqM6rc.jpeg",
         "SGOTkPy.jpeg",
-        "TbyKUOl.jpg"
+        "TbyKUOl.jpg",
+        "tw:GbtQqeLbwAErTx0",
+        "tw:GYOZNxRakAArAtz",
+        "db:fd67c66224da4778ea058f67db6a92a5"
     ],
     "cosplay": [
         "szUB8tn.jpg",
@@ -185,5 +197,9 @@
     "birthday": [
         "tw:GcASVzka0AAhfG7",
         "tw:GcEdsmlbMAAN80T"
+    ],
+    "maids": [
+        "tw:Gb3IIa1bwAAodAA",
+        "tw:GcLLGUwasAA1Icw"
     ]
 }
