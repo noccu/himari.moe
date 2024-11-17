@@ -31,11 +31,14 @@ function handleRequest() {
     }
     else if (params.has("gr")) {
         let an = params.get("an")
-        getAlbums().then(data => addImage(data[an][params.get("gr")]))
+        getAlbums().then(data => addImage( parseImageData(data[an][params.get("gr")])) )
         msg.innerHTML = `Image randomly selected from the <a href="?a=${an}">${an}</a> album.`
         document.getElementById("randomizer").classList.remove("hide")
         document.getElementById("random").classList.add("hide")
         document.getElementById("reset").classList.add("hide")
+    }
+    else if (params.has("all")) {
+        getAlbums().then(showAll)
     }
 }
 
@@ -71,8 +74,8 @@ function parseImageData(imgData) {
     return {src, title, msg, isCaptioned, isCarousel}
 }
 
-function addImage(imgData) {
-    let {src, title, msg, isCaptioned, isCarousel} = parseImageData(imgData)
+function addImage(parsedImgData) {
+    let {src, title, msg, isCaptioned, isCarousel} = parsedImgData
     let imgCard = document.importNode(t_imgCard.content, true)
     if (isCarousel) {
         imgCard.querySelector(".carousel-controls").classList.remove("hide")
@@ -105,13 +108,21 @@ function addImage(imgData) {
     gallery.appendChild(imgCard)
 }
 
-function parseImages(imgs) {
+function parseImages(imgs, seen = undefined) {
     if (!imgs) return
     if (!Array.isArray(imgs)) {
         imgs = imgs.split(",")
     }
-    for (let imgData of imgs) {
-        addImage(imgData)
+    var parsed
+    for (var imgData of imgs) {
+        parsed = parseImageData(imgData)
+        if (seen !== undefined) {
+            if ( (parsed.isCarousel && seen.has(parsed.src[0])) || seen.has(parsed.src) ) {
+                continue
+            }
+            seen.add(parsed.src)
+        }
+        addImage(parsed)
     }
 }
 
@@ -140,5 +151,13 @@ function pickRandom() {
 function pickReset() {
     for (var card of gallery.children) {
         card.classList.remove("hide")
+    }
+}
+
+function showAll(albums) {
+    var seen = new Set()
+    for (var [name, imgs] of Object.entries(albums)) {
+        if (name == "Himari") continue
+        parseImages(imgs, seen)
     }
 }
