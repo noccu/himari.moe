@@ -54,7 +54,11 @@
         "tw:GcVlMWfXQAED3RJ",
         "tw:GcQMHSBaYAAkKP_",
         "tw:GcOWOdwa8AA7TqW",
-        "tw:GOhhZZQWQAAQAk5"
+        "tw:GOhhZZQWQAAQAk5",
+        {"src": "tw:GcoVJ7dWAAAuUNh", "msg": "Angery required, outfit fine but negotiable."},
+        "db:1043b84c22695f5e1d2ae2be048ef11f", "bs:dxpfvxynezrhhv5fz3ca4gn3/bafkreifpc2dlx6466czpunf3susecw6c665ppwi3fqt7fwigd3xdqrculy",
+        "tw:GTqb_lva8AAHj6R",
+        {"src": "tw:GQ7VTZjb0AABu4Y", "msg": "Doing some quick shopping late at night in simple (possibly rushed and deficient) clothing. Very much a concept suggestion."}
     ],
     "scenic": [
         "GubCi11.jpg",
@@ -72,7 +76,8 @@
             "db:850875d1777cc86cfbe092da8ee7de4a"
         ],
         ["db:1347b60ad72fe971d63463ae6565b172", "db:b00f511dbc08cbec22226e891a6a2921"],
-        "db:7e5940c0103fba746963ab582fa96b52"
+        "db:7e5940c0103fba746963ab582fa96b52",
+        "tw:GcYdsamWMAAt4dg"
     ],
     "spring": [
         "q2pIqNI.jpeg",
@@ -89,8 +94,7 @@
         "gmwXrTx.png",
         "QGuLCzf.jpeg",
         "xnzdlVm.jpg",
-        "GzBp9ay.jpg",
-        "UkbDPsU.jpeg"
+        "GzBp9ay.jpg"
     ],
     "summer": [
         "LtwJuxs.jpeg",
@@ -99,7 +103,6 @@
         "4Rzsmme.jpg",
         "deixRTv.jpg",
         "DJx8Hd5.jpg",
-        "UkbDPsU.jpeg",
         "tw:GSxRH8gaYAAVJN8",
         "tw:GVRCWXdbYAEWQ0m",
         "tw:GcONumZWIAA-Fft"
@@ -111,7 +114,7 @@
         "TECrT14.png",
         "24lQQU6.jpeg",
         "b5RALoF.jpeg",
-        "tw:Gb15o1XbEAAkhsK",
+        {"src": "tw:Gb15o1XbEAAkhsK", "msg": "This is a good shape."},
         "tw:Gb0F22HbsAASSoc",
         "2hbavDX.jpeg",
         "tw:Gb181S_bwAEr1K7",
@@ -120,7 +123,8 @@
         "tw:F8uh617boAABmmY",
         "tw:Gb67nn8a8AATewL",
         "tw:GYOZNxRakAArAtz",
-        "db:3b3a36bae24bad7eb42168a1c1a06f5d"
+        "db:3b3a36bae24bad7eb42168a1c1a06f5d",
+        "db:489425dfed83239ab7a6ab63c1e11f46"
     ],
     "ecchi": [
         "NdMZ4rB.jpeg",
@@ -141,7 +145,10 @@
         "tw:GcCIy-QaMAAiDua",
         ["db:bcd8d0e07be5ffb0b7c6ccf385b770a7", "db:9486963854e2d089fd60729a9b9581c5"],
         "c0rrqnB.jpeg",
-        "tw:GcRYLRUbsAARhG5"
+        "EHvWkkz.jpeg",
+        "mQkdbBV.jpeg",
+        "tw:Gb2lN6sbwAI2VtC",
+        "tw:GI3Wm-ObgAAbtHd"
     ],
     "halloween (ecchi)": [
         {"src": ["2tni6JU.jpeg", "tw:GbNAm_SakAMi7R0"], "msg": "Any sort of mummy style with enough squish and wrap is fine."},
@@ -171,7 +178,10 @@
         "TbyKUOl.jpg",
         "tw:GbtQqeLbwAErTx0",
         "tw:GYOZNxRakAArAtz",
-        "db:fd67c66224da4778ea058f67db6a92a5"
+        "db:fd67c66224da4778ea058f67db6a92a5",
+        "tw:GZTASpwasAAFeB9",
+        "tw:GPy3ekib0AA20Pm",
+        ["tw:Gbwh6dHawAApGez", "tw:Gbwh6dLasAAgaUX", "tw:Gbwh6dKagAA8MHW"]
     ],
     "cosplay": [
         "szUB8tn.jpg",
@@ -185,7 +195,10 @@
     ],
     "sporty": [
         "Wo3vq77.jpeg",
-        "bbgky3B.png"
+        "bbgky3B.png",
+        "db:6658cb64acfbc7378c29634cff91ab40",
+        "tw:GTybwEsaEAAR2f_",
+        "tw:GPy3ekib0AA20Pm"
     ],
     "cat": [
         "tw:GbXWt8raMAAQIo9"
@@ -201,5 +214,14 @@
     "maids": [
         "tw:Gb3IIa1bwAAodAA",
         "tw:GcLLGUwasAA1Icw"
+    ],
+    "white shirt": [
+        {"src": "db:7cb4ad33c3b85c8f893cd9dd8e8b72f3", "msg": "The (bra) see through from stretch (not wet) is important! The collar is a fitting detail actually but not required. A cropped shot is fine if it works."},
+        "9Ch7BLu.jpeg",
+        "EHvWkkz.jpeg",
+        "tw:GOhhZZQWQAAQAk5",
+        "db:b45ad0760ac8feb2fa67e818376b9041",
+        "db:01cfbffc50777c0778b7cbd22b36f82a",
+        "lO1R8iC.gif"
     ]
 }
