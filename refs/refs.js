@@ -4,7 +4,8 @@ import {enableCarouselControls} from "./carousel.js"
 const imgHosts = {
     "im": "https://i.imgur.com/$",
     "tw": "https://pbs.twimg.com/media/$?format=jpg",
-    "db": "https://cdn.donmai.us/sample/%1/%2/sample-$.jpg"
+    "db": "https://cdn.donmai.us/sample/%1/%2/sample-$.jpg",
+    "bs": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:$@jpeg"
 }
 const gallery = document.getElementById("gallery")
 const t_imgCard = document.getElementById("t-img-card")
