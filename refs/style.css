@@ -85,3 +85,9 @@
     grid-area: header;
     place-self: center;
 }
+
+#error-msg {
+    /* white-space: pre-wrap; */
+    background-color: color-mix(in srgb, transparent, var(--accent) 50%);
+    line-height: 1em;
+}

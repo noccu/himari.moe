@@ -95,11 +95,14 @@ function addImage(parsedImgData) {
             e => { e.target.parentElement.style.height = e.target.clientHeight + "px" },
             { once: true, passive:true }
         )
+        newImages[0].addEventListener("error", h_onImgError, { once: true, passive:true })
         imageList.replaceChildren(...newImages)
         enableCarouselControls(imgCard.firstElementChild)
     }
     else {
-        imgCard.querySelector("img").src = src
+        let img = imgCard.querySelector("img")
+        img.src = src
+        img.addEventListener("error", h_onImgError, { once: true, passive:true })
     }
     if (isCaptioned) {
         imgCard.querySelector(".card").classList.add("captioned")
@@ -161,4 +164,26 @@ function showAll(albums) {
         if (name == "Himari") continue
         parseImages(imgs, seen)
     }
+}
+
+function h_onImgError(e) {
+    e.target.parentElement.parentElement.parentElement.classList.add("hide")
+    var ele = document.getElementById("error-msg")
+    var msg
+    ele.errors = (ele.errors || 0) + 1
+    if (ele.errors > 1) {
+        msg = `${ele.errors} images failed to load`
+        let host = new URL(e.target.src).host
+        if (!ele.failedHosts.includes(host)) {
+            ele.failedHosts.push(host)
+        }
+    }
+    else {
+        msg = "An image failed to load"
+        ele.failedHosts = [new URL(e.target.src).host]
+    }
+    msg += ` from host${ele.failedHosts?.length > 1 ? "s" : ""}: ${ele.failedHosts.join(", ")}`
+    ele.innerHTML = msg
+    ele.classList.remove("hide")
+    console.log(arguments)
 }
