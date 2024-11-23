@@ -1,4 +1,4 @@
-import {getAlbums, randomInt} from "./common.js"
+import {getAlbums, randomInt, enumerate} from "./common.js"
 import {enableCarouselControls} from "./carousel.js"
 
 const imgHosts = {
@@ -75,7 +75,7 @@ function parseImageData(imgData) {
     return {src, title, msg, isCaptioned, isCarousel}
 }
 
-function addImage(parsedImgData) {
+function addImage(parsedImgData, idx) {
     let {src, title, msg, isCaptioned, isCarousel} = parsedImgData
     let imgCard = document.importNode(t_imgCard.content, true)
     if (isCarousel) {
@@ -83,9 +83,11 @@ function addImage(parsedImgData) {
         let imageList = imgCard.querySelector(".card-images")
         let t_image = imgCard.querySelector(".card-img-top")
         let newImages = []
-        for (let imgSrc of src) {
+        for (let [i, imgSrc] of enumerate(src)) {
             let newImage = t_image.cloneNode()
             newImage.src = imgSrc
+            newImage.idx = idx
+            newImage.subIdx = i
             newImages.push(newImage)
         }
         imageList.classList.add("multi")
@@ -102,6 +104,7 @@ function addImage(parsedImgData) {
     else {
         let img = imgCard.querySelector("img")
         img.src = src
+        img.idx = idx
         img.addEventListener("error", h_onImgError, { once: true, passive:true })
     }
     if (isCaptioned) {
@@ -118,7 +121,7 @@ function parseImages(imgs, seen = undefined) {
         imgs = imgs.split(",")
     }
     var parsed
-    for (var imgData of imgs) {
+    for (var [i, imgData] of enumerate(imgs)) {
         parsed = parseImageData(imgData)
         if (seen !== undefined) {
             if ( (parsed.isCarousel && seen.has(parsed.src[0])) || seen.has(parsed.src) ) {
@@ -126,7 +129,7 @@ function parseImages(imgs, seen = undefined) {
             }
             seen.add(parsed.src)
         }
-        addImage(parsed)
+        addImage(parsed, i)
     }
 }
 
