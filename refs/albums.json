@@ -51,14 +51,17 @@
         "db:75632dd9c7d64e969430a4ca1be7cfd7",
         {"src": "tw:F-Y5ffXaoAAW6EZ", "msg": "Cute/silly phone selfies or purikura with little additions like drawings, stickers, etc!"},
         {"src": "tw:GcFM9kDa4AAFpOB", "msg": "Anything in this sort of colour style."},
-        "tw:GcVlMWfXQAED3RJ",
         "tw:GcQMHSBaYAAkKP_",
         "tw:GcOWOdwa8AA7TqW",
         "tw:GOhhZZQWQAAQAk5",
         {"src": "tw:GcoVJ7dWAAAuUNh", "msg": "Angery required, outfit fine but negotiable."},
         "db:1043b84c22695f5e1d2ae2be048ef11f", "bs:dxpfvxynezrhhv5fz3ca4gn3/bafkreifpc2dlx6466czpunf3susecw6c665ppwi3fqt7fwigd3xdqrculy",
         "tw:GTqb_lva8AAHj6R",
-        {"src": "tw:GQ7VTZjb0AABu4Y", "msg": "Doing some quick shopping late at night in simple (possibly rushed and deficient) clothing. Very much a concept suggestion."}
+        {"src": "tw:GQ7VTZjb0AABu4Y", "msg": "Doing some quick shopping late at night in simple (possibly rushed and deficient) clothing. Very much a concept suggestion."},
+        "tw:GdDFPnMagAEfoSS",
+        ["tw:GOTTkc4a4AE3j1k", "tw:GOTUwmNbEAATP10", "tw:GM6xHxAboAAYNB2"],
+        {"src": "tw:GQdyCq3aIAIYVI_", "msg": "Happy times on a casual trip. Onsen is great, but other locations/destinations or simply happy shopping are fine. Bakery goods make a good choice for the latter."},
+        {"src": "tw:GMXBYYCagAA6dJt", "msg": "With different animal ears or whatever else is fitting."}
     ],
     "scenic": [
         "GubCi11.jpg",
@@ -148,7 +151,9 @@
         "EHvWkkz.jpeg",
         "mQkdbBV.jpeg",
         "tw:Gb2lN6sbwAI2VtC",
-        "tw:GI3Wm-ObgAAbtHd"
+        "tw:GI3Wm-ObgAAbtHd",
+        "tw:GbP7o7iawAA99uE",
+        {"src": "tw:GPV11Oua0AEwsJL", "msg": "Remove sensei or replace with a big plush, generic pillow, etc."}
     ],
     "halloween (ecchi)": [
         {"src": ["2tni6JU.jpeg", "tw:GbNAm_SakAMi7R0"], "msg": "Any sort of mummy style with enough squish and wrap is fine."},
@@ -181,7 +186,8 @@
         "db:fd67c66224da4778ea058f67db6a92a5",
         "tw:GZTASpwasAAFeB9",
         "tw:GPy3ekib0AA20Pm",
-        ["tw:Gbwh6dHawAApGez", "tw:Gbwh6dLasAAgaUX", "tw:Gbwh6dKagAA8MHW"]
+        ["tw:Gbwh6dHawAApGez", "tw:Gbwh6dLasAAgaUX", "tw:Gbwh6dKagAA8MHW"],
+        "tw:GKnj2YYa8AA2__8"
     ],
     "cosplay": [
         "szUB8tn.jpg",
@@ -205,7 +211,10 @@
     ],
     "casual": [
         "tw:GYbzDK_a4AAQRkL",
-        "GvBvlcM.jpeg"
+        "GvBvlcM.jpeg",
+        "tw:GdDFPnMagAEfoSS",
+        "bs:h6nw7noezdb67pixwco3ta4m/bafkreiancdfydy6f2dluvp4xw4irfirrhgiu46x7kxknxddrhbul4ni5ge",
+        {"src": "tw:GcVlMWfXQAED3RJ", "msg": "(Replace sensei pillow)"}
     ],
     "birthday": [
         "tw:GcASVzka0AAhfG7",
