@@ -104,11 +104,18 @@ function clearSelection() {
 }
 
 function remSelection() {
+    var removed
     for (let ele of SELECTION) {
-        let img = ALBUMS[CUR_ALBUM][ele.idx]
-        if (img.src) img = img.src
-        if (ele.subIdx) img = img[ele.subIdx]
-        console.log(`Removing ${ele.idx} -> ${ele.subIdx} (${img}) from ${CUR_ALBUM} (triggered by ${ele.src})`)
+        if (ele.subIdx) {
+            let img = ALBUMS[CUR_ALBUM][ele.idx]
+            if (img.src) img = img.src
+            removed = img.splice(ele.subIdx, 1)
+        }
+        else {
+            removed = ALBUMS[CUR_ALBUM].splice(ele.idx, 1)
+        }
+        console.log(`Removing ${ele.idx} -> ${ele.subIdx} from ${CUR_ALBUM} (triggered by ${ele.src})`)
+        console.log("Removed: ", removed)
     }
     clearSelection()
 }
