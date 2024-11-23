@@ -1,10 +1,10 @@
 @import "/style.css";
 
-/* .content {
-    padding: 1.5em 1em;
-    background-color: #e9ecef;
-    min-height: 100vh;
-} */
+.editing {
+    border: 0.3em dashed var(--accent);
+    /* box-sizing: content-box; */
+}
+
 .card-columns {
     column-count: 3;
 }
