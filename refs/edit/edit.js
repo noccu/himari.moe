@@ -55,6 +55,10 @@ function handleKeys(e) {
             break
         case "c":
             clearSelection()
+            break
+        case "s":
+            save()
+            break
     }
 }
 
@@ -141,6 +145,21 @@ function remSelection() {
     clearSelection()
 }
 
+function _jsonProc(k, v) {
+    if (Array.isArray(v)) {
+        v = v.filter(x => x) // Remove null/undef
+        return v.length == 1 ? v[0] : v
+    }
+    else return v
+}
+
+function save() {
+    const data = JSON.stringify(ALBUMS, _jsonProc, 4)
+    fetch(`/refs/albums.json`, {
+        method: "PUT",
+        body: data
+    })
+}
 
 function toggleEditMode() {
     if (!CUR_ALBUM) {
