@@ -27,12 +27,22 @@ function parseUrl(href) {
 function select(e) {
     if (!ACTIVE) return
     if (e.target.nodeName == "IMG" && e.target.parentElement.classList.contains("card-images")) {
-        let active = e.target.classList.toggle("editing")
-        if (active) {
-            SELECTION.add(e.target)
+        var targets
+        if (e.shiftKey && e.target.subIdx !== undefined) {
+            targets = e.target.parentElement.children
         }
-        else {
-            SELECTION.delete(e.target)
+        else targets = [e.target]
+
+        const isNowSelected = !e.target.classList.contains("editing")
+        for (let t of targets) {
+            if (isNowSelected) {
+                SELECTION.add(t)
+                t.classList.add("editing")
+            }
+            else {
+                SELECTION.delete(t)
+                t.classList.remove("editing")
+            }
         }
         e.stopPropagation()
     }
