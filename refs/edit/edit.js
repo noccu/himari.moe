@@ -6,6 +6,7 @@ const CUR_ALBUM = new URLSearchParams(location.search).get("a")
 /** @type {Set<HTMLElement>} */
 const SELECTION = new Set()
 var ACTIVE = false
+const DIA_ALBUM_CHOICE = createDialog()
 
 const hosts = {
     "i.imgur.com": ["", /([^\/]+)$/],
@@ -21,6 +22,41 @@ function parseUrl(href) {
     if (!data) return href
     const [prefix, re] = data
     return `${prefix}${href.match(re)[1]}`
+}
+
+function createDialog() {
+    const dia = document.createElement("dialog")
+    const action = document.createElement("p")
+    const search = document.createElement("input")
+    const searchList = document.createElement("datalist")
+    const albNames = Object.keys(ALBUMS).sort()
+    dia.append(action)
+    dia.append(search)
+    dia.append(searchList)
+
+    dia.actionLabel = action
+    searchList.id = "album-names"
+    search.setAttribute("list", searchList.id)
+    for (let name of albNames) {
+        let albEntry = document.createElement("option")
+        albEntry.value = name
+        searchList.append(albEntry)
+    }
+    search.addEventListener("keyup", e => {
+        if (e.key == "Enter" && albNames.includes(search.value)) {
+            dia.dispatchEvent(new CustomEvent("choice", {
+                bubbles: false,
+                detail: search.value
+            }))
+            if (!e.shiftKey) {
+                // default close event fires on ESC, contrary to spec!
+                dia.dispatchEvent(new Event("submitClose"))
+                dia.close()
+            }
+        }
+    })
+    document.body.append(dia)
+    return dia
 }
 
 /** @param {PointerEvent} e */
@@ -69,6 +105,12 @@ function handleKeys(e) {
             break
         case "s":
             save()
+            break
+        case "v":
+            copy()
+            break
+        case "x":
+            move()
             break
     }
 }
@@ -124,6 +166,35 @@ function addToCarousel() {
         addNewImage(imgData, true)
     }
     clearSelection()
+}
+
+function copy(msg = "Copy to album", clearSel = true) {
+    function _copy(e) {
+        for (let ele of SELECTION) {
+            let imgData = ALBUMS[CUR_ALBUM][ele.idx]
+            ALBUMS[e.detail].push(imgData)
+            console.log(`Copied ${imgData.src || imgData} to ${e.detail}`)
+        }
+    }
+    const listenerCtrl = new AbortController()
+    DIA_ALBUM_CHOICE.actionLabel.textContent = msg
+    DIA_ALBUM_CHOICE.addEventListener("choice", _copy, { signal: listenerCtrl.signal })
+    DIA_ALBUM_CHOICE.addEventListener("submitClose", () => {
+        if (clearSel) clearSelection()
+    }, { once: true, signal: listenerCtrl.signal })
+    DIA_ALBUM_CHOICE.addEventListener("close", () => listenerCtrl.abort(), { once: true })
+    DIA_ALBUM_CHOICE.showModal()
+}
+
+function move() {
+    //? If move listener is first, we don't need to clearSelection
+    const listenerCtrl = new AbortController()
+    DIA_ALBUM_CHOICE.addEventListener("submitClose", remSelection, {
+        once: true,
+        signal: listenerCtrl.signal
+    })
+    DIA_ALBUM_CHOICE.addEventListener("close", () => listenerCtrl.abort(), { once: true })
+    copy("Move to album", false)
 }
 
 function clearSelection() {
