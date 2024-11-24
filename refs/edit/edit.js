@@ -71,8 +71,8 @@ function addImages() {
     }
 }
 
-function addNewImage (collection, msg="Add image to album") {
-    const newImgUrl = prompt(msg)
+function addNewImage (collection, isMulti) {
+    const newImgUrl = prompt(isMulti ? "Add image to carousel" : "Add image to album")
     if (!newImgUrl) return
     const parsedImgUrl = parseUrl(newImgUrl)
     collection.push(parsedImgUrl)
@@ -89,7 +89,7 @@ function addToCarousel() {
         }
         let imgData = ALBUMS[CUR_ALBUM][ele.idx]
         if (imgData.src) imgData = imgData.src
-        addNewImage(imgData, "Add image to carousel")
+        addNewImage(imgData, true)
     }
     clearSelection()
 }
