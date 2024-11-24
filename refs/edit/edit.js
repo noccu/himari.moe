@@ -25,15 +25,13 @@ function parseUrl(href) {
 /** @param {PointerEvent} e */
 function select(e) {
     if (!ACTIVE) return
-    if (e.target.nodeName == "IMG") {
+    if (e.target.nodeName == "IMG" && e.target.parentElement.classList.contains("card-images")) {
         let active = e.target.classList.toggle("editing")
         if (active) {
             SELECTION.add(e.target)
-            // e.target.classList.add("editing")
         }
         else {
             SELECTION.delete(e.target)
-            // e.target.classList.remove("editing")
         }
         e.stopPropagation()
     }
