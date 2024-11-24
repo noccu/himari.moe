@@ -11,9 +11,9 @@ const MIME_TYPE = {
 }
 
 function saveFile(name, data) {
-    // "/refs/albums.json"
+    if (name[0] == "/") name = name.slice(1)
     console.log(`saving ${name}`)
-    writeFileSync(name, data)
+    fs.writeFileSync(name, data)
 }
 
 function notFound(r) {
@@ -32,14 +32,13 @@ function handleRequest(request, response) {
     if (request.method == "PUT") {
         let data = ""
         request.on("data", d => data += d)
-        request.on("end", x => {
+        request.on("end", () => {
             if (!request.complete) {
                 console.error("Connection terminated unexpectedly")
                 return
             }
-            console.log(x)
             saveFile(fullUrl.pathname, data)
-            res.send("saved")
+            response.end()
         })
     }
     else if (request.method == "GET") {
