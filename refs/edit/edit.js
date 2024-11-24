@@ -109,10 +109,13 @@ function remSelection() {
         if (ele.subIdx) {
             let img = ALBUMS[CUR_ALBUM][ele.idx]
             if (img.src) img = img.src
-            removed = img.splice(ele.subIdx, 1)
+            removed = img[ele.subIdx]
+            img[ele.subIdx] = null
         }
         else {
-            removed = ALBUMS[CUR_ALBUM].splice(ele.idx, 1)
+            removed = ALBUMS[CUR_ALBUM][ele.idx]
+            ALBUMS[CUR_ALBUM][ele.idx] = null
+
         }
         console.log(`Removing ${ele.idx} -> ${ele.subIdx} from ${CUR_ALBUM} (triggered by ${ele.src})`)
         console.log("Removed: ", removed)
