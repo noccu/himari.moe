@@ -40,13 +40,14 @@ function select(e) {
 
 /** @param {KeyboardEvent} e */
 function handleKeys(e) {
-    if (!e.shiftKey) {
+    if (e.shiftKey && e.key == "E") {
+        toggleEditMode()
         return
     }
-    switch (e.key.toLowerCase()) {
-        case "e":
-            toggleEditMode()
-            break
+    if (!ACTIVE) {
+        return
+    }
+    switch (e.key) {
         case "d":
             remSelection()
             break
