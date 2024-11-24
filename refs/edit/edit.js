@@ -85,7 +85,21 @@ function addNewImage(collection, isMulti) {
     collection.push(parsedImgUrl)
     console.log(`Adding ${newIdx}: ${newImgUrl} to ${CUR_ALBUM} as ${parsedImgUrl}`)
     console.log(ALBUMS[CUR_ALBUM])
-    addImgNode({ src: newImgUrl }, newIdx).scrollIntoView()
+    if (isMulti) {
+        for (let ele of SELECTION) {
+            const card = ele.closest(".card")
+            const newImg = ele.cloneNode(true)
+            newImg.src = newImgUrl
+            newImg.idx = ele.idx
+            newImg.subIdx = card.carouselImages.children.length
+            newImg.classList.remove("active")
+            card.carouselImages.append(newImg)
+            card.carouselNum += 1
+        }
+    }
+    else {
+        addImgNode({ src: newImgUrl }, newIdx).scrollIntoView()
+    }
 }
 
 function addToCarousel() {
