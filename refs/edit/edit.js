@@ -44,7 +44,7 @@ function handleKeys(e) {
         toggleEditMode()
         return
     }
-    if (!ACTIVE) {
+    if (!ACTIVE || e.shiftKey || e.ctrlKey) {
         return
     }
     switch (e.key) {
