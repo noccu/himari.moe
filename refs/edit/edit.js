@@ -109,11 +109,28 @@ function remSelection() {
             if (img.src) img = img.src
             removed = img[ele.subIdx]
             img[ele.subIdx] = null
+
+            const card = ele.closest(".card")
+            if (card.carouselImages.childElementCount == 1) {
+                card.remove()
+            }
+            else {
+                ele.remove()
+                card.carouselNum -= 1
+                if (ele.classList.contains("active")) {
+                    card.carouselCur = (ele.subIdx + 1) % card.carouselNum
+                    card.carouselImages.children[card.carouselCur].classList.add("active")
+                }
+                if (card.carouselNum == 1) {
+                    card.querySelector(".carousel-controls").classList.add("hide")
+                    card.carouselImages.classList.remove("multi")
+                }
+            }
         }
         else {
             removed = ALBUMS[CUR_ALBUM][ele.idx]
             ALBUMS[CUR_ALBUM][ele.idx] = null
-
+            ele.closest(".card").remove()
         }
         console.log(`Removing ${ele.idx} -> ${ele.subIdx} from ${CUR_ALBUM} (triggered by ${ele.src})`)
         console.log("Removed: ", removed)
