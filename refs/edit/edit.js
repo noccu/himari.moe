@@ -104,7 +104,7 @@ function clearSelection() {
 function remSelection() {
     var removed
     for (let ele of SELECTION) {
-        if (ele.subIdx) {
+        if (ele.subIdx !== undefined) {
             let img = ALBUMS[CUR_ALBUM][ele.idx]
             if (img.src) img = img.src
             removed = img[ele.subIdx]
