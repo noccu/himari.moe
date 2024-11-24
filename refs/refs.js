@@ -75,7 +75,7 @@ function parseImageData(imgData) {
     return {src, title, msg, isCaptioned, isCarousel}
 }
 
-function addImage(parsedImgData, idx) {
+export function addImage(parsedImgData, idx) {
     let {src, title, msg, isCaptioned, isCarousel} = parsedImgData
     let imgCard = document.importNode(t_imgCard.content, true)
     if (isCarousel) {
@@ -112,7 +112,9 @@ function addImage(parsedImgData, idx) {
         imgCard.querySelector(".card-title").innerText = title || ""
         imgCard.querySelector(".card-text").innerText = msg || ""
     }
+    const newNode = imgCard.firstElementChild
     gallery.appendChild(imgCard)
+    return newNode
 }
 
 function parseImages(imgs, seen = undefined) {

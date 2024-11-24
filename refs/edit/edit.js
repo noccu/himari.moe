@@ -1,4 +1,5 @@
 import { getAlbums } from "../common.js"
+import { addImage as addImgNode } from "../refs.js"
 
 const ALBUMS = await getAlbums()
 const CUR_ALBUM = new URLSearchParams(location.search).get("a")
@@ -71,13 +72,15 @@ function addImages() {
     }
 }
 
-function addNewImage (collection, isMulti) {
+function addNewImage(collection, isMulti) {
     const newImgUrl = prompt(isMulti ? "Add image to carousel" : "Add image to album")
     if (!newImgUrl) return
     const parsedImgUrl = parseUrl(newImgUrl)
+    const newIdx = collection.length
     collection.push(parsedImgUrl)
-    console.log(`Adding ${newImgUrl} to ${CUR_ALBUM} as ${parsedImgUrl}`)
+    console.log(`Adding ${newIdx}: ${newImgUrl} to ${CUR_ALBUM} as ${parsedImgUrl}`)
     console.log(ALBUMS[CUR_ALBUM])
+    addImgNode({ src: newImgUrl }, newIdx).scrollIntoView()
 }
 
 function addToCarousel() {
