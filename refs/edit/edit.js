@@ -35,6 +35,10 @@ function parseUrl(href) {
     return `${prefix}${href.match(re)[1]}`
 }
 
+function isCaptioned(o) {
+    return Object.hasOwn(o, "src")
+}
+
 /** @param {Modal} parent */
 function createAlbumChoice(parent, onChoice) {
     const search = document.createElement("input")
@@ -248,15 +252,13 @@ function editImgTitle(title, msg) {
     var data
     for (let ele of SELECTION) {
         data = ALBUMS[CUR_ALBUM][ele.idx]
-        const isObj = Object.hasOwn(data, "src")
         const clear = (title == "" && msg == "")
-
         if (clear) {
             data = data.src
-            if (isObj) ALBUMS[CUR_ALBUM][ele.idx] = data
+            if (isCaptioned(data)) ALBUMS[CUR_ALBUM][ele.idx] = data
         }
         else {
-            if (!isObj) {
+            if (!isCaptioned(data)) {
                 data = { src: data }
                 ALBUMS[CUR_ALBUM][ele.idx] = data
             }
