@@ -145,7 +145,7 @@ function handleKeys(e) {
             remSelection()
             break
         case "a":
-            addImages()
+            addNewImage()
             break
         case "c":
             clearSelection()
@@ -166,57 +166,39 @@ function handleKeys(e) {
     }
 }
 
-function addImages() {
-    switch (SELECTION.size) {
-        case 0:
-            addNewImage(ALBUMS[CUR_ALBUM])
-            clearSelection()
-            break
-        case 1:
-            addToCarousel()
-            break
-        default:
-            alert("Multiple images selected. Clear selection or select a carousel.")
+function addNewImage() {
+    if (SELECTION.size > 1) {
+        alert("Multiple images selected. Clear selection to add to album or select 1 image/carousel.")
+        return
     }
-}
-
-function addNewImage(collection, isMulti) {
+    const isMulti = SELECTION.size == 1
     const newImgUrl = prompt(isMulti ? "Add image to carousel" : "Add image to album")
     if (!newImgUrl) return
     const parsedImgUrl = parseUrl(newImgUrl)
-    const newIdx = collection.length
-    collection.push(parsedImgUrl)
-    console.log(`Adding ${newIdx}: ${newImgUrl} to ${CUR_ALBUM} as ${parsedImgUrl}`)
-    console.log(ALBUMS[CUR_ALBUM])
+    var imgList
+
     if (isMulti) {
         for (let ele of SELECTION) {
-            const card = ele.closest(".card")
-            const newImg = ele.cloneNode(true)
-            newImg.src = newImgUrl
-            newImg.idx = ele.idx
-            newImg.subIdx = card.carouselImages.children.length
-            newImg.classList.remove("active")
-            card.carouselImages.append(newImg)
-            card.carouselNum += 1
+            let imgData = ALBUMS[CUR_ALBUM][ele.idx]
+            imgList = isCaptioned(imgData) ? imgData.src : imgData
+            if (!Array.isArray(imgList)) {
+                // Create carousel
+                imgList = [imgList]
+                if (isCaptioned(imgData)) imgData.src = imgList
+                else ALBUMS[CUR_ALBUM][ele.idx] = imgData = imgList
+            }
+            imgList.push(parsedImgUrl)
+            ele = replaceCard(ele, imgData)
         }
+        clearSelection()
     }
     else {
-        addImgNode({ src: newImgUrl }, newIdx).scrollIntoView()
+        imgList = ALBUMS[CUR_ALBUM]
+        imgList.push(parsedImgUrl)
+        addImgNode({ src: newImgUrl }, imgList.length).scrollIntoView()
     }
-}
-
-function addToCarousel() {
-    // Only ever 1 ele
-    for (let ele of SELECTION) {
-        if (ele.subIdx == undefined) {
-            alert("Selected image is not a carousel")
-            return
-        }
-        let imgData = ALBUMS[CUR_ALBUM][ele.idx]
-        if (imgData.src) imgData = imgData.src
-        addNewImage(imgData, true)
-    }
-    clearSelection()
+    console.log(`Adding ${imgList.length}: ${newImgUrl} to ${CUR_ALBUM} as ${parsedImgUrl}`)
+    console.debug(ALBUMS[CUR_ALBUM])
 }
 
 function copy(destAlb, keepSelection) {
