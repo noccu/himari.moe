@@ -1,236 +1,293 @@
 {
-    "Himari": [
-        "iGOhH88.jpg",
-        "4YSkzzk.jpg",
-        "idYBAFY.jpg",
-        "EfLmn9T.jpg",
-        "nIsjtiq.jpg",
-        "KQG25gr.jpg",
-        "Pdj25z3.jpg",
-        "I2X6gN6.jpg",
-        "dU2Xfr6.jpg",
-        "QL34oUo.jpg",
-        "5a4AQW2.jpg",
-        "VynA87y.jpg",
-        "BIg2yuR.jpg",
-        "I7ZQBYp.jpg",
-        "TqjXMBr.jpg",
-        "92668Re.jpg",
-        "lLhPRei.jpg",
-        "zJiBsWm.png",
-        "MWNv0Rf.jpg",
-        "8Pq2vqC.jpg",
-        "lBCPJme.jpg",
-        "b2cwpGb.jpg"
+  "Himari": [
+    "iGOhH88.jpg",
+    "4YSkzzk.jpg",
+    "idYBAFY.jpg",
+    "EfLmn9T.jpg",
+    "nIsjtiq.jpg",
+    "KQG25gr.jpg",
+    "Pdj25z3.jpg",
+    "I2X6gN6.jpg",
+    "dU2Xfr6.jpg",
+    "QL34oUo.jpg",
+    "5a4AQW2.jpg",
+    "VynA87y.jpg",
+    "BIg2yuR.jpg",
+    "I7ZQBYp.jpg",
+    "TqjXMBr.jpg",
+    "92668Re.jpg",
+    "lLhPRei.jpg",
+    "zJiBsWm.png",
+    "MWNv0Rf.jpg",
+    "8Pq2vqC.jpg",
+    "lBCPJme.jpg",
+    "b2cwpGb.jpg"
+  ],
+  "general": [
+    "AjB1rP0.jpg",
+    "wxn2LO9.jpeg",
+    "AEpaYyQ.jpeg",
+    "8EW2zcY.jpeg",
+    "axw3MMj.jpeg",
+    "qpTJIbP.jpeg",
+    "iJgCm83.jpeg",
+    "XESbRJP.jpeg",
+    "u9Z22Ob.jpeg",
+    "KbXYk7h.jpeg",
+    "MvqULev.jpeg",
+    "lkEVvHR.jpeg",
+    "4Rzsmme.jpeg",
+    "GtXsHrt.png",
+    "GxBfThX.jpeg",
+    "vfRrdwx.jpg",
+    "JANQ8ao.jpg",
+    "tw:GS2ZVTOaEAAeQnL",
+    "tw:GbskVK1awAErUNY",
+    "sxaoR7e.jpeg",
+    "GvBvlcM.jpeg",
+    "tw:Gb2tLv_bwAAAHUp",
+    "db:e1c27f66687c923e875d7450be74755d",
+    "db:1347b60ad72fe971d63463ae6565b172",
+    "db:75632dd9c7d64e969430a4ca1be7cfd7",
+    {
+      "src": "tw:F-Y5ffXaoAAW6EZ",
+      "msg": "Cute/silly phone selfies or purikura with little additions like drawings, stickers, etc!"
+    },
+    {
+      "src": "tw:GcFM9kDa4AAFpOB",
+      "msg": "Anything in this sort of colour style."
+    },
+    "tw:GcQMHSBaYAAkKP_",
+    "tw:GcOWOdwa8AA7TqW",
+    "tw:GOhhZZQWQAAQAk5",
+    {
+      "src": "tw:GcoVJ7dWAAAuUNh",
+      "msg": "Angery required, outfit fine but negotiable."
+    },
+    "db:1043b84c22695f5e1d2ae2be048ef11f",
+    "bs:dxpfvxynezrhhv5fz3ca4gn3/bafkreifpc2dlx6466czpunf3susecw6c665ppwi3fqt7fwigd3xdqrculy",
+    "tw:GTqb_lva8AAHj6R",
+    {
+      "src": "tw:GQ7VTZjb0AABu4Y",
+      "msg": "Doing some quick shopping late at night in simple (possibly rushed and deficient) clothing. Very much a concept suggestion."
+    },
+    "tw:GdDFPnMagAEfoSS",
+    [
+      "tw:GOTTkc4a4AE3j1k",
+      "tw:GOTUwmNbEAATP10",
+      "tw:GM6xHxAboAAYNB2"
     ],
-    "general": [
-        "AjB1rP0.jpg",
-        "wxn2LO9.jpeg",
-        "AEpaYyQ.jpeg",
-        "8EW2zcY.jpeg",
-        "axw3MMj.jpeg",
-        "qpTJIbP.jpeg",
-        "iJgCm83.jpeg",
-        "XESbRJP.jpeg",
-        "u9Z22Ob.jpeg",
-        "KbXYk7h.jpeg",
-        "MvqULev.jpeg",
-        "lkEVvHR.jpeg",
-        "4Rzsmme.jpeg",
-        "GtXsHrt.png",
-        "GxBfThX.jpeg",
-        "vfRrdwx.jpg",
-        "JANQ8ao.jpg",
-        "tw:GS2ZVTOaEAAeQnL",
-        "tw:GbskVK1awAErUNY",
-        "sxaoR7e.jpeg",
-        "GvBvlcM.jpeg",
-        "tw:Gb2tLv_bwAAAHUp",
-        "db:e1c27f66687c923e875d7450be74755d",
-        "db:1347b60ad72fe971d63463ae6565b172",
-        "db:75632dd9c7d64e969430a4ca1be7cfd7",
-        {"src": "tw:F-Y5ffXaoAAW6EZ", "msg": "Cute/silly phone selfies or purikura with little additions like drawings, stickers, etc!"},
-        {"src": "tw:GcFM9kDa4AAFpOB", "msg": "Anything in this sort of colour style."},
-        "tw:GcQMHSBaYAAkKP_",
-        "tw:GcOWOdwa8AA7TqW",
-        "tw:GOhhZZQWQAAQAk5",
-        {"src": "tw:GcoVJ7dWAAAuUNh", "msg": "Angery required, outfit fine but negotiable."},
-        "db:1043b84c22695f5e1d2ae2be048ef11f", "bs:dxpfvxynezrhhv5fz3ca4gn3/bafkreifpc2dlx6466czpunf3susecw6c665ppwi3fqt7fwigd3xdqrculy",
-        "tw:GTqb_lva8AAHj6R",
-        {"src": "tw:GQ7VTZjb0AABu4Y", "msg": "Doing some quick shopping late at night in simple (possibly rushed and deficient) clothing. Very much a concept suggestion."},
-        "tw:GdDFPnMagAEfoSS",
-        ["tw:GOTTkc4a4AE3j1k", "tw:GOTUwmNbEAATP10", "tw:GM6xHxAboAAYNB2"],
-        {"src": "tw:GQdyCq3aIAIYVI_", "msg": "Happy times on a casual trip. Onsen is great, but other locations/destinations or simply happy shopping are fine. Bakery goods make a good choice for the latter."},
-        {"src": "tw:GMXBYYCagAA6dJt", "msg": "With different animal ears or whatever else is fitting."}
+    {
+      "src": "tw:GQdyCq3aIAIYVI_",
+      "msg": "Happy times on a casual trip. Onsen is great, but other locations/destinations or simply happy shopping are fine. Bakery goods make a good choice for the latter."
+    },
+    {
+      "src": "tw:GMXBYYCagAA6dJt",
+      "msg": "With different animal ears or whatever else is fitting."
+    }
+  ],
+  "scenic": [
+    "GubCi11.jpg",
+    "7m3U6Pl.jpg",
+    "X9pwty1.jpg",
+    "FZLXX3N.jpg",
+    "Cuemat8.jpg",
+    "Lz1o55Q.jpg",
+    "Bh7IN2B.jpg",
+    "5QHP2Rb.jpg",
+    [
+      "db:7327a1569b8d514be74e3b289d3c13f6",
+      "db:d04888bd68b443550783f036c29e1eb0",
+      "db:310b4d2a7d3dc462cd6db8e5d0a825bb",
+      "db:850875d1777cc86cfbe092da8ee7de4a"
     ],
-    "scenic": [
-        "GubCi11.jpg",
-        "7m3U6Pl.jpg",
-        "X9pwty1.jpg",
-        "FZLXX3N.jpg",
-        "Cuemat8.jpg",
-        "Lz1o55Q.jpg",
-        "Bh7IN2B.jpg",
-        "5QHP2Rb.jpg",
-        [
-            "db:7327a1569b8d514be74e3b289d3c13f6",
-            "db:d04888bd68b443550783f036c29e1eb0",
-            "db:310b4d2a7d3dc462cd6db8e5d0a825bb",
-            "db:850875d1777cc86cfbe092da8ee7de4a"
-        ],
-        ["db:1347b60ad72fe971d63463ae6565b172", "db:b00f511dbc08cbec22226e891a6a2921"],
-        "db:7e5940c0103fba746963ab582fa96b52",
-        "tw:GcYdsamWMAAt4dg"
+    [
+      "db:1347b60ad72fe971d63463ae6565b172",
+      "db:b00f511dbc08cbec22226e891a6a2921"
     ],
-    "spring": [
-        "q2pIqNI.jpeg",
-        "krHVKG7.jpeg",
-        "RsiQcrx.jpg"
+    "db:7e5940c0103fba746963ab582fa96b52",
+    "tw:GcYdsamWMAAt4dg"
+  ],
+  "spring": [
+    "q2pIqNI.jpeg",
+    "krHVKG7.jpeg",
+    "RsiQcrx.jpg"
+  ],
+  "swimsuits": [
+    "LHxnfcW.jpg",
+    "S0nycab.jpeg",
+    "pyjqFld.jpeg",
+    "I4QB28d.jpeg",
+    "b8nEMxV.jpeg",
+    "vu6cJCq.jpeg",
+    "gmwXrTx.png",
+    "QGuLCzf.jpeg",
+    "xnzdlVm.jpg",
+    "GzBp9ay.jpg"
+  ],
+  "summer": [
+    "LtwJuxs.jpeg",
+    "pyjqFld.jpeg",
+    "GubCi11.jpg",
+    "4Rzsmme.jpg",
+    "deixRTv.jpg",
+    "DJx8Hd5.jpg",
+    "tw:GSxRH8gaYAAVJN8",
+    "tw:GVRCWXdbYAEWQ0m",
+    "tw:GcONumZWIAA-Fft"
+  ],
+  "boobs": [
+    "sMctd0l.jpg",
+    "qPp2CVP.jpeg",
+    "iJgCm83.jpeg",
+    "TECrT14.png",
+    "24lQQU6.jpeg",
+    "b5RALoF.jpeg",
+    {
+      "src": "tw:Gb15o1XbEAAkhsK",
+      "msg": "This is a good shape."
+    },
+    "tw:Gb0F22HbsAASSoc",
+    "2hbavDX.jpeg",
+    "tw:Gb181S_bwAEr1K7",
+    "xcPyAX1.png",
+    "8NG0cq9.jpeg",
+    "tw:F8uh617boAABmmY",
+    "tw:Gb67nn8a8AATewL",
+    "tw:GYOZNxRakAArAtz",
+    "db:3b3a36bae24bad7eb42168a1c1a06f5d",
+    "db:489425dfed83239ab7a6ab63c1e11f46"
+  ],
+  "ecchi": [
+    "NdMZ4rB.jpeg",
+    "lO1R8iC.png",
+    "vTcyBeQ.jpeg",
+    "rgGjE3s.jpg",
+    "aBrwYWP.jpeg",
+    "hiPnnQX.jpeg",
+    "9Ch7BLu.jpeg",
+    "iJgCm83.jpeg",
+    "24lQQU6.jpeg",
+    "Wo3vq77.jpeg",
+    "tw:GZev2FmaAAUVLoI",
+    "tw:GbF3s8kaQAAQxRV",
+    "tw:Gb0F22HbsAASSoc",
+    "tw:GYbzDK_a4AAQRkL",
+    "tw:F8uh617boAABmmY",
+    "tw:GcCIy-QaMAAiDua",
+    [
+      "db:bcd8d0e07be5ffb0b7c6ccf385b770a7",
+      "db:9486963854e2d089fd60729a9b9581c5"
     ],
-    "swimsuits": [
-        "LHxnfcW.jpg",
-        "S0nycab.jpeg",
-        "pyjqFld.jpeg",
-        "I4QB28d.jpeg",
-        "b8nEMxV.jpeg",
-        "vu6cJCq.jpeg",
-        "gmwXrTx.png",
-        "QGuLCzf.jpeg",
-        "xnzdlVm.jpg",
-        "GzBp9ay.jpg"
-    ],
-    "summer": [
-        "LtwJuxs.jpeg",
-        "pyjqFld.jpeg",
-        "GubCi11.jpg",
-        "4Rzsmme.jpg",
-        "deixRTv.jpg",
-        "DJx8Hd5.jpg",
-        "tw:GSxRH8gaYAAVJN8",
-        "tw:GVRCWXdbYAEWQ0m",
-        "tw:GcONumZWIAA-Fft"
-    ],
-    "boobs": [
-        "sMctd0l.jpg",
-        "qPp2CVP.jpeg",
-        "iJgCm83.jpeg",
-        "TECrT14.png",
-        "24lQQU6.jpeg",
-        "b5RALoF.jpeg",
-        {"src": "tw:Gb15o1XbEAAkhsK", "msg": "This is a good shape."},
-        "tw:Gb0F22HbsAASSoc",
-        "2hbavDX.jpeg",
-        "tw:Gb181S_bwAEr1K7",
-        "xcPyAX1.png",
-        "8NG0cq9.jpeg",
-        "tw:F8uh617boAABmmY",
-        "tw:Gb67nn8a8AATewL",
-        "tw:GYOZNxRakAArAtz",
-        "db:3b3a36bae24bad7eb42168a1c1a06f5d",
-        "db:489425dfed83239ab7a6ab63c1e11f46"
-    ],
-    "ecchi": [
-        "NdMZ4rB.jpeg",
-        "lO1R8iC.png",
-        "vTcyBeQ.jpeg",
-        "rgGjE3s.jpg",
-        "aBrwYWP.jpeg",
-        "hiPnnQX.jpeg",
-        "9Ch7BLu.jpeg",
-        "iJgCm83.jpeg",
-        "24lQQU6.jpeg",
-        "Wo3vq77.jpeg",
-        "tw:GZev2FmaAAUVLoI",
-        "tw:GbF3s8kaQAAQxRV",
-        "tw:Gb0F22HbsAASSoc",
-        "tw:GYbzDK_a4AAQRkL",
-        "tw:F8uh617boAABmmY",
-        "tw:GcCIy-QaMAAiDua",
-        ["db:bcd8d0e07be5ffb0b7c6ccf385b770a7", "db:9486963854e2d089fd60729a9b9581c5"],
-        "c0rrqnB.jpeg",
-        "EHvWkkz.jpeg",
-        "mQkdbBV.jpeg",
-        "tw:Gb2lN6sbwAI2VtC",
-        "tw:GI3Wm-ObgAAbtHd",
-        "tw:GbP7o7iawAA99uE",
-        {"src": "tw:GPV11Oua0AEwsJL", "msg": "Remove sensei or replace with a big plush, generic pillow, etc."}
-    ],
-    "halloween (ecchi)": [
-        {"src": ["2tni6JU.jpeg", "tw:GbNAm_SakAMi7R0"], "msg": "Any sort of mummy style with enough squish and wrap is fine."},
-        "UBqO89A.png",
-        ["CmgDtoV.png", "tw:GbYFCKrbUAIA0B3"]
-    ],
-    "fashion": [
-        "R5EAksl.jpg",
-        "UCbrtXn.jpg",
-        "krHVKG7.jpg",
-        "Q2e73O7.jpg",
-        "wjwMLWn.jpeg",
-        "gD1Nn9b.jpg",
-        "z7bZtRZ.jpeg",
-        "lkEVvHR.jpeg",
-        "Cuemat8.jpg",
-        "daPuAkX.jpg",
-        "AkFg71k.jpg",
-        "5jfIIn0.jpg",
-        "hz2MmMx.jpg",
-        "BiDd9WA.jpg",
-        "Z0CCEym.jpg",
-        "PrKAl9o.jpg",
-        "OpEIViC.jpeg",
-        "1YqM6rc.jpeg",
-        "SGOTkPy.jpeg",
-        "TbyKUOl.jpg",
-        "tw:GbtQqeLbwAErTx0",
-        "tw:GYOZNxRakAArAtz",
-        "db:fd67c66224da4778ea058f67db6a92a5",
-        "tw:GZTASpwasAAFeB9",
-        "tw:GPy3ekib0AA20Pm",
-        ["tw:Gbwh6dHawAApGez", "tw:Gbwh6dLasAAgaUX", "tw:Gbwh6dKagAA8MHW"],
-        "tw:GKnj2YYa8AA2__8"
-    ],
-    "cosplay": [
-        "szUB8tn.jpg",
-        "CZQHjaE.jpg",
-        "96h18aw.jpg",
-        ["qOdhKhm.jpeg", "kGmuOeA.jpeg"],
-        "3b8XEvW.jpeg",
-        "gmwXrTx.png",
-        "https://arknights.wiki.gg/images/f/f2/Ho%27olheyak_Skin_1.png",
-        "grrDYIG.jpeg"
-    ],
-    "sporty": [
-        "Wo3vq77.jpeg",
-        "bbgky3B.png",
-        "db:6658cb64acfbc7378c29634cff91ab40",
-        "tw:GTybwEsaEAAR2f_",
-        "tw:GPy3ekib0AA20Pm"
-    ],
-    "cat": [
-        "tw:GbXWt8raMAAQIo9"
-    ],
-    "casual": [
-        "tw:GYbzDK_a4AAQRkL",
-        "GvBvlcM.jpeg",
-        "tw:GdDFPnMagAEfoSS",
-        "bs:h6nw7noezdb67pixwco3ta4m/bafkreiancdfydy6f2dluvp4xw4irfirrhgiu46x7kxknxddrhbul4ni5ge",
-        {"src": "tw:GcVlMWfXQAED3RJ", "msg": "(Replace sensei pillow)"}
-    ],
-    "birthday": [
-        "tw:GcASVzka0AAhfG7",
-        "tw:GcEdsmlbMAAN80T"
-    ],
-    "maids": [
-        "tw:Gb3IIa1bwAAodAA",
-        "tw:GcLLGUwasAA1Icw"
-    ],
-    "white shirt": [
-        {"src": "db:7cb4ad33c3b85c8f893cd9dd8e8b72f3", "msg": "The (bra) see through from stretch (not wet) is important! The collar is a fitting detail actually but not required. A cropped shot is fine if it works."},
-        "9Ch7BLu.jpeg",
-        "EHvWkkz.jpeg",
-        "tw:GOhhZZQWQAAQAk5",
-        "db:b45ad0760ac8feb2fa67e818376b9041",
-        "db:01cfbffc50777c0778b7cbd22b36f82a",
-        "lO1R8iC.gif"
+    "c0rrqnB.jpeg",
+    "EHvWkkz.jpeg",
+    "mQkdbBV.jpeg",
+    "tw:Gb2lN6sbwAI2VtC",
+    "tw:GI3Wm-ObgAAbtHd",
+    "tw:GbP7o7iawAA99uE",
+    {
+      "src": "tw:GPV11Oua0AEwsJL",
+      "msg": "Remove sensei or replace with a big plush, generic pillow, etc."
+    }
+  ],
+  "halloween (ecchi)": [
+    {
+      "src": [
+        "2tni6JU.jpeg",
+        "tw:GbNAm_SakAMi7R0"
+      ],
+      "msg": "Any sort of mummy style with enough squish and wrap is fine."
+    },
+    "UBqO89A.png",
+    [
+      "CmgDtoV.png",
+      "tw:GbYFCKrbUAIA0B3"
     ]
+  ],
+  "fashion": [
+    "R5EAksl.jpg",
+    "UCbrtXn.jpg",
+    "krHVKG7.jpg",
+    "Q2e73O7.jpg",
+    "wjwMLWn.jpeg",
+    "gD1Nn9b.jpg",
+    "z7bZtRZ.jpeg",
+    "lkEVvHR.jpeg",
+    "Cuemat8.jpg",
+    "daPuAkX.jpg",
+    "AkFg71k.jpg",
+    "5jfIIn0.jpg",
+    "hz2MmMx.jpg",
+    "BiDd9WA.jpg",
+    "Z0CCEym.jpg",
+    "PrKAl9o.jpg",
+    "OpEIViC.jpeg",
+    "1YqM6rc.jpeg",
+    "SGOTkPy.jpeg",
+    "TbyKUOl.jpg",
+    "tw:GbtQqeLbwAErTx0",
+    "tw:GYOZNxRakAArAtz",
+    "db:fd67c66224da4778ea058f67db6a92a5",
+    "tw:GZTASpwasAAFeB9",
+    "tw:GPy3ekib0AA20Pm",
+    [
+      "tw:Gbwh6dHawAApGez",
+      "tw:Gbwh6dLasAAgaUX",
+      "tw:Gbwh6dKagAA8MHW"
+    ],
+    "tw:GKnj2YYa8AA2__8"
+  ],
+  "cosplay": [
+    "szUB8tn.jpg",
+    "CZQHjaE.jpg",
+    "96h18aw.jpg",
+    [
+      "qOdhKhm.jpeg",
+      "kGmuOeA.jpeg"
+    ],
+    "3b8XEvW.jpeg",
+    "gmwXrTx.png",
+    "https://arknights.wiki.gg/images/f/f2/Ho%27olheyak_Skin_1.png",
+    "grrDYIG.jpeg"
+  ],
+  "sporty": [
+    "Wo3vq77.jpeg",
+    "bbgky3B.png",
+    "db:6658cb64acfbc7378c29634cff91ab40",
+    "tw:GTybwEsaEAAR2f_",
+    "tw:GPy3ekib0AA20Pm"
+  ],
+  "cat": [
+    "tw:GbXWt8raMAAQIo9"
+  ],
+  "casual": [
+    "tw:GYbzDK_a4AAQRkL",
+    "GvBvlcM.jpeg",
+    "tw:GdDFPnMagAEfoSS",
+    "bs:h6nw7noezdb67pixwco3ta4m/bafkreiancdfydy6f2dluvp4xw4irfirrhgiu46x7kxknxddrhbul4ni5ge",
+    {
+      "src": "tw:GcVlMWfXQAED3RJ",
+      "msg": "(Replace sensei pillow)"
+    }
+  ],
+  "birthday": [
+    "tw:GcASVzka0AAhfG7",
+    "tw:GcEdsmlbMAAN80T"
+  ],
+  "maids": [
+    "tw:Gb3IIa1bwAAodAA",
+    "tw:GcLLGUwasAA1Icw"
+  ],
+  "white shirt": [
+    {
+      "src": "db:7cb4ad33c3b85c8f893cd9dd8e8b72f3",
+      "msg": "The (bra) see through from stretch (not wet) is important! The collar is a fitting detail actually but not required. A cropped shot is fine if it works."
+    },
+    "9Ch7BLu.jpeg",
+    "EHvWkkz.jpeg",
+    "tw:GOhhZZQWQAAQAk5",
+    "db:b45ad0760ac8feb2fa67e818376b9041",
+    "db:01cfbffc50777c0778b7cbd22b36f82a",
+    "lO1R8iC.gif"
+  ]
 }

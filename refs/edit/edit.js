@@ -313,7 +313,7 @@ function _jsonProc(k, v) {
 }
 
 function save() {
-    const data = JSON.stringify(ALBUMS, _jsonProc, 4)
+    const data = JSON.stringify(ALBUMS, _jsonProc, 2)
     fetch(`/refs/albums.json`, {
         method: "PUT",
         body: data
