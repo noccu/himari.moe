@@ -317,7 +317,7 @@ function remSelection() {
 function _jsonProc(k, v) {
     if (Array.isArray(v)) {
         v = v.filter(x => x) // Remove null/undef
-        return v.length == 1 ? v[0] : v
+        return !isNaN(k) && v.length == 1 ? v[0] : v
     }
     else return v
 }
