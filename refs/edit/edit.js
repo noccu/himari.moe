@@ -39,6 +39,12 @@ function isCaptioned(o) {
     return Object.hasOwn(o, "src")
 }
 
+function replaceCard(ele, imgData) {
+    const newNode = addImgNode(parseImageData(imgData), ele.idx)
+    ele.closest(".card").replaceWith(newNode)
+    return newNode
+}
+
 /** @param {Modal} parent */
 function createAlbumChoice(parent, onChoice) {
     const search = document.createElement("input")
@@ -267,7 +273,7 @@ function editImgTitle(title, msg) {
             if (msg == "") delete data.msg
             else data.msg = msg
         }
-        ele.closest(".card").replaceWith(addImgNode(parseImageData(data), ele.idx))
+        replaceCard(ele, data)
     }
     clearSelection()
 }
