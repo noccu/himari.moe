@@ -1,5 +1,5 @@
 import { getAlbums } from "../common.js"
-import { addImage as addImgNode } from "../refs.js"
+import { addImage as addImgNode, parseImageData } from "../refs.js"
 
 class Modal extends HTMLDialogElement {
     constructor() {
@@ -17,6 +17,7 @@ const CUR_ALBUM = new URLSearchParams(location.search).get("a")
 const SELECTION = new Set()
 var ACTIVE = false
 const MODAL_COPYMOVE = createCopyMoveModal()
+const MODAL_TITLE_EDIT = createTitleEditModal()
 const hosts = {
     "i.imgur.com": ["", /([^\/]+)$/],
     "pbs.twimg.com": ["tw:", /media\/([^?]+)\?/],
@@ -70,6 +71,31 @@ function createCopyMoveModal() {
     return modal
 }
 
+function createTitleEditModal() {
+    const modal = new Modal()
+    modal.setLabel("Edit title & msg")
+    const title = document.createElement("input")
+    const msg = document.createElement("textarea")
+    const clear = document.createElement("button")
+    title.size = 50
+    msg.rows = 5
+    msg.style = "display: block; resize: none; width: 100%;"
+    clear.textContent = "Clear"
+    modal.append(title, msg, clear)
+
+    modal.addEventListener("keyup", e => {
+        if (!e.ctrlKey || e.key != "Enter") return
+        editImgTitle(title.value, msg.value)
+        modal.close()
+    })
+    clear.addEventListener("click", e => {
+        title.value = msg.value = ""
+        editImgTitle(title.value, msg.value)
+        modal.close()
+    })
+    return modal
+}
+
 /** @param {PointerEvent} e */
 function select(e) {
     if (!ACTIVE) return
@@ -101,7 +127,7 @@ function handleKeys(e) {
         toggleEditMode()
         return
     }
-    if (!ACTIVE || e.shiftKey || e.ctrlKey || e.target instanceof HTMLInputElement) {
+    if (!ACTIVE || e.shiftKey || e.ctrlKey || e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
         return
     }
     switch (e.key) {
@@ -122,6 +148,10 @@ function handleKeys(e) {
             break
         case "x":
             showCopyMoveModal(true)
+            break
+        case "m":
+        case "t":
+            showTitleEditModal()
             break
     }
 }
@@ -200,6 +230,46 @@ function showCopyMoveModal(move = false) {
     MODAL_COPYMOVE.showModal()
 }
 
+function showTitleEditModal() {
+    if (SELECTION.size > 1) {
+        alert("Multiple images selected. Will only edit titles one at a time.")
+        return
+    }
+    var currentData
+    for (let ele of SELECTION) {
+        currentData = Object(ALBUMS[CUR_ALBUM][ele.idx])
+    }
+    MODAL_TITLE_EDIT.querySelector("input").value = currentData.title || ""
+    MODAL_TITLE_EDIT.querySelector("textarea").value = currentData.msg || ""
+    MODAL_TITLE_EDIT.showModal()
+}
+
+function editImgTitle(title, msg) {
+    var data
+    for (let ele of SELECTION) {
+        data = ALBUMS[CUR_ALBUM][ele.idx]
+        const isObj = Object.hasOwn(data, "src")
+        const clear = (title == "" && msg == "")
+
+        if (clear) {
+            data = data.src
+            if (isObj) ALBUMS[CUR_ALBUM][ele.idx] = data
+        }
+        else {
+            if (!isObj) {
+                data = { src: data }
+                ALBUMS[CUR_ALBUM][ele.idx] = data
+            }
+            if (title == "") delete data.title
+            else data.title = title
+            if (msg == "") delete data.msg
+            else data.msg = msg
+        }
+        ele.closest(".card").replaceWith(addImgNode(parseImageData(data), ele.idx))
+    }
+    clearSelection()
+}
+
 function clearSelection() {
     SELECTION.clear()
     for (let card of document.querySelectorAll("img.editing")) {
@@ -270,6 +340,6 @@ function toggleEditMode() {
     if (!ACTIVE) clearSelection()
 }
 
-document.body.append(MODAL_COPYMOVE)
+document.body.append(MODAL_COPYMOVE, MODAL_TITLE_EDIT)
 document.addEventListener("click", select, { capture: true })
 document.addEventListener("keyup", handleKeys, { passive: true })

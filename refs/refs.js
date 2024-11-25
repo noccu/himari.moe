@@ -57,7 +57,7 @@ function parseImageSource(imgSrc) {
     return imgSrc
 }
 
-function parseImageData(imgData) {
+export function parseImageData(imgData) {
     let src, title, msg, isCaptioned = false, isCarousel = false
     if (Array.isArray(imgData)) {
         src = imgData.map(parseImageSource)
