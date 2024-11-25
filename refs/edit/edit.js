@@ -1,19 +1,29 @@
 import { getAlbums } from "../common.js"
 import { addImage as addImgNode } from "../refs.js"
 
+class Modal extends HTMLDialogElement {
+    constructor() {
+        super()
+        this.label = document.createElement("p")
+        this.append(this.label)
+    }
+    setLabel(text) { this.label.textContent = text }
+}
+customElements.define("modal-menu", Modal, { extends: "dialog" })
+
 const ALBUMS = await getAlbums()
 const CUR_ALBUM = new URLSearchParams(location.search).get("a")
 /** @type {Set<HTMLElement>} */
 const SELECTION = new Set()
 var ACTIVE = false
-const DIA_ALBUM_CHOICE = createDialog()
-
+const MODAL_COPYMOVE = createCopyMoveModal()
 const hosts = {
     "i.imgur.com": ["", /([^\/]+)$/],
     "pbs.twimg.com": ["tw:", /media\/([^?]+)\?/],
     "cdn.donmai.us": ["db:", /sample-([^\.]+).jpg/],
     "cdn.bsky.app": ["bs:", /did:plc:([^@]+)@/]
 }
+
 
 /** @param {string} href */
 function parseUrl(href) {
@@ -24,17 +34,14 @@ function parseUrl(href) {
     return `${prefix}${href.match(re)[1]}`
 }
 
-function createDialog() {
-    const dia = document.createElement("dialog")
-    const action = document.createElement("p")
+/** @param {Modal} parent */
+function createAlbumChoice(parent, onChoice) {
     const search = document.createElement("input")
     const searchList = document.createElement("datalist")
     const albNames = Object.keys(ALBUMS).sort()
-    dia.append(action)
-    dia.append(search)
-    dia.append(searchList)
+    parent.append(search)
+    parent.append(searchList)
 
-    dia.actionLabel = action
     searchList.id = "album-names"
     search.setAttribute("list", searchList.id)
     for (let name of albNames) {
@@ -42,21 +49,25 @@ function createDialog() {
         albEntry.value = name
         searchList.append(albEntry)
     }
-    search.addEventListener("keyup", e => {
-        if (e.key == "Enter" && albNames.includes(search.value)) {
-            dia.dispatchEvent(new CustomEvent("choice", {
-                bubbles: false,
-                detail: search.value
-            }))
-            if (!e.shiftKey) {
-                // default close event fires on ESC, contrary to spec!
-                dia.dispatchEvent(new Event("submitClose"))
-                dia.close()
+    if (onChoice) {
+        search.addEventListener("keyup", e => {
+            if (e.key == "Enter" && albNames.includes(search.value)) {
+                onChoice(e, search.value)
             }
-        }
+        })
+    }
+}
+
+function createCopyMoveModal() {
+    const modal = new Modal()
+    modal.move = false
+    createAlbumChoice(modal, (e, choice) => {
+        const doClose = !e.shiftKey
+        if (modal.move) move(choice, !doClose)
+        else copy(choice, !doClose)
+        if (doClose) modal.close()
     })
-    document.body.append(dia)
-    return dia
+    return modal
 }
 
 /** @param {PointerEvent} e */
@@ -107,10 +118,10 @@ function handleKeys(e) {
             save()
             break
         case "v":
-            copy()
+            showCopyMoveModal(false)
             break
         case "x":
-            move()
+            showCopyMoveModal(true)
             break
     }
 }
@@ -168,33 +179,25 @@ function addToCarousel() {
     clearSelection()
 }
 
-function copy(msg = "Copy to album", clearSel = true) {
-    function _copy(e) {
-        for (let ele of SELECTION) {
-            let imgData = ALBUMS[CUR_ALBUM][ele.idx]
-            ALBUMS[e.detail].push(imgData)
-            console.log(`Copied ${imgData.src || imgData} to ${e.detail}`)
-        }
+function copy(destAlb, keepSelection) {
+    for (let ele of SELECTION) {
+        let imgData = ALBUMS[CUR_ALBUM][ele.idx]
+        ALBUMS[destAlb].push(imgData)
+        console.log(`Copied ${imgData.src || imgData} to ${destAlb}`)
     }
-    const listenerCtrl = new AbortController()
-    DIA_ALBUM_CHOICE.actionLabel.textContent = msg
-    DIA_ALBUM_CHOICE.addEventListener("choice", _copy, { signal: listenerCtrl.signal })
-    DIA_ALBUM_CHOICE.addEventListener("submitClose", () => {
-        if (clearSel) clearSelection()
-    }, { once: true, signal: listenerCtrl.signal })
-    DIA_ALBUM_CHOICE.addEventListener("close", () => listenerCtrl.abort(), { once: true })
-    DIA_ALBUM_CHOICE.showModal()
+    if (!keepSelection) clearSelection()
 }
 
-function move() {
-    //? If move listener is first, we don't need to clearSelection
-    const listenerCtrl = new AbortController()
-    DIA_ALBUM_CHOICE.addEventListener("submitClose", remSelection, {
-        once: true,
-        signal: listenerCtrl.signal
-    })
-    DIA_ALBUM_CHOICE.addEventListener("close", () => listenerCtrl.abort(), { once: true })
-    copy("Move to album", false)
+function move(destAlb, keepSelection) {
+    copy(destAlb, true)
+    if (!keepSelection) remSelection()
+}
+
+function showCopyMoveModal(move = false) {
+    MODAL_COPYMOVE.move = move
+    if (move) MODAL_COPYMOVE.setLabel("Move to album")
+    else MODAL_COPYMOVE.setLabel("Copy to album")
+    MODAL_COPYMOVE.showModal()
 }
 
 function clearSelection() {
@@ -267,5 +270,6 @@ function toggleEditMode() {
     if (!ACTIVE) clearSelection()
 }
 
+document.body.append(MODAL_COPYMOVE)
 document.addEventListener("click", select, { capture: true })
 document.addEventListener("keyup", handleKeys, { passive: true })
