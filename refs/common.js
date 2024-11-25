@@ -6,3 +6,16 @@ export async function getAlbums(){
 export function randomInt(max) {
     return Math.floor(Math. random() * max)
 }
+
+/**
+ * @template T
+ * @param {Iterable<T>} col
+ * @returns {Generator<[number, T]>}
+ * */
+export function* enumerate(col) {
+    let i = 0
+    for (let e of col) {
+        yield [i, e]
+        i++
+    }
+}
