@@ -18,7 +18,7 @@ const SELECTION = new Set()
 var ACTIVE = false
 const MODAL_COPYMOVE = createCopyMoveModal()
 const MODAL_TITLE_EDIT = createTitleEditModal()
-const hosts = {
+const HOSTS = {
     "i.imgur.com": ["", /([^\/]+)$/],
     "pbs.twimg.com": ["tw:", /media\/([^?]+)\?/],
     "cdn.donmai.us": ["db:", /sample-([^\.]+).jpg/],
@@ -29,7 +29,7 @@ const hosts = {
 /** @param {string} href */
 function parseUrl(href) {
     /** @type {[string, RegExp]} */
-    const data = hosts[(new URL(href)).host]
+    const data = HOSTS[(new URL(href)).host]
     if (!data) return href
     const [prefix, re] = data
     return `${prefix}${href.match(re)[1]}`
