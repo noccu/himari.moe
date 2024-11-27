@@ -47,6 +47,7 @@ function handleRequest(request, response) {
     if (request.method == "PUT") {
         readData(request).then(data => {
             saveFile(relPath, data)
+            response.writeHead(204)
             response.end()
         })
     }
