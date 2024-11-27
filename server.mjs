@@ -21,6 +21,21 @@ function notFound(r) {
     r.end()
 }
 
+function readData(request) {
+    return new Promise((r, x) => {
+        let data = ""
+        request.on("data", d => data += d)
+        request.on("end", () => {
+            if (!request.complete) {
+                console.error("Connection terminated unexpectedly")
+                x()
+                return
+            }
+            r(data)
+        })
+    })
+}
+
 /**
  * @param {http.IncomingMessage} request
  * @param {http.ServerResponse} response
@@ -30,14 +45,8 @@ function handleRequest(request, response) {
     const fullUrl = new URL(`http://localhost:8000${request.url}`)
     let relPath = fullUrl.pathname.slice(1)
     if (request.method == "PUT") {
-        let data = ""
-        request.on("data", d => data += d)
-        request.on("end", () => {
-            if (!request.complete) {
-                console.error("Connection terminated unexpectedly")
-                return
-            }
-            saveFile(fullUrl.pathname, data)
+        readData(request).then(data => {
+            saveFile(relPath, data)
             response.end()
         })
     }
