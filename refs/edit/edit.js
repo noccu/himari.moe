@@ -133,11 +133,14 @@ function select(e) {
 
 /** @param {KeyboardEvent} e */
 function handleKeys(e) {
+    if (e.ctrlKey || e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+        return
+    }
     if (e.shiftKey && e.key == "E") {
         toggleEditMode()
         return
     }
-    if (!ACTIVE || e.ctrlKey || e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+    if (!ACTIVE) {
         return
     }
     switch (e.key) {
