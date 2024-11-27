@@ -57,6 +57,7 @@ function parseImageSource(imgSrc) {
     return imgSrc
 }
 
+/** @returns {{src: string | string[], title: string, msg:string, isCaptioned: boolean, isCarousel:boolean}} */
 export function parseImageData(imgData) {
     let src, title, msg, isCaptioned = false, isCarousel = false
     if (Array.isArray(imgData)) {

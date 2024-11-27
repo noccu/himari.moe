@@ -137,7 +137,7 @@ function handleKeys(e) {
         toggleEditMode()
         return
     }
-    if (!ACTIVE || e.shiftKey || e.ctrlKey || e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
+    if (!ACTIVE || e.ctrlKey || e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
         return
     }
     switch (e.key) {
@@ -152,6 +152,9 @@ function handleKeys(e) {
             break
         case "s":
             save()
+            break
+        case "S":
+            archive()
             break
         case "v":
             showCopyMoveModal(false)
@@ -317,6 +320,25 @@ function save() {
     fetch(`/refs/albums.json`, {
         method: "PUT",
         body: data
+    })
+}
+
+function archive() {
+    const data = []
+    for (let [albName, imageList] of Object.entries(ALBUMS)) {
+        for (let imgData of imageList) {
+            let parsedData = parseImageData(imgData)
+            if (parsedData.isCarousel){
+                for (let href of parsedData.src) {
+                    data.push({albName, src: href})
+                }
+            }
+            else data.push({albName, src: parsedData.src})
+        }
+    }
+    fetch("/archive/", {
+        method: "POST",
+        body: JSON.stringify(data)
     })
 }
 
