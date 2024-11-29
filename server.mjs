@@ -19,6 +19,7 @@ const MIME_TYPE = {
     ".avif": "image/avif"
 }
 const MIME_TYPE_REV = Object.fromEntries(Object.entries(MIME_TYPE).map(([k, v]) => [v, k]))
+const CACHE = {}
 
 function saveFile(name, data) {
     if (name[0] == "/") name = name.slice(1)
@@ -124,8 +125,10 @@ function handleRequest(request, response) {
     }
     else if (request.method == "GET") {
         if (relPath == "") relPath = "index.html"
+        const headers = {
+            "Cache-Control": "no-cache"
+        }
         if (!fs.existsSync(relPath)) return notFound(response)
-        const headers = {}
         var isDir = DIR_CACHE[relPath],
             basePath = undefined
         if (isDir === undefined) {
@@ -141,7 +144,19 @@ function handleRequest(request, response) {
             }
             relPath += "index.html"
         }
-        if (!fs.existsSync(relPath)) return notFound(response)
+
+        const stat = fs.statSync(relPath, { throwIfNoEntry: false })
+        if (!stat) return notFound(response)
+        const modTime = stat.mtime.getTime()
+        headers["Date"] = stat.mtime.toString()
+        headers["ETag"] = modTime
+        if (request.headers["if-none-match"] == modTime && request.headers["cache-control"] != "no-cache") {
+            return response.writeHead(304, headers).end()
+        }
+        if (CACHE[relPath]) {
+            console.log("Returning data from memory cache.")
+            return response.writeHead(200, headers).end(CACHE[relPath])
+        }
         const ext = fspath.extname(relPath)
         headers["Content-Type"] = MIME_TYPE[ext] || "text/plain"
         var data = fs.readFileSync(relPath, { encoding: "utf-8" })
@@ -153,6 +168,10 @@ function handleRequest(request, response) {
                 "</head>",
                 `<script type="module" src="/refs/edit/edit.js"></script></head>`
             )
+        }
+        if (fullUrl.search) {
+            console.log("Caching data for query URL.")
+            CACHE[relPath] = data
         }
         response.writeHead(200, headers)
         response.end(data)
