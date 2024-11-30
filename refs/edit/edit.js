@@ -21,7 +21,7 @@ const MODAL_TITLE_EDIT = createTitleEditModal()
 const HOSTS = {
     "i.imgur.com": ["", /([^\/]+)$/],
     "pbs.twimg.com": ["tw:", /media\/([^?]+)\?/],
-    "cdn.donmai.us": ["db:", /sample-([^\.]+).jpg/],
+    "cdn.donmai.us": ["db:", /([^\./]+).{4,5}$/],
     "cdn.bsky.app": ["bs:", /did:plc:([^@]+)@/]
 }
 
