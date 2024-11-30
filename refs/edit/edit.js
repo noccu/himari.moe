@@ -201,7 +201,7 @@ function addNewImage() {
     else {
         imgList = ALBUMS[CUR_ALBUM]
         imgList.push(parsedImgUrl)
-        addImgNode({ src: newImgUrl }, imgList.length - 1).scrollIntoView()
+        addImgNode(parseImageData(parsedImgUrl), imgList.length - 1).scrollIntoView()
     }
     console.log(`Adding ${imgList.length - 1}: ${newImgUrl} to ${CUR_ALBUM} as ${parsedImgUrl}`)
     console.debug(ALBUMS[CUR_ALBUM])
