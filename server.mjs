@@ -20,6 +20,7 @@ const MIME_TYPE = {
 }
 const MIME_TYPE_REV = Object.fromEntries(Object.entries(MIME_TYPE).map(([k, v]) => [v, k]))
 const CACHE = {}
+var DEV_MODE = false
 
 function saveFile(name, data) {
     if (name[0] == "/") name = name.slice(1)
@@ -119,6 +120,11 @@ function handleRequest(request, response) {
                 archive(JSON.parse(data))
             })
             response.writeHead(200)
+        }
+        else if (relPath == "devmode") {
+            DEV_MODE = !DEV_MODE
+            console.log(`Dev mode status: ${DEV_MODE}`)
+            response.writeHead(200).end()
         }
         else response.writeHead(400)
         response.end()

@@ -169,6 +169,9 @@ function handleKeys(e) {
         case "t":
             showTitleEditModal()
             break
+        case "D":
+            toggleDevMode()
+        break
     }
 }
 
@@ -353,6 +356,10 @@ function toggleEditMode() {
     ACTIVE = !ACTIVE
     document.body.classList.toggle("editing")
     if (!ACTIVE) clearSelection()
+}
+
+function toggleDevMode() {
+    fetch("/devmode", {method: "POST"})
 }
 
 document.body.append(MODAL_COPYMOVE, MODAL_TITLE_EDIT)
