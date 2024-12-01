@@ -24,14 +24,11 @@
     "b2cwpGb.jpg"
   ],
   "general": [
-    "AjB1rP0.jpg",
     "wxn2LO9.jpeg",
     "AEpaYyQ.jpeg",
     "8EW2zcY.jpeg",
     "axw3MMj.jpeg",
     "qpTJIbP.jpeg",
-    "iJgCm83.jpeg",
-    "XESbRJP.jpeg",
     "u9Z22Ob.jpeg",
     "KbXYk7h.jpeg",
     "MvqULev.jpeg",
@@ -82,7 +79,7 @@
     ],
     {
       "src": "tw:GQdyCq3aIAIYVI_",
-      "msg": "Happy times on a casual trip. Onsen is great, but other locations/destinations or simply happy shopping are fine. Bakery goods make a good choice for the latter."
+      "msg": "Happy times on a casual trip. Onsen is great, but other locations/destinations or simply happily shopping (or returning from) are fine. Bakery goods make a good choice for the latter."
     },
     {
       "src": "tw:GMXBYYCagAA6dJt",
@@ -91,9 +88,19 @@
     "tw:GdOZVEJbwAABASq",
     "tw:GdLdDRHa4AAW-On",
     {
-      "src": "tw:GdYahXrasAA2_Xp",
+      "src": [
+        "tw:GdYahXrasAA2_Xp",
+        "XESbRJP.jpeg"
+      ],
       "title": "POV cafe/date shot"
-    }
+    },
+    "tw:GdiVncCW8AAZ1dg",
+    [
+      "tw:GZDJHT3bwAAs8_b",
+      "AjB1rP0.jpg"
+    ],
+    "tw:GdzH8DtboAEoUUc",
+    "tw:GdxYNP1aYAAvA-F"
   ],
   "scenic": [
     "GubCi11.jpg",
@@ -118,7 +125,10 @@
     "tw:GcYdsamWMAAt4dg",
     "tw:Gc349xXaAAEuOio",
     "bD440l8.jpeg",
-    "tw:GdmuOXQX0AALUHr"
+    "tw:GdmuOXQX0AALUHr",
+    "tw:GdoKghQXYAAfR1n",
+    "tw:GdiJOT4boAMzl6p",
+    "tw:GbskVK1awAErUNY"
   ],
   "spring": [
     "q2pIqNI.jpeg",
@@ -150,7 +160,8 @@
     {
       "src": "db:f41065cefaae5ba824156c5b157b0e87",
       "msg": "Suggest to change outfit, but a nice summery shot of this type would be nice."
-    }
+    },
+    "tw:GdiJOT4boAMzl6p"
   ],
   "boobs": [
     "sMctd0l.jpg",
@@ -172,7 +183,18 @@
     "tw:Gb67nn8a8AATewL",
     "tw:GYOZNxRakAArAtz",
     "db:3b3a36bae24bad7eb42168a1c1a06f5d",
-    "db:489425dfed83239ab7a6ab63c1e11f46"
+    "db:489425dfed83239ab7a6ab63c1e11f46",
+    {
+      "src": [
+        "db:92a0f9104047117f9888342b42dca304",
+        "https://cdn.donmai.us/original/01/2c/012c8d6ebbd024387672edb3fb0fff67.jpg",
+        "tw:Duk72eRVYAAJuoD",
+        "db:eaf106cc072109caf3459de023d3616e",
+        "db:6b59122165f9c6bfb53094c9ced7b142",
+        "db:349047579d5f448aa6d1b3f60d191e1d"
+      ],
+      "title": "Popped button"
+    }
   ],
   "ecchi": [
     "NdMZ4rB.jpeg",
@@ -204,7 +226,13 @@
     {
       "src": "tw:GPV11Oua0AEwsJL",
       "msg": "Remove sensei or replace with a big plush, generic pillow, etc."
-    }
+    },
+    {
+      "src": "db:eeca1e6467aa6e45cdf3da770ae4bbef",
+      "msg": "Any similar form of undressing is good."
+    },
+    "db:c707f51093d2e0036cac95fb85bf24c8",
+    "bs:23kijzb6fzqenpf6pm2vit6s/bafkreih7mbea3o7sq5eo2j7tyfess4ekylyefut2elulae2e7sjmftqzpm"
   ],
   "halloween (ecchi)": [
     {
@@ -275,10 +303,20 @@
     "db:6658cb64acfbc7378c29634cff91ab40",
     "tw:GTybwEsaEAAR2f_",
     "tw:GPy3ekib0AA20Pm",
-    "tw:GHUWPZuboAAFcaz"
+    "tw:GHUWPZuboAAFcaz",
+    "tw:GdNnAURbgAASBrb"
   ],
   "cat": [
-    "tw:GbXWt8raMAAQIo9"
+    "tw:GbXWt8raMAAQIo9",
+    "tw:GdzH8DtboAEoUUc",
+    "tw:Gb9Phj7aIAAZP0Z",
+    "tw:Gc6ftDIaAAEHBIP",
+    "tw:GaqI-MJbYAAOUTE",
+    "tw:GaAVy_HagAAELvg",
+    "tw:GaayELTbUAAQ0OL",
+    "tw:GZvOfK8bMAA8C-r",
+    "tw:GZITAVcagAAGhS6",
+    "tw:GX6WgRebEAAupTI"
   ],
   "casual": [
     "tw:GYbzDK_a4AAQRkL",
@@ -290,7 +328,13 @@
       "msg": "(Replace sensei pillow)"
     },
     "tw:GdJ7xP8bQAET4Hu",
-    "bD440l8.jpeg"
+    "bD440l8.jpeg",
+    "DJx8Hd5.jpg",
+    "tw:GZDJHT3bwAAs8_b",
+    "db:1043b84c22695f5e1d2ae2be048ef11f",
+    "iJgCm83.jpeg",
+    "tw:GdNnAURbgAASBrb",
+    "tw:GKpr6nObkAAERpo"
   ],
   "birthday": [
     "tw:GcASVzka0AAhfG7",
