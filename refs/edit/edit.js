@@ -333,6 +333,7 @@ function archive() {
     const data = []
     for (let [albName, imageList] of Object.entries(ALBUMS)) {
         for (let imgData of imageList) {
+            if (!imgData) continue // Removals this session
             let parsedData = parseImageData(imgData)
             if (parsedData.isCarousel){
                 for (let href of parsedData.src) {
