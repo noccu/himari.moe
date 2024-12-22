@@ -1,8 +1,10 @@
+import { getAlbums } from "../common.js"
+
 const LIST = document.getElementById("list")
 const T_ALBUM = document.getElementById("t-album")
 
 async function parseAlbums() {
-    albums = await fetch("../albums.json").then(x => x.json())
+    const albums = await getAlbums()
     for (let [name, images] of Object.entries(albums)) {
         if (!images) {
             console.debug(`Album ${name} is empty`)
