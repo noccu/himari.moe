@@ -156,12 +156,14 @@ function handleRequest(request, response) {
         const modTime = stat.mtime.getTime()
         headers["Date"] = stat.mtime.toString()
         headers["ETag"] = modTime
-        if (request.headers["if-none-match"] == modTime && request.headers["cache-control"] != "no-cache") {
-            return response.writeHead(304, headers).end()
-        }
-        if (CACHE[relPath]) {
-            console.log("Returning data from memory cache.")
-            return response.writeHead(200, headers).end(CACHE[relPath])
+        if (request.headers["cache-control"] != "no-cache") {
+            if (request.headers["if-none-match"] == modTime) {
+                return response.writeHead(304, headers).end()
+            }
+            if (CACHE[relPath]) {
+                console.log("Returning data from memory cache.")
+                return response.writeHead(200, headers).end(CACHE[relPath])
+            }
         }
         const ext = fspath.extname(relPath)
         headers["Content-Type"] = MIME_TYPE[ext] || "text/plain"
