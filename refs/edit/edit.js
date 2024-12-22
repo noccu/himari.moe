@@ -1,4 +1,4 @@
-import { getAlbums } from "../common.js"
+import { getAlbums, PARAMS } from "../common.js"
 import { addImage as addImgNode, parseImageData } from "../refs.js"
 
 class Modal extends HTMLDialogElement {
@@ -323,7 +323,7 @@ function _jsonProc(k, v) {
 
 function save() {
     const data = JSON.stringify(ALBUMS, _jsonProc, 2)
-    fetch(`/refs/albums.json`, {
+    fetch(`/refs/albums${PARAMS.has("s") ? "_special" : ""}.json`, {
         method: "PUT",
         body: data
     })

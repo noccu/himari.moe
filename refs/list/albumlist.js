@@ -1,4 +1,4 @@
-import { getAlbums } from "../common.js"
+import { getAlbums, PARAMS } from "../common.js"
 
 const LIST = document.getElementById("list")
 const T_ALBUM = document.getElementById("t-album")
@@ -11,7 +11,7 @@ async function parseAlbums() {
             continue
         }
         var albEntry = document.importNode(T_ALBUM.content, true)
-        albEntry.querySelector("a").href = `../?a=${name}`
+        albEntry.querySelector("a").href = `../?a=${name}${PARAMS.has("s") ? "&s=1" : ""}`
         albEntry.querySelector(".album-name").textContent = name
         albEntry.querySelector(".album-num").textContent = images.length
         LIST.append(albEntry)

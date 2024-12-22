@@ -1,5 +1,7 @@
+export const PARAMS = new URLSearchParams(document.location.search)
+
 export async function getAlbums(){
-    return fetch(`/refs/albums.json`).then(x => x.json())
+    return fetch(PARAMS.has("s") ? "/refs/albums_special.json" : "/refs/albums.json").then(x => x.json())
     // return (await import("./albums.json", {assert: {type: "json"}})).default
 }
 
