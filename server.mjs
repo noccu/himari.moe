@@ -143,11 +143,11 @@ function handleRequest(request, response) {
         if (isDir) {
             if (relPath[relPath.length - 1] != "/") {
                 relPath += "/"
-                basePath = "/" + relPath
                 // response.writeHead(301, {location: fullUrl.toString()})
                 // response.end()
                 // return
             }
+            basePath = "/" + relPath
             relPath += "index.html"
         }
 
