@@ -329,9 +329,15 @@ function save() {
     })
 }
 
-function archive() {
+async function archive() {
     const data = []
-    for (let [albName, imageList] of Object.entries(ALBUMS)) {
+    const isSpecial = PARAMS.has("s")
+    isSpecial ? PARAMS.delete("s") : PARAMS.set("s", "1")
+    var mergedAlbums =  await getAlbums()
+    isSpecial ? PARAMS.set("s", "1") : PARAMS.delete("s")
+    Object.assign(mergedAlbums, ALBUMS)
+
+    for (let [albName, imageList] of Object.entries(mergedAlbums)) {
         for (let imgData of imageList) {
             if (!imgData) continue // Removals this session
             let parsedData = parseImageData(imgData)
