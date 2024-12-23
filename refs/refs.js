@@ -1,5 +1,6 @@
 import {getAlbums, randomInt, enumerate} from "./common.js"
 import {enableCarouselControls} from "./carousel.js"
+import {enableLightbox} from "./lightbox.js"
 
 const imgHosts = {
     "im": "https://i.imgur.com/$",

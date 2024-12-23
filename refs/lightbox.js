@@ -14,7 +14,7 @@ function hideLb() {
     LIGHTBOX.classList.add("hide")
 }
 
-function enableLightbox(e) {
+export default function enableLightbox(e) {
     e.addEventListener("click", lightbox)
 }
 
