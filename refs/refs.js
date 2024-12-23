@@ -1,6 +1,6 @@
 import {getAlbums, randomInt, enumerate} from "./common.js"
 import {enableCarouselControls} from "./carousel.js"
-import {enableLightbox} from "./lightbox.js"
+import enableLightbox from "./lightbox.js"
 
 const imgHosts = {
     "im": "https://i.imgur.com/$",
@@ -12,10 +12,6 @@ const gallery = document.getElementById("gallery")
 const t_imgCard = document.getElementById("t-img-card")
 const msg = document.getElementById("msg")
 
-enableLightbox(gallery)
-document.getElementById("random").addEventListener("click", pickRandom)
-document.getElementById("reset").addEventListener("click", pickReset)
-handleRequest()
 
 function handleRequest() {
     let params = new URLSearchParams(document.location.search)
@@ -193,4 +189,11 @@ function h_onImgError(e) {
     ele.innerHTML = msg
     ele.classList.remove("hide")
     console.log(arguments)
+}
+
+if (location.pathname.match(/refs\/?$/)) {
+    enableLightbox(gallery)
+    document.getElementById("random").addEventListener("click", pickRandom)
+    document.getElementById("reset").addEventListener("click", pickReset)
+    handleRequest()
 }

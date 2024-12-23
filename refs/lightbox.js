@@ -15,6 +15,7 @@ function hideLb() {
 }
 
 export default function enableLightbox(e) {
+    if (!e) return
     e.addEventListener("click", lightbox)
 }
 
