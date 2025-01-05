@@ -249,23 +249,25 @@ function editImgTitle(title, msg) {
     var data
     for (let ele of SELECTION) {
         data = ALBUMS[CUR_ALBUM][ele.idx]
-        const clear = (title == "" && msg == "")
-        if (clear) {
-            if (!isCaptioned(data)) return
+        if (!isCaptioned(data)) {
+            data = { src: data, title, msg }
+            ALBUMS[CUR_ALBUM][ele.idx] = data
+            replaceCard(ele, data)
+        }
+        else if (title == "" && msg == "") {
             data = data.src
             ALBUMS[CUR_ALBUM][ele.idx] = data
+            replaceCard(ele, data)
         }
         else {
-            if (!isCaptioned(data)) {
-                data = { src: data }
-                ALBUMS[CUR_ALBUM][ele.idx] = data
-            }
             if (title == "") delete data.title
             else data.title = title
             if (msg == "") delete data.msg
             else data.msg = msg
+            card = ele.closest(".card")
+            card.querySelector(".card-title").textContent = title
+            card.querySelector(".card-text").textContent = msg
         }
-        replaceCard(ele, data)
     }
     clearSelection()
 }
