@@ -170,25 +170,25 @@ function showAll(albums) {
 }
 
 function h_onImgError(e) {
-    e.target.parentElement.parentElement.parentElement.classList.add("hide")
-    var ele = document.getElementById("error-msg")
+    e.target.closest(".card").classList.add("hide")
+    const ele = document.getElementById("error-msg")
+    const host = new URL(e.target.src).host
     var msg
     ele.errors = (ele.errors || 0) + 1
     if (ele.errors > 1) {
         msg = `${ele.errors} images failed to load`
-        let host = new URL(e.target.src).host
         if (!ele.failedHosts.includes(host)) {
             ele.failedHosts.push(host)
         }
     }
     else {
         msg = "An image failed to load"
-        ele.failedHosts = [new URL(e.target.src).host]
+        ele.failedHosts = [host]
     }
     msg += ` from host${ele.failedHosts?.length > 1 ? "s" : ""}: ${ele.failedHosts.join(", ")}`
+    msg += "\nOn some browsers, strict Enhanced Tracking Protection could be blocking images, check the icon to the left of the address bar."
     ele.innerHTML = msg
     ele.classList.remove("hide")
-    console.log(arguments)
 }
 
 if (location.pathname.match(/refs\/?$/)) {

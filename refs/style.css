@@ -87,7 +87,7 @@
 }
 
 #error-msg {
-    /* white-space: pre-wrap; */
+    white-space: pre-line;
     background-color: color-mix(in srgb, transparent, var(--accent) 50%);
     line-height: 1em;
 }
