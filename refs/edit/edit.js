@@ -251,8 +251,9 @@ function editImgTitle(title, msg) {
         data = ALBUMS[CUR_ALBUM][ele.idx]
         const clear = (title == "" && msg == "")
         if (clear) {
+            if (!isCaptioned(data)) return
             data = data.src
-            if (isCaptioned(data)) ALBUMS[CUR_ALBUM][ele.idx] = data
+            ALBUMS[CUR_ALBUM][ele.idx] = data
         }
         else {
             if (!isCaptioned(data)) {
