@@ -49,6 +49,7 @@ function handleRequest() {
     }
     //albums
     else if (params.has("a")) {
+        document.title += ` (${params.get("a")})`
         parseAlbum(params.get("a"))
         .then(() => {
             if (params.has("r")) pickRandom()
