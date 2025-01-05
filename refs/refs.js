@@ -12,6 +12,34 @@ const gallery = document.getElementById("gallery")
 const t_imgCard = document.getElementById("t-img-card")
 const msg = document.getElementById("msg")
 
+/** Automatically tracks load state */
+class ImgLoadState {
+    #p
+    #expect
+    #done
+    constructor() {
+        this.reset()
+    }
+    reset() {
+        this.#p = Promise.withResolvers()
+        this.allLoaded = this.#p.promise
+        this.#expect = this.#done = 0
+    }
+    imgAdded(img) {
+        img.addEventListener("load", this, { once: true, passive: true })
+        img.addEventListener("error", this, { once: true, passive: true })
+        this.#expect += 1
+    }
+    handleEvent(e) {
+        this.#done += 1
+        if (e.type == "error") h_onImgError(e)
+        if (this.#done == this.#expect) {
+            this.#p.resolve(this.#done)
+            this.reset()
+        }
+    }
+}
+const IMAGE_LOAD_STATE = new ImgLoadState()
 
 function handleRequest() {
     let params = new URLSearchParams(document.location.search)
@@ -22,6 +50,9 @@ function handleRequest() {
     //albums
     else if (params.has("a")) {
         parseAlbum(params.get("a"))
+        .then(() => {
+            if (params.has("r")) pickRandom()
+        })
     }
     //image list
     else if (params.has("i")) {
@@ -95,7 +126,7 @@ export function addImage(parsedImgData, idx) {
             e => { e.target.parentElement.style.height = e.target.clientHeight + "px" },
             { once: true, passive:true }
         )
-        newImages[0].addEventListener("error", h_onImgError, { once: true, passive:true })
+        IMAGE_LOAD_STATE.imgAdded(newImages[0])
         imageList.replaceChildren(...newImages)
         enableCarouselControls(imgCard.firstElementChild)
     }
@@ -103,7 +134,7 @@ export function addImage(parsedImgData, idx) {
         let img = imgCard.querySelector("img")
         img.src = src
         img.idx = idx
-        img.addEventListener("error", h_onImgError, { once: true, passive:true })
+        IMAGE_LOAD_STATE.imgAdded(img)
     }
     if (isCaptioned) {
         imgCard.querySelector(".card").classList.add("captioned")
@@ -143,6 +174,7 @@ async function parseAlbum(name) {
     }
     document.getElementById("name").textContent = ` (${name})`
     parseImages(imgs)
+    return IMAGE_LOAD_STATE.allLoaded
 }
 
 function pickRandom() {
