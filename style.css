@@ -19,7 +19,7 @@ button {
     background-color: unset;
 }
 
-.hide {
+.hide, .error {
     display: none !important;
 }
 

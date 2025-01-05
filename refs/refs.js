@@ -146,8 +146,9 @@ async function parseAlbum(name) {
 }
 
 function pickRandom() {
-    let idx = randomInt(gallery.children.length)
-    let choice = gallery.children[idx]
+    const filtered = gallery.querySelectorAll(".card:not(.error)")
+    let idx = randomInt(filtered.length)
+    let choice = filtered[idx]
     choice.classList.remove("hide")
     for (var card of gallery.children) {
         if (card == choice) continue
@@ -170,7 +171,7 @@ function showAll(albums) {
 }
 
 function h_onImgError(e) {
-    e.target.closest(".card").classList.add("hide")
+    e.target.closest(".card").classList.add("error")
     const ele = document.getElementById("error-msg")
     const host = new URL(e.target.src).host
     var msg
