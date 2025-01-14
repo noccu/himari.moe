@@ -264,7 +264,7 @@ function editImgTitle(title, msg) {
             else data.title = title
             if (msg == "") delete data.msg
             else data.msg = msg
-            card = ele.closest(".card")
+            const card = ele.closest(".card")
             card.querySelector(".card-title").textContent = title
             card.querySelector(".card-text").textContent = msg
         }
