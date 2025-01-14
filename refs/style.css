@@ -17,6 +17,10 @@
     padding: 1rem;
 }
 
+.card-text {
+    white-space: pre-line;
+}
+
 :not(.captioned)>.card-body,
 .card-title:empty,
 .card-text:empty {
@@ -47,6 +51,7 @@
 
 #info {
     margin-bottom: 1em;
+    font-size: smaller;
 }
 
 #lightbox {

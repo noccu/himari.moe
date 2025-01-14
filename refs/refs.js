@@ -166,6 +166,7 @@ function parseImages(imgs, seen = undefined) {
 }
 
 async function parseAlbum(name) {
+    if (name == "Himari") document.getElementById("note").classList.add("hide")
     let albums = await getAlbums()
     let imgs = albums[name]
     if (!imgs) {
