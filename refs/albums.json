@@ -1,27 +1,85 @@
 {
   "Himari": [
     "iGOhH88.jpg",
-    "4YSkzzk.jpg",
-    "idYBAFY.jpg",
+    {
+      "src": "4YSkzzk.jpg",
+      "title": "Alt outfits",
+      "msg": ""
+    },
+    {
+      "src": "idYBAFY.jpg",
+      "title": "Details",
+      "msg": "She's a cute cat if you're wondering about the rightmost images.\nHer katana's name is a reference to the legendary Dōjigiri and its creator. Its anime design is in the middle. As you can see, it's a little different. Either is fine, but prefer the manga one.\nWhile her weapon of choice is a katana, she's actually proficient with all bladed weapons."
+    },
     "EfLmn9T.jpg",
-    "nIsjtiq.jpg",
-    "KQG25gr.jpg",
-    "Pdj25z3.jpg",
+    {
+      "src": "nIsjtiq.jpg",
+      "title": "Swimsuits",
+      "msg": ""
+    },
+    {
+      "src": "KQG25gr.jpg",
+      "title": "Color ref for one of the swimsuits",
+      "msg": ""
+    },
+    {
+      "src": "Pdj25z3.jpg",
+      "msg": "To clarify; the left image is technically official, drawn by the LN artist."
+    },
     "I2X6gN6.jpg",
     "dU2Xfr6.jpg",
-    "QL34oUo.jpg",
+    {
+      "src": "QL34oUo.jpg",
+      "title": "Himari, from Omamori Himari",
+      "msg": "Hair: Black (can have a blue shine). Ponytail not visible above head! The bow comes in all sorts of styles.\nEyes: Blueish side of purple, with ring(s).\nShe is a white cat, so her cat ears and tail in catgirl form are also white.\n\nA loyal and protective bakeneko with a penchant for traditional Japanese elements. Speaks in archaic style. While she can be energetic, get easily heated, and likes to tease, she's peaceful at heart and likes nature, sleeping in the sun, and taking pictures. Naturally shares many similarities with cats.\nShe works as a waitress at a maid-themed teahouse."
+    },
     "5a4AQW2.jpg",
     "VynA87y.jpg",
-    "BIg2yuR.jpg",
-    "I7ZQBYp.jpg",
-    "TqjXMBr.jpg",
-    "92668Re.jpg",
-    "lLhPRei.jpg",
-    "zJiBsWm.png",
-    "MWNv0Rf.jpg",
+    {
+      "src": "BIg2yuR.jpg",
+      "msg": "Pictured top right: Reaction to alcohol. Her cat tongue does not like it!"
+    },
+    {
+      "src": "I7ZQBYp.jpg",
+      "title": "Specific outfit",
+      "msg": "While it seems inspired by miko clothing, she actually doesn't do very well with shrines and can start feeling dizzy when near powerful Shinto places or objects in general, owing to her nature!"
+    },
+    {
+      "src": "TqjXMBr.jpg",
+      "title": "Specific outfit",
+      "msg": ""
+    },
+    {
+      "src": "92668Re.jpg",
+      "title": "Specific outfit",
+      "msg": ""
+    },
+    {
+      "src": "lLhPRei.jpg",
+      "title": "Various looks in cosplay",
+      "msg": ""
+    },
+    {
+      "src": "zJiBsWm.png",
+      "title": "Twintails style",
+      "msg": ""
+    },
+    {
+      "src": "MWNv0Rf.jpg",
+      "title": "Summer uniform",
+      "msg": "The red one often seen is for winter."
+    },
     "8Pq2vqC.jpg",
-    "lBCPJme.jpg",
-    "b2cwpGb.jpg"
+    {
+      "src": "lBCPJme.jpg",
+      "title": "Young Himari",
+      "msg": ""
+    },
+    {
+      "src": "b2cwpGb.jpg",
+      "title": "",
+      "msg": "She wears a lot of different things, feel free to be creative!"
+    }
   ],
   "general": [
     "wxn2LO9.jpeg",
@@ -154,7 +212,8 @@
     "QGuLCzf.jpeg",
     "xnzdlVm.jpg",
     "GzBp9ay.jpg",
-    "tw:F6cjYMOagAAF3uu"
+    "tw:F6cjYMOagAAF3uu",
+    "db:1974f3aa780ba0e4788b04479bfffa10"
   ],
   "summer": [
     "LtwJuxs.jpeg",
@@ -175,13 +234,13 @@
       "src": "tw:Ge1UduMawAAgcBz",
       "msg": "Nice outfit, in particular."
     },
-    "tw:GQxn8yibEAAFhr-"
+    "tw:GQxn8yibEAAFhr-",
+    "db:1974f3aa780ba0e4788b04479bfffa10"
   ],
   "boobs": [
     "sMctd0l.jpg",
     "qPp2CVP.jpeg",
     "iJgCm83.jpeg",
-    "TECrT14.png",
     "24lQQU6.jpeg",
     "b5RALoF.jpeg",
     {
@@ -213,7 +272,9 @@
     "tw:GcawbSYakAA0xaq",
     "tw:GeV5BAvaIAADf66",
     "db:c2c76007b288a09533e376cb3051d36a",
-    "db:27aed651e030355b58e86816b357fc6e"
+    "db:27aed651e030355b58e86816b357fc6e",
+    "db:83d192ecb221d101e7bc5dbedd79fb44",
+    "db:7e6ef3d530b525f08985d3fc464a8823"
   ],
   "ecchi": [
     "NdMZ4rB.jpeg",
@@ -248,7 +309,7 @@
     },
     {
       "src": "db:eeca1e6467aa6e45cdf3da770ae4bbef",
-      "msg": "Any similar form of undressing is good."
+      "msg": "Any similar form of undressing is good, but no see-through underwear please."
     },
     "db:c707f51093d2e0036cac95fb85bf24c8",
     "bs:23kijzb6fzqenpf6pm2vit6s/bafkreih7mbea3o7sq5eo2j7tyfess4ekylyefut2elulae2e7sjmftqzpm",
@@ -256,7 +317,11 @@
     "tw:GXpO9Q6bwAApDfb",
     "tw:GfEaxYXacAAWGJU",
     "tw:GfdfbZaaEAACaw6",
-    "tw:GgcEcOPa8AATRld"
+    "tw:GgcEcOPa8AATRld",
+    "https://cdn.donmai.us/original/6c/04/6c040e9dbd01ebb4dd3037b49aa61f0a.jpg",
+    "db:dc6a7d7b80202b289d55ebb85fa0d298",
+    "https://cdn.donmai.us/original/c3/71/c371a1957bf13b30426aeb6cc77c0c56.jpg",
+    "db:7716b8b3c2c5b11d2a28816bb9d5f7fa"
   ],
   "halloween (ecchi)": [
     {
@@ -313,7 +378,8 @@
     "tw:GfUY0C0bUAELasr",
     "tw:GfUY0C4aIAAhpPB",
     "tw:GftueX7aQAA6ibf",
-    "db:47d8da5a58b4c94a3e2bb7b55e28c82f"
+    "db:47d8da5a58b4c94a3e2bb7b55e28c82f",
+    "db:609d4b62d05079d0a24e3f5a7837bc71"
   ],
   "cosplay": [
     "szUB8tn.jpg",
@@ -336,7 +402,8 @@
     "tw:GPy3ekib0AA20Pm",
     "tw:GHUWPZuboAAFcaz",
     "tw:GdNnAURbgAASBrb",
-    "tw:GeOPwCxakAApL-r"
+    "tw:GeOPwCxakAApL-r",
+    "tw:GaTnmzibUAUTyAy"
   ],
   "cat": [
     "tw:GbXWt8raMAAQIo9",
@@ -376,8 +443,17 @@
     "tw:GO56QhrbAAAK-cN",
     "db:790de123539f1fb0e4e41b8c258fe667",
     "db:bb2a2f0db320d5bc56275a8394b24e4f",
-    "db:4237fe147088e358e6b6b4558295f245",
-    "tw:GgdKo-BagAAVJVG"
+    [
+      "db:4237fe147088e358e6b6b4558295f245",
+      "db:2de7ec03da58990f963dc5982ffb4b08"
+    ],
+    "tw:GgdKo-BagAAVJVG",
+    "tw:GTFaUiUasAEnG3X",
+    {
+      "src": "db:d4d93fca912cd8fc64494851c8789c1e",
+      "title": "",
+      "msg": "Top right."
+    }
   ],
   "birthday": [
     "tw:GcASVzka0AAhfG7",
