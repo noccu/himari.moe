@@ -19,8 +19,7 @@
     },
     {
       "src": "KQG25gr.jpg",
-      "title": "Color ref for one of the swimsuits",
-      "msg": ""
+      "title": "Colour ref for one of the swimsuits"
     },
     {
       "src": "Pdj25z3.jpg",
@@ -79,6 +78,11 @@
       "src": "b2cwpGb.jpg",
       "title": "",
       "msg": "She wears a lot of different things, feel free to be creative!"
+    },
+    {
+      "src": "PEqmV05.jpg",
+      "title": "Colour ref for a dress",
+      "msg": "Her first non-traditional outfit outside school uniforms."
     }
   ],
   "general": [
@@ -166,7 +170,12 @@
       "tw:GenVKZEa0AEpuYV",
       "tw:GcwzwKZaoAAL41y"
     ],
-    "tw:Gfp8Wnca0AABQBz"
+    "tw:Gfp8Wnca0AABQBz",
+    "tw:GhkObRZa0AAaSzb",
+    "tw:Gec9_PwbMAAJqg3",
+    "tw:Gf2NotZaUAAwLcW",
+    "tw:GY5wlGYasAA4S85",
+    "tw:GgHK88WaIAAF9GC"
   ],
   "scenic": [
     "GubCi11.jpg",
@@ -280,7 +289,9 @@
       "db:a2de2472ea54688e3da783aa82ae3ca2",
       "db:429a7c8cb4874a12454ce5c1eee00b2b"
     ],
-    "db:d0788988fd0dfbde87dc8decc2c92d68"
+    "db:d0788988fd0dfbde87dc8decc2c92d68",
+    "tw:GR0yIW8a4AAQOvI",
+    "tw:Gh4u2lma0AAiK6J"
   ],
   "ecchi": [
     "NdMZ4rB.jpeg",
@@ -327,7 +338,13 @@
     "https://cdn.donmai.us/original/6c/04/6c040e9dbd01ebb4dd3037b49aa61f0a.jpg",
     "db:dc6a7d7b80202b289d55ebb85fa0d298",
     "https://cdn.donmai.us/original/c3/71/c371a1957bf13b30426aeb6cc77c0c56.jpg",
-    "db:7716b8b3c2c5b11d2a28816bb9d5f7fa"
+    "db:7716b8b3c2c5b11d2a28816bb9d5f7fa",
+    "tw:GUe1di1X0AAQv5n",
+    {
+      "src": "tw:Gdizi64boAA5qHZ",
+      "title": "",
+      "msg": "Top left."
+    }
   ],
   "halloween (ecchi)": [
     {
@@ -385,7 +402,8 @@
     "tw:GfUY0C4aIAAhpPB",
     "tw:GftueX7aQAA6ibf",
     "db:47d8da5a58b4c94a3e2bb7b55e28c82f",
-    "db:609d4b62d05079d0a24e3f5a7837bc71"
+    "db:609d4b62d05079d0a24e3f5a7837bc71",
+    "XxqJDPC.jpg"
   ],
   "cosplay": [
     "szUB8tn.jpg",
@@ -409,7 +427,14 @@
     "tw:GHUWPZuboAAFcaz",
     "tw:GdNnAURbgAASBrb",
     "tw:GeOPwCxakAApL-r",
-    "tw:GaTnmzibUAUTyAy"
+    "tw:GaTnmzibUAUTyAy",
+    [
+      "etN5WfE.jpg",
+      "numqKvN.jpg",
+      "LGRT7nc.jpg"
+    ],
+    "tw:GgAVX3lakAAjb2U",
+    "tw:GRbP3fMb0AE8ByT"
   ],
   "cat": [
     "tw:GbXWt8raMAAQIo9",
@@ -421,7 +446,13 @@
     "tw:GaayELTbUAAQ0OL",
     "tw:GZvOfK8bMAA8C-r",
     "tw:GZITAVcagAAGhS6",
-    "tw:GX6WgRebEAAupTI"
+    "tw:GX6WgRebEAAupTI",
+    "RDkQvQU.gif",
+    "OiUjp7E.gif",
+    "VR7PA1H.gif",
+    "twN1bLR.gif",
+    "tQQdCjd.gif",
+    "tw:Gec9_PwbMAAJqg3"
   ],
   "casual": [
     "tw:GYbzDK_a4AAQRkL",
@@ -465,7 +496,10 @@
       "db:a2de2472ea54688e3da783aa82ae3ca2",
       "db:429a7c8cb4874a12454ce5c1eee00b2b"
     ],
-    "tw:GhcM6OtacAAvNqk"
+    "tw:GhcM6OtacAAvNqk",
+    "0PK48h1.gif",
+    "tw:GRPzX19bsAADENi",
+    "tw:Ggn_5UfasAAiuwY"
   ],
   "birthday": [
     "tw:GcASVzka0AAhfG7",
@@ -474,21 +508,33 @@
   "maids": [
     "tw:GcLLGUwasAA1Icw",
     "tw:GddfSA3aUAAlJ6l.jpg",
-    "db:582d8b6084522c7af85c528212d2b34f"
+    "db:582d8b6084522c7af85c528212d2b34f",
+    "PQplLMv.gif"
   ],
   "white shirt": [
     {
       "src": "db:7cb4ad33c3b85c8f893cd9dd8e8b72f3",
-      "msg": "The (bra) see through from stretch (not wet) is important! The collar is a fitting detail actually but not required. A cropped shot is fine if it works."
+      "msg": "The (bra) see through from stretch (not wet) is important! Collar is ok to include but not needed. A cropped shot should be fine as long as it works to show it's her."
     },
     "9Ch7BLu.jpeg",
     "EHvWkkz.jpeg",
     "db:b45ad0760ac8feb2fa67e818376b9041",
     "db:01cfbffc50777c0778b7cbd22b36f82a",
-    "lO1R8iC.gif"
+    "lO1R8iC.gif",
+    "tw:GfD8HI5asAAvCtC",
+    {
+      "src": "tw:GfJs2dHa4AAKcFw",
+      "msg": "Ignore condoms…"
+    },
+    {
+      "src": "tw:Ghfw19Ib0AAev0X",
+      "title": "",
+      "msg": "Top right."
+    }
   ],
   "christmas": [
-    "tw:Gfj51b0aIAAk2Ab"
+    "tw:Gfj51b0aIAAk2Ab",
+    "tw:GfTSYPRbIAAEPUl"
   ],
   "focus shots": [
     "db:48a5a6cde8680d2031a033308a1c0237",
@@ -497,6 +543,14 @@
     "db:5b13c962790be30d4297e92526404ac0",
     "tw:FzdF_yvacAETv7E",
     "tw:FiysYpTakAEheZB",
-    "tw:GfvBtuaa4AIB8mx"
+    "tw:GfvBtuaa4AIB8mx",
+    {
+      "src": "rnM0gwy.jpg",
+      "title": "",
+      "msg": "Could zoom out a bit further if you're not confident in likeness."
+    }
+  ],
+  "dynamic shots": [
+    "e4BatEq.jpg"
   ]
 }
