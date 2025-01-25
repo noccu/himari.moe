@@ -56,6 +56,10 @@
     mix-blend-mode: luminosity;
 }
 
+.card-img-top {
+    object-fit: contain;
+}
+
 #info {
     margin-bottom: 1em;
     font-size: smaller;

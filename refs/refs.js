@@ -124,7 +124,11 @@ export function addImage(parsedImgData, idx) {
         newImages[0].classList.add("active")
         newImages[0].addEventListener(
             "load",
-            e => { e.target.parentElement.style.height = e.target.clientHeight + "px" },
+            e => {
+                for (let c of e.target.parentElement.children) {
+                    c.style.height = e.target.parentElement.clientHeight + "px"
+                }
+            },
             { once: true, passive:true }
         )
         IMAGE_LOAD_STATE.imgAdded(newImages[0])
