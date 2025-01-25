@@ -27,6 +27,11 @@
     display: none;
 }
 
+.card-img-container {
+    overflow: hidden;
+    position: relative;
+}
+
 .card-images {
     max-height: 120vh;
     overflow: hidden;
@@ -45,8 +50,10 @@
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
     height: auto;
-    width: 10%;
+    width: 6%;
     cursor: pointer;
+    background-color: var(--panel);
+    mix-blend-mode: luminosity;
 }
 
 #info {
