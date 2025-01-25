@@ -109,7 +109,7 @@ function createTitleEditModal() {
 /** @param {PointerEvent} e */
 function select(e) {
     if (!ACTIVE) return
-    if (e.target.nodeName == "IMG" && e.target.parentElement.classList.contains("card-images")) {
+    if (["IMG", "VIDEO"].includes(e.target.nodeName) && e.target.parentElement.classList.contains("card-images")) {
         var targets
         if (e.shiftKey && e.target.subIdx !== undefined) {
             targets = e.target.parentElement.children
@@ -128,6 +128,7 @@ function select(e) {
             }
         }
         e.stopPropagation()
+        e.preventDefault()
     }
 }
 
@@ -274,7 +275,7 @@ function editImgTitle(title, msg) {
 
 function clearSelection() {
     SELECTION.clear()
-    for (let card of document.querySelectorAll("img.editing")) {
+    for (let card of document.querySelectorAll(".card-img-top.editing")) {
         card.classList.remove("editing")
     }
 }

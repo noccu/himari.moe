@@ -16,7 +16,8 @@ const MIME_TYPE = {
     ".gif": "image/gif",
     ".apng": "image/apng",
     ".webp": "image/webp",
-    ".avif": "image/avif"
+    ".avif": "image/avif",
+    ".mp4": "video/mp4"
 }
 const MIME_TYPE_REV = Object.fromEntries(Object.entries(MIME_TYPE).map(([k, v]) => [v, k]))
 const CACHE = {}
@@ -46,7 +47,7 @@ async function downloadExternal(href, albName) {
         return
     }
     const type = resp.headers.get("Content-Type")
-    if (!type.startsWith("image")) {
+    if (!type.startsWith("image") && !type.startsWith("video")) {
         console.warn(`Tried to archive ${type}: ${href}`)
         return
     }

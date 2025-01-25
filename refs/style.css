@@ -35,6 +35,7 @@
 .card-images {
     max-height: 120vh;
     overflow: hidden;
+    line-height: 0;
 }
 
 .card-images.multi {
@@ -43,7 +44,8 @@
     flex-direction: column;
 }
 
-.card-images.multi>img:not(.active) {
+.card-images.multi>img:not(.active),
+.card-images.multi>video:not(.active) {
     display: none;
 }
 

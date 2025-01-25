@@ -105,16 +105,27 @@ export function parseImageData(imgData) {
     return {src, title, msg, isCaptioned, isCarousel}
 }
 
+function tryCastVideo(src, contentBase) {
+    if (src.endsWith(".mp4") || src.endsWith(".gifv")) {
+        const vid = document.createElement("video")
+        vid.className = contentBase.className
+        vid.controls = vid.muted = vid.loop = vid.playsinline = true
+        vid.preload = "metadata"
+        return vid
+    }
+}
+
 export function addImage(parsedImgData, idx) {
     let {src, title, msg, isCaptioned, isCarousel} = parsedImgData
     let imgCard = document.importNode(t_imgCard.content, true)
+    let content = imgCard.querySelector(".card-img-top")
     if (isCarousel) {
         imgCard.querySelector(".carousel-controls").classList.remove("hide")
         let imageList = imgCard.querySelector(".card-images")
-        let t_image = imgCard.querySelector(".card-img-top")
         let newImages = []
         for (let [i, imgSrc] of enumerate(src)) {
-            let newImage = t_image.cloneNode()
+            let vid = tryCastVideo(imgSrc, content)
+            let newImage = vid || content.cloneNode()
             newImage.src = imgSrc
             newImage.idx = idx
             newImage.subIdx = i
@@ -123,7 +134,7 @@ export function addImage(parsedImgData, idx) {
         imageList.classList.add("multi")
         newImages[0].classList.add("active")
         newImages[0].addEventListener(
-            "load",
+            newImages[0].nodeName == "VIDEO" ? "loadedmetadata" : "load",
             e => {
                 for (let c of e.target.parentElement.children) {
                     c.style.height = e.target.parentElement.clientHeight + "px"
@@ -136,10 +147,14 @@ export function addImage(parsedImgData, idx) {
         enableCarouselControls(imgCard.firstElementChild)
     }
     else {
-        let img = imgCard.querySelector("img")
-        img.src = src
-        img.idx = idx
-        IMAGE_LOAD_STATE.imgAdded(img)
+        let vid = tryCastVideo(src, content)
+        if (vid) {
+            content.replaceWith(vid)
+            content = vid
+        }
+        content.src = src
+        content.idx = idx
+        IMAGE_LOAD_STATE.imgAdded(content)
     }
     if (isCaptioned) {
         imgCard.querySelector(".card").classList.add("captioned")
