@@ -145,7 +145,7 @@
     },
     {
       "src": "tw:GMXBYYCagAA6dJt",
-      "msg": "With different animal ears or whatever else is fitting."
+      "msg": "Different animal ears would be fun as well, either works."
     },
     "tw:GdOZVEJbwAABASq",
     "tw:GdLdDRHa4AAW-On",
@@ -175,7 +175,15 @@
     "tw:Gec9_PwbMAAJqg3",
     "tw:Gf2NotZaUAAwLcW",
     "tw:GY5wlGYasAA4S85",
-    "tw:GgHK88WaIAAF9GC"
+    "tw:GgHK88WaIAAF9GC",
+    "tw:GjQ41zia0AAZmev",
+    [
+      "tw:Gck0sz9bYAAJOQO",
+      "tw:GdeHJf9bQAAfatD",
+      "tw:FkL0Ay3UEAEK_XZ"
+    ],
+    "tw:GjItjumaoAAsDLi",
+    []
   ],
   "scenic": [
     "GubCi11.jpg",
@@ -203,6 +211,7 @@
     "tw:GdmuOXQX0AALUHr",
     "tw:GdoKghQXYAAfR1n",
     "tw:GdiJOT4boAMzl6p",
+    "tw:GbskVK1awAErUNY",
     "tw:GbskVK1awAErUNY"
   ],
   "spring": [
@@ -251,10 +260,9 @@
     "qPp2CVP.jpeg",
     "iJgCm83.jpeg",
     "24lQQU6.jpeg",
-    "b5RALoF.jpeg",
     {
       "src": "tw:Gb15o1XbEAAkhsK",
-      "msg": "Good size & shape."
+      "msg": "Good size & shape. Really what it's here for."
     },
     "tw:Gb0F22HbsAASSoc",
     "2hbavDX.jpeg",
@@ -264,7 +272,6 @@
     "tw:F8uh617boAABmmY",
     "tw:Gb67nn8a8AATewL",
     "tw:GYOZNxRakAArAtz",
-    "db:3b3a36bae24bad7eb42168a1c1a06f5d",
     {
       "src": [
         "db:92a0f9104047117f9888342b42dca304",
@@ -272,7 +279,8 @@
         "tw:Duk72eRVYAAJuoD",
         "db:eaf106cc072109caf3459de023d3616e",
         "db:6b59122165f9c6bfb53094c9ced7b142",
-        "db:349047579d5f448aa6d1b3f60d191e1d"
+        "db:349047579d5f448aa6d1b3f60d191e1d",
+        "tw:Gh4u2lma0AAiK6J"
       ],
       "title": "Popped button"
     },
@@ -283,15 +291,21 @@
     "db:c2c76007b288a09533e376cb3051d36a",
     "db:27aed651e030355b58e86816b357fc6e",
     "db:83d192ecb221d101e7bc5dbedd79fb44",
-    "db:7e6ef3d530b525f08985d3fc464a8823",
-    [
-      "db:253904b11f22b12e10aa797b9a43d05f",
-      "db:a2de2472ea54688e3da783aa82ae3ca2",
-      "db:429a7c8cb4874a12454ce5c1eee00b2b"
-    ],
+    {
+      "src": [
+        "db:253904b11f22b12e10aa797b9a43d05f",
+        "db:a2de2472ea54688e3da783aa82ae3ca2",
+        "db:429a7c8cb4874a12454ce5c1eee00b2b"
+      ],
+      "msg": "No uhh, bumps though, please…"
+    },
     "db:d0788988fd0dfbde87dc8decc2c92d68",
-    "tw:GR0yIW8a4AAQOvI",
-    "tw:Gh4u2lma0AAiK6J"
+    [
+      "tw:GR0yIW8a4AAQOvI",
+      "db:3b3a36bae24bad7eb42168a1c1a06f5d"
+    ],
+    "tw:FgrX1UYakAAIljr",
+    "tw:GiS38puakAAJ6L_"
   ],
   "ecchi": [
     "NdMZ4rB.jpeg",
@@ -403,7 +417,9 @@
     "tw:GftueX7aQAA6ibf",
     "db:47d8da5a58b4c94a3e2bb7b55e28c82f",
     "db:609d4b62d05079d0a24e3f5a7837bc71",
-    "XxqJDPC.jpg"
+    "XxqJDPC.jpg",
+    [],
+    []
   ],
   "cosplay": [
     "szUB8tn.jpg",
@@ -499,7 +515,14 @@
     "tw:GhcM6OtacAAvNqk",
     "0PK48h1.gif",
     "tw:GRPzX19bsAADENi",
-    "tw:Ggn_5UfasAAiuwY"
+    "tw:Ggn_5UfasAAiuwY",
+    "tw:GTCqSUtXIAAw7bq",
+    "tw:GhqYY-Sb0AAp2Ji",
+    "tw:GjQ41zia0AAZmev",
+    "tw:GjRuPw8bgAAiGO4",
+    "db:059875f13869851e552820b59415a097",
+    "tw:GiS38puakAAJ6L_",
+    "tw:Gh3h6iOawAANlK0"
   ],
   "birthday": [
     "tw:GcASVzka0AAhfG7",
@@ -548,9 +571,25 @@
       "src": "rnM0gwy.jpg",
       "title": "",
       "msg": "Could zoom out a bit further if you're not confident in likeness."
-    }
+    },
+    "tw:GiHD1CzboAAUGey"
   ],
   "dynamic shots": [
     "e4BatEq.jpg"
+  ],
+  "animated": [
+    {
+      "src": "88cseQm.mp4",
+      "msg": "Feel free to do this one as a small collage. Doesn't have to be animated but it sure would be nice to see if you feel like it."
+    },
+    {
+      "src": "kOiG3c1.mp4",
+      "msg": "Also free to do as collage. Preference goes to Shizuru's (brown hair) if only doing one."
+    },
+    {
+      "src": "https://video.twimg.com/tweet_video/GjUOZiZbcAA72m4.mp4",
+      "title": "",
+      "msg": "Just any simple loop of her listening to music, really."
+    }
   ]
 }
