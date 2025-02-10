@@ -376,3 +376,4 @@ function toggleDevMode() {
 document.body.append(MODAL_COPYMOVE, MODAL_TITLE_EDIT)
 document.addEventListener("click", select, { capture: true })
 document.addEventListener("keyup", handleKeys, { passive: true })
+if (PARAMS.has("a")) toggleEditMode()
