@@ -210,7 +210,8 @@
     "tw:GkEEoeZa4AA0dPG",
     "tw:GjKWnJbbIAMW7H0",
     "tw:GkE0SgKaYAAOW8X",
-    "tw:GjGknHOaEAAUzEL"
+    "tw:GjGknHOaEAAUzEL",
+    "tw:GmpejRCaIAAqhrr"
   ],
   "scenic": [
     "GubCi11.jpg",
@@ -316,7 +317,6 @@
     "DJx8Hd5.jpg",
     "tw:GSxRH8gaYAAVJN8",
     "tw:GVRCWXdbYAEWQ0m",
-    "tw:GcONumZWIAA-Fft",
     {
       "src": "db:f41065cefaae5ba824156c5b157b0e87",
       "msg": "Suggest to change outfit, but a nice summery shot of this type would be nice."
@@ -334,7 +334,12 @@
       "tw:Gk9KreLbkAA8xyS",
       "tw:Gk9Kp3kbQAIhJHO"
     ],
-    "tw:Gnr1I6dakAAgfa8"
+    "tw:Gnr1I6dakAAgfa8",
+    "db:b0d83ce8bc629d2856946f3d890ce4ae",
+    "tw:Goe6I_UW0AAFRWD",
+    "db:7849c62c98095f5c2752aa8e0daa69af",
+    "db:f853a1dc3f7752a4f84fb58d2cb43ea8",
+    "db:4e5c24a004bd37cef067d87c6d5cb6c4"
   ],
   "boobs": [
     "sMctd0l.jpg",
@@ -393,7 +398,9 @@
       "title": "",
       "msg": "Main image, center top. (and m-maybe top right...)"
     },
-    "db:54fd4fbead2b3b64680bd3f0efd66e89"
+    "db:54fd4fbead2b3b64680bd3f0efd66e89",
+    "tw:Goe6I_UW0AAFRWD",
+    "tw:GmzTgohbMAElj8z"
   ],
   "ecchi": [
     "NdMZ4rB.jpeg",
@@ -478,7 +485,8 @@
     "tw:GNIrOJRacAAHP5C",
     "tw:GnPBmV-XoAAh62X",
     "db:2a5479fb7434ee0e9ebb517aaab1e514",
-    "tw:Gk8AtnnawAAGVUd"
+    "tw:Gk8AtnnawAAGVUd",
+    "tw:GoaLqybW8AAQ-ZZ"
   ],
   "fashion": [
     "R5EAksl.jpg",
@@ -540,7 +548,8 @@
       "src": "tw:Giq8RmUbYAcgmMv",
       "msg": "But no/different shoes, and probably shorts or pleated skirt. Keep it more casual."
     },
-    "https://staticx.antenna.jp/article_images/18694521_full_743a2f97-94d9-41ea-bd64-419450bd6f80_.jpeg"
+    "https://staticx.antenna.jp/article_images/18694521_full_743a2f97-94d9-41ea-bd64-419450bd6f80_.jpeg",
+    "tw:GobzHJeXMAAbspf"
   ],
   "sporty": [
     "Wo3vq77.jpeg",
@@ -591,7 +600,17 @@
     "tw:Gec9_PwbMAAJqg3",
     "tw:GkWzfztaoAEdqcz",
     "tw:GkUD1rDaQAArw9B",
-    "db:e2bea936645de07c555ec94a045eefdc"
+    "db:e2bea936645de07c555ec94a045eefdc",
+    {
+      "src": [
+        "tw:GofYVPZXkAAZXxD",
+        "tw:GofYWHXWkAANKE8",
+        "tw:GofYXWuWAAES8MA",
+        "tw:GofYXpHWgAAatBu"
+      ],
+      "title": "Catrage",
+      "msg": "Anything similar is good."
+    }
   ],
   "casual": [
     "tw:GYbzDK_a4AAQRkL",
@@ -712,13 +731,16 @@
     "db:e942ab662a8e94fdccd90ba6063df59d",
     "tw:GfFQ7vvaMAACJZJ",
     "db:4045e24e3061bfd57bdbe336c7ebc4b5",
-    "tw:GoOHxVrbYAAoncH"
+    "tw:GoOHxVrbYAAoncH",
+    "tw:GoY3WUYW0AAB9Hl",
+    "tw:GnoZiTra8AANMUv"
   ],
   "attitude": [
     "db:a7ec29972f64463534a7efbbb7963300",
     "db:b3cdc174ece01fa51bd38e094855b3b4",
     "tw:GLBRtxmbMAA77tz",
-    "tw:GjvHsXSbEAAWZqF"
+    "tw:GjvHsXSbEAAWZqF",
+    "tw:GokWTsUW0AA_HR8"
   ],
   "focus shots": [
     "db:48a5a6cde8680d2031a033308a1c0237",
@@ -805,7 +827,7 @@
   ],
   "christmas": [
     "tw:Gfj51b0aIAAk2Ab",
-    "tw:GfTSYPRbIAAEPUl"
+    "SjkORXI.png"
   ],
   "halloween (ecchi)": [
     {
