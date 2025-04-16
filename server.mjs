@@ -106,7 +106,7 @@ function readData(request) {
  */
 function handleRequest(request, response) {
     console.log(`${request.method} ${request.url || "/"}`)
-    const fullUrl = new URL(`http://localhost:8000${request.url}`)
+    const fullUrl = new URL(`http://localhost:8800${request.url}`)
     let relPath = fullUrl.pathname.slice(1)
     if (request.method == "PUT") {
         readData(request).then(data => {
@@ -188,6 +188,6 @@ function handleRequest(request, response) {
 }
 
 const server = http.createServer(handleRequest)
-server.listen(8000, () => {
-    console.log("Server listening on port 8000")
+server.listen(8800, () => {
+    console.log("Server listening on port 8800")
 })
