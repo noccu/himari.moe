@@ -17,7 +17,7 @@
     "db:87dd2dd648be095c02af521ab159115a",
     "db:32f7d8f028b80400b1a1063163c87cc7"
   ],
-  "pantsu": [
+  "ptsu": [
     "db:1974f3aa780ba0e4788b04479bfffa10",
     "LtwJuxs.jpeg",
     "https://cdn.donmai.us/original/6c/04/6c040e9dbd01ebb4dd3037b49aa61f0a.jpg",
@@ -52,5 +52,10 @@
     "db:3b7522f89c4b1b9f75c3567dd25aac2d",
     "vTcyBeQ.jpeg",
     "tw:Gh-kgO6aUAAN5Gv"
+  ],
+  "tg": [
+    "db:6f763ee352989858e4c1668eedbb0cd6",
+    "db:d52f00cb1e518ed9b3a1d00a9b68cc50",
+    "db:a00a59e932ec603adbc61b362a3de38b"
   ]
 }
