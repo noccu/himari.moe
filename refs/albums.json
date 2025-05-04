@@ -246,7 +246,9 @@
       "src": "https://cdn.donmai.us/original/bd/d2/bdd2b1adaef4703764f71b86c9d05c84.jpg",
       "title": "",
       "msg": "But solo, with the kimono stuck between her legs instead of held down."
-    }
+    },
+    "tw:GqBqlXaasAArCy1",
+    "tw:GZINlnibYAAV4F0"
   ],
   "scenic": [
     "GubCi11.jpg",
@@ -483,7 +485,7 @@
     "tw:GfjLSpKa0AEDkkL",
     "tw:GdYqhZxaAAAsPSa",
     "tw:GbSza_RbMAEf0L4",
-    "tw:GbSza_RbMAEf0L4"
+    "db:cc0e85d9fb6f0f949678543e4b7ff771"
   ],
   "ecchi": [
     "NdMZ4rB.jpeg",
@@ -583,7 +585,8 @@
     "tw:Gj-pd_Fa4AAP0Wp",
     "tw:GpxoeU1agAADT7H",
     "tw:GdYqhZxaAAAsPSa",
-    "db:951d9d0c884057db6bb6a939b57c744f"
+    "db:951d9d0c884057db6bb6a939b57c744f",
+    "tw:GqAqRZKbAAAD2bR"
   ],
   "fashion": [
     "R5EAksl.jpg",
@@ -660,7 +663,10 @@
     "db:74620a19dae9def339890a85175f792e",
     "db:0fe266170aac70639138290403533d29",
     "db:0f38ad07b6eb9aac08edcb5972229b42",
-    "db:ba0619f7f3be916e5eb30a6a2f56c402"
+    "db:ba0619f7f3be916e5eb30a6a2f56c402",
+    "tw:Gp5hsv2WgAATtvW",
+    "https://cdn.donmai.us/original/dd/33/dd3311436dcbc166d04953304ae8c720.png",
+    "tw:GqFwox0aAAASJIj"
   ],
   "sporty": [
     "Wo3vq77.jpeg",
@@ -838,7 +844,9 @@
     "tw:Gm0n4PHbgAAyO6B",
     "tw:GfjLSpKa0AEDkkL",
     "db:c40562f74008f0474a99fe9161ee9c39",
-    "db:821dc42c9aea50ee4f9b6fc345ec4aa9"
+    "db:821dc42c9aea50ee4f9b6fc345ec4aa9",
+    "tw:Gp2nYXRbsAA2Pg7",
+    "tw:GVhb6BuXYAAH7Rt"
   ],
   "birthday (21 december)": [
     "tw:GcASVzka0AAhfG7",
@@ -942,30 +950,80 @@
   ],
   "dynamic shots": [
     "e4BatEq.jpg",
-    "https://cdn.donmai.us/original/98/a7/98a74d5c9f4643daecccb2ae828e2a79.jpg"
+    "https://cdn.donmai.us/original/98/a7/98a74d5c9f4643daecccb2ae828e2a79.jpg",
+    "tw:Gp2nYXRbsAA2Pg7"
   ],
   "cosplay": [
-    "szUB8tn.jpg",
-    "CZQHjaE.jpg",
-    "96h18aw.jpg",
-    [
-      "qOdhKhm.jpeg",
-      "kGmuOeA.jpeg"
-    ],
-    "3b8XEvW.jpeg",
-    "gmwXrTx.png",
-    "https://arknights.wiki.gg/images/f/f2/Ho%27olheyak_Skin_1.png",
-    "grrDYIG.jpeg",
+    {
+      "src": "szUB8tn.jpg",
+      "title": "Ichika, Blue Archive",
+      "msg": ""
+    },
+    {
+      "src": "CZQHjaE.jpg",
+      "title": "Kazusa, Blue Archive",
+      "msg": ""
+    },
+    {
+      "src": "96h18aw.jpg",
+      "title": "Beido",
+      "msg": ""
+    },
+    {
+      "src": [
+        "qOdhKhm.jpeg",
+        "kGmuOeA.jpeg"
+      ],
+      "title": "Hiiro (Ephemeral Petals Over Ashes), Alchemy Stars"
+    },
+    {
+      "src": "3b8XEvW.jpeg",
+      "title": "Burnice, Zenless Zone Zero",
+      "msg": ""
+    },
+    {
+      "src": "gmwXrTx.png",
+      "title": "Lin (swimsuit), Arknights",
+      "msg": ""
+    },
+    {
+      "src": "https://arknights.wiki.gg/images/f/f2/Ho%27olheyak_Skin_1.png",
+      "title": "Ho'olheyak (Carriage of the Winds of Time), Arknights",
+      "msg": ""
+    },
+    {
+      "src": "grrDYIG.jpeg",
+      "title": "Yukine Chris, Symphogear (Gothic dress, Donki collab)",
+      "msg": "https://www.donki.com/products/symphogear-xv/?pre=list"
+    },
     "db:42d6cc82396c03ad37cd7cc1097cf8ee",
     [
       "https://cdn.donmai.us/original/5d/b7/5db7da53c52da1cc556ecdef07f64487.jpg",
       "db:6a8ec1ff59fd26ad6874687833d9f122"
     ],
-    [
-      "tw:GmlcZ8haEAAB-wi",
-      "tw:GmlcZ8haEAM66jW"
-    ],
-    "https://gbf.wiki/images/thumb/1/1c/Jobs_1138x1138_220301_1.png/1024px-Jobs_1138x1138_220301_1.png"
+    {
+      "src": [
+        "tw:GmlcZ8haEAAB-wi",
+        "tw:GmlcZ8haEAM66jW"
+      ],
+      "title": "Sparkle, Honkai Star Rail",
+      "msg": ""
+    },
+    {
+      "src": "https://gbf.wiki/images/thumb/1/1c/Jobs_1138x1138_220301_1.png/1024px-Jobs_1138x1138_220301_1.png",
+      "title": "Kengo (class), Granblue Fantasy",
+      "msg": ""
+    },
+    {
+      "src": "VsASg1k.png",
+      "title": "Natsume Maya, Tenjou Tenge",
+      "msg": ""
+    },
+    {
+      "src": "https://static.wikia.nocookie.net/mahjongsoul/images/b/b2/0_%E4%B8%80%E5%A7%AC.png",
+      "title": "Ichihime, Mahjong Soul",
+      "msg": ""
+    }
   ],
   "animated": [
     {
