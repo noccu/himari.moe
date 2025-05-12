@@ -248,7 +248,8 @@
       "msg": "But solo, with the kimono stuck between her legs instead of held down."
     },
     "tw:GqBqlXaasAArCy1",
-    "tw:GZINlnibYAAV4F0"
+    "tw:GZINlnibYAAV4F0",
+    "tw:Gp8v26gawAUdi5Z"
   ],
   "scenic": [
     "GubCi11.jpg",
@@ -326,7 +327,8 @@
     "tw:GTFWPKbaMAAMzyE",
     "tw:GAlUKrlagAAw5_M",
     "2U4O4Xx.jpeg",
-    "tw:GpxvN8CaYAAamQF"
+    "tw:GpxvN8CaYAAamQF",
+    "tw:GqrC8dsbsAAh28W"
   ],
   "spring": [
     "q2pIqNI.jpeg",
@@ -396,7 +398,8 @@
     "db:8b3774899c36e885f91382901d67dbb6",
     "tw:GphZepgbEAE8m8_",
     "tw:GnnwR_ebgAARSb6",
-    "tw:GpxvN8CaYAAamQF"
+    "tw:GpxvN8CaYAAamQF",
+    "tw:GR7KqdGbMAA3N5m"
   ],
   "winter": [
     "db:74620a19dae9def339890a85175f792e",
@@ -485,7 +488,8 @@
     "tw:GfjLSpKa0AEDkkL",
     "tw:GdYqhZxaAAAsPSa",
     "tw:GbSza_RbMAEf0L4",
-    "db:cc0e85d9fb6f0f949678543e4b7ff771"
+    "db:cc0e85d9fb6f0f949678543e4b7ff771",
+    "tw:GqgQrFBbcAIG6xe"
   ],
   "ecchi": [
     "NdMZ4rB.jpeg",
@@ -746,7 +750,11 @@
       "title": "Catrage",
       "msg": "Anything similar is good."
     },
-    "tw:GowLx_zaAAECDBO"
+    "u5qLaOk.jpeg",
+    {
+      "src": "tw:GqcdMZAWQAEleWm",
+      "msg": "It's also fine to do a more general stylistic \"my shadow is a cat\" thing, but this is a very cute and silly rendition of it."
+    }
   ],
   "casual": [
     "tw:GYbzDK_a4AAQRkL",
@@ -846,7 +854,18 @@
     "db:c40562f74008f0474a99fe9161ee9c39",
     "db:821dc42c9aea50ee4f9b6fc345ec4aa9",
     "tw:Gp2nYXRbsAA2Pg7",
-    "tw:GVhb6BuXYAAH7Rt"
+    "tw:GVhb6BuXYAAH7Rt",
+    "https://cdn.donmai.us/original/e9/69/e969aa9285db411e9c7fc4718275302b.jpg",
+    "tw:Gp260rzbkAAy12Z",
+    "tw:GqgPG_TWQAA5wY0"
+  ],
+  "intimate": [
+    [
+      "tw:GqqduvVW8AADjJ1",
+      "tw:Gqqdvv0WgAATEqj",
+      "tw:GqqdwixbEAAhOHI",
+      "tw:GqqdzMlWYAAvm_f"
+    ]
   ],
   "birthday (21 december)": [
     "tw:GcASVzka0AAhfG7",
@@ -866,7 +885,16 @@
       "title": "",
       "msg": "Pref for Kazusa (#3)"
     },
-    "tw:Gpog7T0aUAAAMeq"
+    "tw:Gpog7T0aUAAAMeq",
+    "db:1ac28b58284122bdd1e03fd077ae03a4",
+    [
+      "db:5300c12195c6876c1b36bcf6687043c0",
+      "db:cb1aef18aca91906b13dd6137a6b2167",
+      "db:dd19f4b6c467884ee317599c7f30381a",
+      "db:9382e55207f023547d51c708f7a9d6c9"
+    ],
+    "tw:GqkGCinXUAAjzVF",
+    "db:ccf9fba307ee50eea2e1bd6a0933a567"
   ],
   "white shirt": [
     {
@@ -894,8 +922,8 @@
     "db:4045e24e3061bfd57bdbe336c7ebc4b5",
     "tw:GoOHxVrbYAAoncH",
     "tw:GoY3WUYW0AAB9Hl",
-    "tw:GnoZiTra8AANMUv",
-    "tw:GpZCkkca8AE4Y6Q"
+    "tw:GpZCkkca8AE4Y6Q",
+    "tw:Gqa-ujiXoAAc63y"
   ],
   "attitude": [
     "db:a7ec29972f64463534a7efbbb7963300",
@@ -951,7 +979,16 @@
   "dynamic shots": [
     "e4BatEq.jpg",
     "https://cdn.donmai.us/original/98/a7/98a74d5c9f4643daecccb2ae828e2a79.jpg",
-    "tw:Gp2nYXRbsAA2Pg7"
+    "tw:Gp2nYXRbsAA2Pg7",
+    [
+      "db:5300c12195c6876c1b36bcf6687043c0",
+      "db:cb1aef18aca91906b13dd6137a6b2167",
+      "db:dd19f4b6c467884ee317599c7f30381a",
+      "db:9382e55207f023547d51c708f7a9d6c9"
+    ]
+  ],
+  "school uniforms": [
+    "db:d2de2a2004d83ddfd5e5f2793afd7fe4"
   ],
   "cosplay": [
     {
@@ -1043,7 +1080,8 @@
       "src": "https://puu.sh/KsLcV/7316ba2c1f.mp4",
       "title": "",
       "msg": "Just any part of this is fine as an illust."
-    }
+    },
+    "https://nama-anaru.com/teaser_assets/img/gif/gif_1.gif"
   ],
   "valentine & anniv": [
     "db:17cf374fac0b3cfde0501d249b4c7b3a",
