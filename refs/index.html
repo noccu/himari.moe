@@ -48,7 +48,10 @@
             <div id="msg"></div>
             <a id="randomizer" class="hide" href="random">Randomize again!</a>
         </section>
-        <div id="gallery" class="card-columns"></div>
+        <!-- Firefox fix for multi-column containers with overflow -->
+        <div class="scroll-frame">
+            <div id="gallery" class="card-columns"></div>
+        </div>
         <div id="error-msg" class="hide p-1"></div>
     </main>
 </body>

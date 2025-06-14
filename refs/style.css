@@ -96,7 +96,7 @@ main#content {
     max-width: 100vw;
 }
 
-#gallery {
+.scroll-frame {
     overflow-y: auto;
 }
 
