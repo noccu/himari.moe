@@ -172,6 +172,8 @@ function handleKeys(e) {
             break
         case "D":
             toggleDevMode()
+        case "C":
+            createCollection()
         break
     }
 }
@@ -315,6 +317,23 @@ function remSelection() {
         console.log("Removed: ", removed)
     }
     clearSelection()
+}
+
+async function createCollection() {
+    const curCbData = await navigator.clipboard.readText()
+    var resultUrl, search
+    if (curCbData && curCbData.startsWith("https://himari.moe/refs?col=")) {
+        resultUrl = new URL(curCbData)
+        search = resultUrl.searchParams
+    }
+    else {
+        resultUrl = new URL("https://himari.moe/refs")
+        search = new URLSearchParams()
+    }
+    const colString = Array.from(SELECTION).map(e => e.idx).join(",")
+    search.append("col", `${CUR_ALBUM}:${colString}`)
+    resultUrl.search = decodeURIComponent(search.toString())
+    navigator.clipboard.writeText(resultUrl.toString())
 }
 
 function _jsonProc(k, v) {

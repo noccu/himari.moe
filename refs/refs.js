@@ -70,6 +70,9 @@ function handleRequest() {
     else if (params.has("all")) {
         getAlbums().then(showAll)
     }
+    else if (params.has("col")) {
+        parseCollection(params.getAll("col"))
+    }
 }
 
 function parseImageSource(imgSrc) {
@@ -196,6 +199,26 @@ async function parseAlbum(name) {
     document.getElementById("name").textContent = ` (${name})`
     parseImages(imgs)
     return IMAGE_LOAD_STATE.allLoaded
+}
+
+function colImgParser(album, imgId) {
+    let img = parseInt(imgId)
+    if (Number.isNaN(img)) return imgId
+    return album[img]
+}
+
+async function parseCollection(colList) {
+    const albums = await getAlbums()
+    const colImages = []
+    const albumNames = []
+    for (let set of colList) {
+        let [albName, images] = set.split(":")
+        albumNames.push(`<a href="?a=${albName}">${albName}</a>`)
+        images = images.split(",").map(e => colImgParser(albums[albName], e))
+        colImages.push(...images)
+    }
+    msg.innerHTML = `Images selected from albums: ${albumNames.join(", ")}`
+    parseImages(colImages)
 }
 
 function pickRandom() {
