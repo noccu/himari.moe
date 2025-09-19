@@ -26,7 +26,7 @@ class ImgLoadState {
         this.#expect = this.#done = 0
     }
     imgAdded(img) {
-        img.addEventListener("load", this, { once: true, passive: true })
+        img.addEventListener(img.nodeName == "VIDEO" ? "loadedmetadata" : "load", this, { once: true, passive: true })
         img.addEventListener("error", this, { once: true, passive: true })
         this.#expect += 1
     }
