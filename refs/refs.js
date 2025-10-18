@@ -109,7 +109,8 @@ export function parseImageData(imgData) {
 }
 
 function tryCastVideo(src, contentBase) {
-    if (src.endsWith(".mp4") || src.endsWith(".gifv")) {
+    var parsed_src = new URL(src)
+    if (parsed_src.pathname.endsWith(".mp4") || parsed_src.pathname.endsWith(".gifv")) {
         const vid = document.createElement("video")
         vid.className = contentBase.className
         vid.controls = vid.muted = vid.loop = vid.playsinline = true
