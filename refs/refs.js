@@ -8,6 +8,7 @@ const imgHosts = {
     "db": "https://cdn.donmai.us/sample/%1/%2/sample-$.jpg",
     "bs": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:$@jpeg"
 }
+const reqRef = ["cdn.donmai.us"]
 const gallery = document.getElementById("gallery")
 const t_imgCard = document.getElementById("t-img-card")
 const msg = document.getElementById("msg")
@@ -119,6 +120,11 @@ function tryCastVideo(src, contentBase) {
     }
 }
 
+function setReferrer(imgEle) {
+    const url = new URL(imgEle.src)
+    if (reqRef.includes(url.host)) imgEle.referrerPolicy = ""
+}
+
 export function addImage(parsedImgData, idx) {
     let {src, title, msg, isCaptioned, isCarousel} = parsedImgData
     let imgCard = document.importNode(t_imgCard.content, true)
@@ -133,6 +139,7 @@ export function addImage(parsedImgData, idx) {
             newImage.src = imgSrc
             newImage.idx = idx
             newImage.subIdx = i
+            setReferrer(newImage)
             newImages.push(newImage)
         }
         imageList.classList.add("multi")
@@ -158,6 +165,7 @@ export function addImage(parsedImgData, idx) {
         }
         content.src = src
         content.idx = idx
+        setReferrer(content)
         IMAGE_LOAD_STATE.imgAdded(content)
     }
     if (isCaptioned) {
