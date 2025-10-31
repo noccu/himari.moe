@@ -38,9 +38,13 @@ class ImgLoadState {
             this.#p.resolve(this.#done)
             this.reset()
         }
+        e.target.dispatchEvent(ev_media_load)
     }
 }
 const IMAGE_LOAD_STATE = new ImgLoadState()
+
+const ev_media_load = new Event("mediaload")
+const ev_height_reset = new Event("heightreset")
 
 function handleRequest() {
     let params = new URLSearchParams(document.location.search)
@@ -125,6 +129,13 @@ function setReferrer(imgEle) {
     if (reqRef.includes(url.host)) imgEle.referrerPolicy = ""
 }
 
+function resetHeight(e) {
+    for (const child of e.target.parentElement.children){
+        child.removeAttribute("height")
+    }
+    e.target.dispatchEvent(ev_height_reset)
+}
+
 export function addImage(parsedImgData, idx) {
     let {src, title, msg, isCaptioned, isCarousel} = parsedImgData
     let imgCard = document.importNode(t_imgCard.content, true)
@@ -144,8 +155,9 @@ export function addImage(parsedImgData, idx) {
         }
         imageList.classList.add("multi")
         newImages[0].classList.add("active")
+        newImages[0].addEventListener("mediaload", resetHeight)
         newImages[0].addEventListener(
-            newImages[0].nodeName == "VIDEO" ? "loadedmetadata" : "load",
+            "heightreset",
             e => {
                 for (let c of e.target.parentElement.children) {
                     c.style.height = e.target.parentElement.clientHeight + "px"
@@ -166,6 +178,7 @@ export function addImage(parsedImgData, idx) {
         content.src = src
         content.idx = idx
         setReferrer(content)
+        content.addEventListener("mediaload", resetHeight)
         IMAGE_LOAD_STATE.imgAdded(content)
     }
     if (isCaptioned) {
@@ -173,7 +186,7 @@ export function addImage(parsedImgData, idx) {
         imgCard.querySelector(".card-title").innerText = title || ""
         imgCard.querySelector(".card-text").innerText = msg || ""
     }
-    const newNode = imgCard.firstElementChild
+    const newNode = imgCard.firstElementChild;
     gallery.appendChild(imgCard)
     return newNode
 }
