@@ -349,7 +349,7 @@ function save() {
     fetch(`/refs/albums${PARAMS.has("s") ? "_special" : ""}.json`, {
         method: "PUT",
         body: data
-    })
+    }).then(d => d.text())
 }
 
 async function archive() {
