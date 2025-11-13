@@ -6,6 +6,7 @@ const imgHosts = {
     "im": "https://i.imgur.com/$",
     "tw": "https://pbs.twimg.com/media/$?format=jpg",
     "db": "https://cdn.donmai.us/sample/%1/%2/sample-$.jpg",
+    "dbgif": "https://cdn.donmai.us/original/%1/%2/$.gif",
     "bs": "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:$@jpeg"
 }
 const reqRef = ["cdn.donmai.us"]
@@ -80,7 +81,7 @@ function handleRequest() {
     }
 }
 
-function parseImageSource(imgSrc) {
+export function parseImageSource(imgSrc) {
     if (imgSrc.startsWith("http")) {
         return imgSrc
     }
@@ -88,7 +89,7 @@ function parseImageSource(imgSrc) {
     const [host, id] = imgSrc.split(":")
     if (id) {
         imgSrc = imgHosts[host].replace("$", id)
-        if (host == "db") {
+        if (["db", "dbgif"].includes(host)) {
             imgSrc = imgSrc.replace(/%(\d)/g, (_, n) => {
                 switch (n) {
                     case "1": return id.substring(0, 2)
@@ -133,9 +134,13 @@ function tryCastVideo(src, contentBase) {
     }
 }
 
+export function requiresRef(href) {
+    const url = new URL(href)
+    return reqRef.includes(url.host)
+}
+
 function setReferrer(imgEle) {
-    const url = new URL(imgEle.src)
-    if (reqRef.includes(url.host)) imgEle.referrerPolicy = ""
+    if (requiresRef(imgEle.src)) imgEle.referrerPolicy = ""
 }
 
 function resetHeight(e) {

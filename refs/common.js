@@ -39,9 +39,9 @@ export async function isUrl404(href) {
     return res.status == 404
 }
 
-export function isImg404(href) {
+export function isImg404(href, useRef=false) {
     const img = new Image()
-    img.referrerPolicy = "no-referrer"
+    if (!useRef) img.referrerPolicy = "no-referrer"
     /** @type {Promise<boolean>} */
     const p = new Promise(r => {
         img.addEventListener("error", _ => r(true), { once: true })

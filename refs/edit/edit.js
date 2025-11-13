@@ -1,5 +1,5 @@
 import { getAlbums, PARAMS, isImg404 } from "../common.js"
-import { addImage as addImgNode, parseImageData, parseImageSource } from "../refs.js"
+import { addImage as addImgNode, parseImageData, parseImageSource, requiresRef } from "../refs.js"
 
 class Modal extends HTMLDialogElement {
     constructor() {
@@ -21,7 +21,7 @@ const MODAL_TITLE_EDIT = createTitleEditModal()
 const HOSTS = {
     "i.imgur.com": ["", /([^\/]+)$/],
     "pbs.twimg.com": ["tw:", /media\/([^?]+)\?/],
-    "cdn.donmai.us": ["db:", /([^\./\-_]+).{4,5}$/],
+    "cdn.donmai.us": ["db:", /([^\./\-_]+)\.(.{3,4})$/],
     "cdn.bsky.app": ["bs:", /did:plc:([^@]+)@/]
 }
 
@@ -31,8 +31,10 @@ function parseUrl(href) {
     /** @type {[string, RegExp]} */
     const data = HOSTS[(new URL(href)).host]
     if (!data) return href
-    const [prefix, re] = data
-    return `${prefix}${href.match(re)[1]}`
+    let [prefix, re] = data
+    const [_, id, ext] = href.match(re)
+    if (ext) prefix = `${prefix.slice(0,-1)}gif:`
+    return `${prefix}${id}`
 }
 
 function isCaptioned(o) {
@@ -187,7 +189,9 @@ async function addNewImage() {
     const newImgUrl = prompt(isMulti ? "Add image to carousel" : "Add image to album")
     if (!newImgUrl) return
     let storedImgUrl = parseUrl(newImgUrl)
-    if (await isImg404(parseImageSource(storedImgUrl))) storedImgUrl = newImgUrl
+    const reparsedURL = parseImageSource(storedImgUrl)
+    const notFound = await isImg404(reparsedURL, requiresRef(reparsedURL))
+    if (notFound) storedImgUrl = newImgUrl
 
     var imgList
     if (isMulti) {
