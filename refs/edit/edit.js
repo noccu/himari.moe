@@ -33,7 +33,7 @@ function parseUrl(href) {
     if (!data) return href
     let [prefix, re] = data
     const [_, id, ext] = href.match(re)
-    if (ext) prefix = `${prefix.slice(0,-1)}gif:`
+    if (ext == "gif") prefix = `${prefix.slice(0, -1)}gif:`
     return `${prefix}${id}`
 }
 
@@ -189,8 +189,8 @@ async function addNewImage() {
     const newImgUrl = prompt(isMulti ? "Add image to carousel" : "Add image to album")
     if (!newImgUrl) return
     let storedImgUrl = parseUrl(newImgUrl)
-    const reparsedURL = parseImageSource(storedImgUrl)
-    const notFound = await isImg404(reparsedURL, requiresRef(reparsedURL))
+    const reparsedUrl = parseImageSource(storedImgUrl)
+    const notFound = await isImg404(reparsedUrl, requiresRef(reparsedUrl))
     if (notFound) storedImgUrl = newImgUrl
 
     var imgList
