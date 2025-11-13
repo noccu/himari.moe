@@ -1,4 +1,5 @@
 export const PARAMS = new URLSearchParams(document.location.search)
+export const VIDEO_EXTS = ["mp4", "gifv", "webm"]
 
 export async function getAlbums(){
     return fetch(PARAMS.has("s") ? "/refs/albums_special.json" : "/refs/albums.json").then(x => x.json())
@@ -20,4 +21,15 @@ export function* enumerate(col) {
         yield [i, e]
         i++
     }
+}
+
+/** @returns {?string} */
+export function getExt(str) {
+    const m = str.match(/[\.=](.{1,4})$/)
+    if (!m) return m
+    return m[1].toLowerCase()
+}
+
+export function isVideo(href) {
+    return VIDEO_EXTS.includes(getExt(href))
 }

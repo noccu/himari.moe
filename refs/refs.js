@@ -1,4 +1,4 @@
-import {getAlbums, randomInt, enumerate} from "./common.js"
+import {getAlbums, randomInt, enumerate, isVideo} from "./common.js"
 import {enableCarouselControls} from "./carousel.js"
 import enableLightbox from "./lightbox.js"
 
@@ -115,7 +115,7 @@ export function parseImageData(imgData) {
 
 function tryCastVideo(src, contentBase) {
     var parsed_src = new URL(src)
-    if (parsed_src.pathname.endsWith(".mp4") || parsed_src.pathname.endsWith(".gifv")) {
+    if (isVideo(parsed_src.pathname)) {
         const vid = document.createElement("video")
         vid.className = contentBase.className
         vid.controls = vid.muted = vid.loop = vid.playsinline = true
