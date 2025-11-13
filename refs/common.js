@@ -33,3 +33,20 @@ export function getExt(str) {
 export function isVideo(href) {
     return VIDEO_EXTS.includes(getExt(href))
 }
+
+export async function isUrl404(href) {
+    const res = await fetch(href, { method: "HEAD" })
+    return res.status == 404
+}
+
+export function isImg404(href) {
+    const img = new Image()
+    img.referrerPolicy = "no-referrer"
+    /** @type {Promise<boolean>} */
+    const p = new Promise(r => {
+        img.addEventListener("error", _ => r(true), { once: true })
+        img.addEventListener(isVideo(href) ? "loadedmetadata" : "load", _ => r(false), { once: true })
+    })
+    img.src = href
+    return p
+}

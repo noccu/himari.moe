@@ -1,5 +1,5 @@
-import { getAlbums, PARAMS } from "../common.js"
-import { addImage as addImgNode, parseImageData } from "../refs.js"
+import { getAlbums, PARAMS, isImg404 } from "../common.js"
+import { addImage as addImgNode, parseImageData, parseImageSource } from "../refs.js"
 
 class Modal extends HTMLDialogElement {
     constructor() {
@@ -178,7 +178,7 @@ function handleKeys(e) {
     }
 }
 
-function addNewImage() {
+async function addNewImage() {
     if (SELECTION.size > 1) {
         alert("Multiple images selected. Clear selection to add to album or select 1 image/carousel.")
         return
@@ -186,9 +186,10 @@ function addNewImage() {
     const isMulti = SELECTION.size == 1
     const newImgUrl = prompt(isMulti ? "Add image to carousel" : "Add image to album")
     if (!newImgUrl) return
-    const parsedImgUrl = parseUrl(newImgUrl)
-    var imgList
+    let storedImgUrl = parseUrl(newImgUrl)
+    if (await isImg404(parseImageSource(storedImgUrl))) storedImgUrl = newImgUrl
 
+    var imgList
     if (isMulti) {
         for (let ele of SELECTION) {
             let imgData = ALBUMS[CUR_ALBUM][ele.idx]
@@ -199,17 +200,17 @@ function addNewImage() {
                 if (isCaptioned(imgData)) imgData.src = imgList
                 else ALBUMS[CUR_ALBUM][ele.idx] = imgData = imgList
             }
-            imgList.push(parsedImgUrl)
+            imgList.push(storedImgUrl)
             ele = replaceCard(ele, imgData)
         }
         clearSelection()
     }
     else {
         imgList = ALBUMS[CUR_ALBUM]
-        imgList.push(parsedImgUrl)
-        addImgNode(parseImageData(parsedImgUrl), imgList.length - 1).scrollIntoView()
+        imgList.push(storedImgUrl)
+        addImgNode(parseImageData(storedImgUrl), imgList.length - 1).scrollIntoView()
     }
-    console.log(`Adding ${imgList.length - 1}: ${newImgUrl} to ${CUR_ALBUM} as ${parsedImgUrl}`)
+    console.log(`Adding ${imgList.length - 1}: ${newImgUrl} to ${CUR_ALBUM} as ${storedImgUrl}`)
     console.debug(ALBUMS[CUR_ALBUM])
 }
 
