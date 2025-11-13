@@ -81,14 +81,23 @@ function handleRequest() {
 }
 
 function parseImageSource(imgSrc) {
-    if (imgSrc[2] == ":") {
-        let [host, id] = imgSrc.split(":")
+    if (imgSrc.startsWith("http")) {
+        return imgSrc
+    }
+
+    const [host, id] = imgSrc.split(":")
+    if (id) {
         imgSrc = imgHosts[host].replace("$", id)
         if (host == "db") {
-            imgSrc = imgSrc.replace("%1", id.substring(0,2)).replace("%2", id.substring(2,4))
+            imgSrc = imgSrc.replace(/%(\d)/g, (_, n) => {
+                switch (n) {
+                    case "1": return id.substring(0, 2)
+                    case "2": return id.substring(2, 4)
+                }
+            })
         }
     }
-    else if (!imgSrc.startsWith("http")) {
+    else {
         imgSrc = imgHosts["im"].replace("$", imgSrc)
     }
     return imgSrc
