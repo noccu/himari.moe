@@ -174,9 +174,9 @@ function handleKeys(e) {
             break
         case "D":
             toggleDevMode()
+            break
         case "C":
             createCollection()
-        break
     }
 }
 
