@@ -1,5 +1,5 @@
-import { getAlbums, PARAMS, isImg404 } from "../common.js"
-import { addImage as addImgNode, parseImageData, parseImageSource, requiresRef } from "../refs.js"
+import {getAlbums, PARAMS, isImg404} from "../common.js"
+import {addImage as addImgNode, parseImageData, parseImageSource, requiresRef} from "../refs.js"
 
 class Modal extends HTMLDialogElement {
     constructor() {
@@ -7,9 +7,9 @@ class Modal extends HTMLDialogElement {
         this.label = document.createElement("p")
         this.append(this.label)
     }
-    setLabel(text) { this.label.textContent = text }
+    setLabel(text) {this.label.textContent = text}
 }
-customElements.define("modal-menu", Modal, { extends: "dialog" })
+customElements.define("modal-menu", Modal, {extends: "dialog"})
 
 const ALBUMS = await getAlbums()
 const CUR_ALBUM = new URLSearchParams(location.search).get("a")
@@ -258,7 +258,7 @@ function editImgTitle(title, msg) {
     for (let ele of SELECTION) {
         data = ALBUMS[CUR_ALBUM][ele.idx]
         if (!isCaptioned(data)) {
-            data = { src: data, title, msg }
+            data = {src: data, title, msg}
             ALBUMS[CUR_ALBUM][ele.idx] = data
             replaceCard(ele, data)
         }
@@ -361,7 +361,7 @@ async function archive() {
     const data = []
     const isSpecial = PARAMS.has("s")
     isSpecial ? PARAMS.delete("s") : PARAMS.set("s", "1")
-    var mergedAlbums =  await getAlbums()
+    var mergedAlbums = await getAlbums()
     isSpecial ? PARAMS.set("s", "1") : PARAMS.delete("s")
     Object.assign(mergedAlbums, ALBUMS)
 
@@ -369,7 +369,7 @@ async function archive() {
         for (let imgData of imageList) {
             if (!imgData) continue // Removals this session
             let parsedData = parseImageData(imgData)
-            if (parsedData.isCarousel){
+            if (parsedData.isCarousel) {
                 for (let href of parsedData.src) {
                     data.push({albName, src: href})
                 }
@@ -398,6 +398,6 @@ function toggleDevMode() {
 }
 
 document.body.append(MODAL_COPYMOVE, MODAL_TITLE_EDIT)
-document.addEventListener("click", select, { capture: true })
-document.addEventListener("keyup", handleKeys, { passive: true })
+document.addEventListener("click", select, {capture: true})
+document.addEventListener("keyup", handleKeys, {passive: true})
 if (PARAMS.has("a")) toggleEditMode()

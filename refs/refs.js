@@ -28,8 +28,8 @@ class ImgLoadState {
         this.#expect = this.#done = 0
     }
     imgAdded(img) {
-        img.addEventListener(img.nodeName == "VIDEO" ? "loadedmetadata" : "load", this, { once: true, passive: true })
-        img.addEventListener("error", this, { once: true, passive: true })
+        img.addEventListener(img.nodeName == "VIDEO" ? "loadedmetadata" : "load", this, {once: true, passive: true})
+        img.addEventListener("error", this, {once: true, passive: true})
         this.#expect += 1
     }
     handleEvent(e) {
@@ -57,9 +57,9 @@ function handleRequest() {
     else if (params.has("a")) {
         document.title += ` (${params.get("a")})`
         parseAlbum(params.get("a"))
-        .then(() => {
-            if (params.has("r")) pickRandom()
-        })
+            .then(() => {
+                if (params.has("r")) pickRandom()
+            })
     }
     //image list
     else if (params.has("i")) {
@@ -67,7 +67,7 @@ function handleRequest() {
     }
     else if (params.has("gr")) {
         let an = params.get("an")
-        getAlbums().then(data => addImage( parseImageData(data[an][params.get("gr")])) )
+        getAlbums().then(data => addImage(parseImageData(data[an][params.get("gr")])))
         msg.innerHTML = `Image randomly selected from the <a href="?a=${an}">${an}</a> album.`
         document.getElementById("randomizer").classList.remove("hide")
         document.getElementById("random").classList.add("hide")
@@ -144,7 +144,7 @@ function setReferrer(imgEle) {
 }
 
 function resetHeight(e) {
-    for (const child of e.target.parentElement.children){
+    for (const child of e.target.parentElement.children) {
         child.removeAttribute("height")
     }
     e.target.dispatchEvent(ev_height_reset)
@@ -177,7 +177,7 @@ export function addImage(parsedImgData, idx) {
                     c.style.height = e.target.parentElement.clientHeight + "px"
                 }
             },
-            { once: true, passive:true }
+            {once: true, passive: true}
         )
         IMAGE_LOAD_STATE.imgAdded(newImages[0])
         imageList.replaceChildren(...newImages)
@@ -200,7 +200,7 @@ export function addImage(parsedImgData, idx) {
         imgCard.querySelector(".card-title").innerText = title || ""
         imgCard.querySelector(".card-text").innerText = msg || ""
     }
-    const newNode = imgCard.firstElementChild;
+    const newNode = imgCard.firstElementChild
     gallery.appendChild(imgCard)
     return newNode
 }
@@ -214,7 +214,7 @@ function parseImages(imgs, seen = undefined) {
     for (var [i, imgData] of enumerate(imgs)) {
         parsed = parseImageData(imgData)
         if (seen !== undefined) {
-            if ( (parsed.isCarousel && seen.has(parsed.src[0])) || seen.has(parsed.src) ) {
+            if ((parsed.isCarousel && seen.has(parsed.src[0])) || seen.has(parsed.src)) {
                 continue
             }
             seen.add(parsed.src)
