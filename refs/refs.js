@@ -212,6 +212,10 @@ function parseImages(imgs, seen = undefined) {
     }
     var parsed
     for (var [i, imgData] of enumerate(imgs)) {
+        if (!imgData) {
+            console.warn(`Missing img data: ${i} @ `, imgs)
+            continue
+        }
         parsed = parseImageData(imgData)
         if (seen !== undefined) {
             if ((parsed.isCarousel && seen.has(parsed.src[0])) || seen.has(parsed.src)) {
