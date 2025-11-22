@@ -2,6 +2,7 @@
 
 function lightbox(e) {
     if (e.target.tagName != "IMG") return
+    LB_IMG.referrerPolicy = e.target.referrerPolicy
     LB_IMG.src = e.target.src
     showLb()
 }
