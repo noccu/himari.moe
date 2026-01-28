@@ -140,7 +140,7 @@ export function requiresRef(href) {
 }
 
 function setReferrer(imgEle) {
-    if (requiresRef(imgEle.src)) imgEle.referrerPolicy = ""
+    if (requiresRef(imgEle.src)) imgEle.referrerPolicy = "origin-when-cross-origin"
 }
 
 function resetHeight(e) {
