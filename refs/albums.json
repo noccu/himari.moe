@@ -725,7 +725,8 @@
     "tw:HA63d4xa8AAsi9O",
     "tw:HFIEZwMaIAAQa3u",
     "tw:HEvNJewb0AE2JVt",
-    "https://cdn.donmai.us/sample/ec/4e/__shiranami_ramune_vspo_drawn_by_niboshidrip__sample-ec4e89268cc33103f5bf139e55486eb8.jpg"
+    "https://cdn.donmai.us/sample/ec/4e/__shiranami_ramune_vspo_drawn_by_niboshidrip__sample-ec4e89268cc33103f5bf139e55486eb8.jpg",
+    "https://cdn.donmai.us/sample/f5/ab/__mika_blue_archive_drawn_by_cutlass_classic_chocolate__sample-f5ab94d1e11ca8a3a948f67a3d164221.jpg"
   ],
   "autumn": [
     "tw:G1Cl317bEAAmQw0",
@@ -1012,6 +1013,7 @@
     "https://cdn.donmai.us/sample/15/b7/__kayoko_blue_archive_drawn_by_rifu002__sample-15b75a602fae30c0edac72266b64c8cb.jpg",
     "https://static.wikitide.net/stellasorawiki/a/a4/Disc_Moon_Upon_Still_Waters.png"
   ],
+  "hair": [],
   "ecchi": [
     "NdMZ4rB.jpeg",
     "lO1R8iC.png",
@@ -1183,7 +1185,8 @@
     "https://cdn.donmai.us/sample/82/aa/__fuwawa_abyssgard_hololive_and_1_more_drawn_by_koahri__sample-82aa17005bce9724b6559b7db840f531.jpg",
     "tw:F8-FwdxbgAAUC3Y.jpg",
     "https://cdn.donmai.us/sample/9b/3f/__kurikoma_komaru_aogiri_koukou_drawn_by_kkix25__sample-9b3f4b0aaec4c43be1f251708c6224ea.jpg",
-    "https://cdn.donmai.us/sample/4e/f6/__typhon_arknights_drawn_by_uof__sample-4ef6409e8fd38e4cde5853dd2c140fc3.jpg"
+    "https://cdn.donmai.us/sample/4e/f6/__typhon_arknights_drawn_by_uof__sample-4ef6409e8fd38e4cde5853dd2c140fc3.jpg",
+    "tw:HDNEzKDbQAA3EIq"
   ],
   "butt": [
     "tw:GuGZWirWsAEa5ia",
@@ -2101,7 +2104,8 @@
       "tw:G0oXxFhaMAQeDaU",
       "tw:G0oXtcqbsAADUeN"
     ],
-    "tw:G6NBd8eacAAG9E6"
+    "tw:G6NBd8eacAAG9E6",
+    "fSbLs3U.png"
   ],
   "focus shots": [
     "db:48a5a6cde8680d2031a033308a1c0237",
@@ -2189,7 +2193,8 @@
     "tw:HAycR8GaAAUqLFg",
     "tw:GPeMYGibgAAXPok",
     "tw:HEAng8ZbUAAtKr8",
-    "https://cdn.donmai.us/sample/78/47/__belno_light_umamusume_and_1_more_drawn_by_sincos__sample-7847b6ac1599773809e147c2677f4d04.jpg"
+    "https://cdn.donmai.us/sample/78/47/__belno_light_umamusume_and_1_more_drawn_by_sincos__sample-7847b6ac1599773809e147c2677f4d04.jpg",
+    "tw:HAWr37NbIAAjO6p"
   ],
   "fun and silly": [
     "db:f687448d845c30cafbd301332733ef00",
@@ -2293,17 +2298,40 @@
       "title": "Ichihime, Mahjong Soul",
       "msg": ""
     },
-    "https://static.wikitide.net/bluearchivewiki/5/5a/Azusa_%28Swimsuit%29_diorama_00.png",
-    "tw:G4kOydYaEAA0Knd",
-    [
-      "https://static.wikitide.net/stellasorawiki/7/71/Chitose_Artwork.png",
-      "https://static.wikitide.net/stellasorawiki/3/32/Chitose_Skills_EN.jpg"
-    ],
+    {
+      "src": "https://static.wikitide.net/bluearchivewiki/5/5a/Azusa_%28Swimsuit%29_diorama_00.png",
+      "title": "Azusa (Summer), Blue Archive",
+      "msg": ""
+    },
+    {
+      "src": [
+        "tw:G4kOydYaEAA0Knd",
+        "https://static.wikia.nocookie.net/blue-archive/images/1/1c/Wakamo_Unmask_Portrait.png/revision/latest?cb=20220417134533"
+      ],
+      "title": "Wakamo, Blue Archive",
+      "msg": ""
+    },
+    {
+      "src": [
+        "https://static.wikitide.net/stellasorawiki/7/71/Chitose_Artwork.png",
+        "https://static.wikitide.net/stellasorawiki/3/32/Chitose_Skills_EN.jpg"
+      ],
+      "title": "Chitose, Stella Sora",
+      "msg": ""
+    },
     [
       "https://scontent.fbru5-1.fna.fbcdn.net/v/t39.30808-6/669823676_122216143418487642_1883489222572851217_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=13d280&_nc_ohc=6IBksqZ0Wi0Q7kNvwE0oS5Z&_nc_oc=Adp9tqjfuTegjg_9DE0k89ccwRpdAwmFlTZUPOLMIX99i08Npx_obP_okY-oGtk1JKe-5coMUt0S3StJsqShR1Nj&_nc_zt=23&_nc_ht=scontent.fbru5-1.fna&_nc_gid=PiFpih3pKBVj2O35bsuQ3Q&_nc_ss=7a3a8&oh=00_Af07w4lEQckkVu8AB84b3wJgJooqyw1YBuQZy5B4W_IQ0Q&oe=69E1D8B9",
       "https://webusstatic.yo-star.com/web-cms-prod/upload/content/2026/04/10/Mjz2TmJl.png"
     ],
-    "mYnacSV.png"
+    {
+      "src": "mYnacSV.png",
+      "title": "Miyabi, Zenless Zone Zero (alt)"
+    },
+    {
+      "src": "tw:HG57G6rawAAAQ7j",
+      "msg": "No need to flash the panties!",
+      "title": "Chitose, Stella Sora (alt)"
+    }
   ],
   "animated": [
     {
@@ -2416,7 +2444,8 @@
       "src": "tw:HEU4aCPbYAUo42Z",
       "title": "",
       "msg": "Dressed up as creepy lolita-inspired \"doll\", like."
-    }
+    },
+    "tw:GbOECsIb0AAuT_q"
   ],
   "special days": [
     "tw:G5eQglSbcAAqc4s"
@@ -2473,7 +2502,8 @@
       "msg": "Outfit only!"
     },
     "tw:HGTNyA3bQAAGagK",
-    "tw:HGQoRfyasAAkk-y"
+    "tw:HGQoRfyasAAkk-y",
+    "tw:HG7FH3CboAEi5OO"
   ],
   "misc fancy outfits": [
     "tw:GtGPt_2bUAAwhvw",
