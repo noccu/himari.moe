@@ -274,7 +274,7 @@ function editImgTitle(title, msg) {
             else data.msg = msg
             const card = ele.closest(".card")
             card.querySelector(".card-title").textContent = title
-            card.querySelector(".card-text").textContent = msg
+            card.querySelector(".card-text").innerHTML = msg
         }
     }
     clearSelection()

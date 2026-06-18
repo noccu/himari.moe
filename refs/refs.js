@@ -198,7 +198,7 @@ export function addImage(parsedImgData, idx) {
     if (isCaptioned) {
         imgCard.querySelector(".card").classList.add("captioned")
         imgCard.querySelector(".card-title").innerText = title || ""
-        imgCard.querySelector(".card-text").innerText = msg || ""
+        imgCard.querySelector(".card-text").innerHTML = msg || ""
     }
     const newNode = imgCard.firstElementChild
     gallery.appendChild(imgCard)
