@@ -83,6 +83,11 @@
       "src": "PEqmV05.jpg",
       "title": "Colour ref for a dress",
       "msg": "Her first non-traditional outfit outside school uniforms."
+    },
+    {
+      "src": "rsuknTa.jpeg",
+      "title": "Newest kimono (university)",
+      "msg": "This is from the special 20th anniversary chapter."
     }
   ],
   "general": [
@@ -477,7 +482,8 @@
     "https://static.wikitide.net/stellasorawiki/5/5d/Chitose_Birthday_Log_2025.jpg",
     "https://static.wikitide.net/stellasorawiki/a/a4/Disc_Moon_Upon_Still_Waters.png",
     "db:4d01b957c1bf3f7ba842f81c5a3c4252",
-    "tw:HKsHwuQasAAYL84"
+    "tw:HKsHwuQasAAYL84",
+    "tw:HLQERwmbAAEv2HF"
   ],
   "spring": [
     "q2pIqNI.jpeg",
@@ -623,9 +629,12 @@
     "https://cdn.donmai.us/original/3f/c5/__kazusa_blue_archive_drawn_by_marisasu_marisa0904__3fc5fbb251a5fdf42041f4c19bf5d4ba.jpg",
     "https://static.wikitide.net/bluearchivewiki/5/54/Nagusa_%28Swimsuit%29_00.png",
     {
-      "src": "https://www.4gamer.net/games/519/G051983/20260620003/SS/001.jpg",
-      "title": "",
-      "msg": "Complete with summer kimono and parasol, please. Variant designs are fine though!"
+      "src": [
+        "https://www.4gamer.net/games/519/G051983/20260620003/SS/001.jpg",
+        "tw:HLKxkaKa0AADitt"
+      ],
+      "title": "Kisaki's 2026 swimsuit",
+      "msg": "Complete with summer kimono and parasol, please. Variant designs are fine though! \nOther image is a fan design which is also nice."
     },
     {
       "src": [
@@ -2169,7 +2178,8 @@
       "https://i.ebayimg.com/images/g/snEAAOSw80phXVXt/s-l1600.webp",
       "https://i.ebayimg.com/images/g/V3kAAOSwwcRhXVXu/s-l1600.webp",
       "https://i.ebayimg.com/images/g/c1oAAOSwqwJhXVXt/s-l1600.webp"
-    ]
+    ],
+    "tw:G8MC3LubwAAEDZV"
   ],
   "intimate": [
     [
@@ -2290,7 +2300,8 @@
     "tw:HF0UAkNasAAbxZ5",
     "tw:HHftP5xXkAAEYCF",
     "tw:HJuHbMCa8AAeiQ_",
-    "tw:HLGw4tfagAA7TbE"
+    "tw:HLGw4tfagAA7TbE",
+    "tw:HLOxe8Pa4AAF8CI"
   ],
   "white shirt": [
     {
@@ -2447,7 +2458,8 @@
       "src": "tw:HLNgxZxbwAE3rES",
       "title": "",
       "msg": "Bottom pose."
-    }
+    },
+    "tw:GSLsi-UboAA9L1o"
   ],
   "dynamic shots": [
     "e4BatEq.jpg",
@@ -2889,7 +2901,13 @@
   ],
   "food": [
     "tw:Gc1ADBIbQAAU3Xf",
-    "tw:HKG4XPRasAEc0Af"
+    "tw:HKG4XPRasAEc0Af",
+    "tw:GnQ-byhboAEg5Q6",
+    "tw:GXaZe2zbQAAh0vi",
+    [
+      "tw:G9E287AbgAALhYC",
+      "tw:GbW0K3_bIAAvzeG"
+    ]
   ],
   "memes": [
     "tw:GoiciQMWkAAGk6F"
