@@ -177,6 +177,8 @@ function handleKeys(e) {
             break
         case "C":
             createCollection()
+        case "i":
+            createImageList()
     }
 }
 
@@ -339,6 +341,12 @@ async function createCollection() {
     search.append("col", `${CUR_ALBUM}:${colString}`)
     resultUrl.search = decodeURIComponent(search.toString())
     navigator.clipboard.writeText(resultUrl.toString())
+}
+
+async function createImageList() {
+    const listString = Array.from(SELECTION).map(e => parseUrl(e.src)).join(",")
+    const resultUrl = `https://himari.moe/refs?i=${listString}`
+    navigator.clipboard.writeText(resultUrl)
 }
 
 function _jsonProc(k, v) {
