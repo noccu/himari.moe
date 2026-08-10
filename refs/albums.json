@@ -350,7 +350,12 @@
     "wPBSI5V.jpeg",
     "tw:HLai0wZbAAAnzqI",
     "db:105ca74de15452b20b286af0192512bd",
-    "tw:HNlipvRa0AAxLFg"
+    "tw:HNlipvRa0AAxLFg",
+    "tw:GVWNBnFa4AAmYMH",
+    [
+      "tw:HNl9C7qagAEc3tO",
+      "tw:HNl9DanaUAAF1In"
+    ]
   ],
   "scenic": [
     "GubCi11.jpg",
@@ -877,7 +882,11 @@
     [
       "db:5ca331c70ce0d0758d7f423449ed3b5f",
       "tw:GuN6LTlagAI_JeG"
-    ]
+    ],
+    "tw:HOFmAOxa8AAsqHO",
+    "tw:HOfBWM0bkAA3Hw6",
+    "tw:HOJ0kzQakAAUs7S",
+    "tw:HOeLAcCagAAbpxF"
   ],
   "autumn": [
     "tw:G1Cl317bEAAmQw0",
@@ -1216,7 +1225,16 @@
     "https://img4.gelbooru.com//samples/50/7d/sample_507dfbc2348f40991496c7f12143651a.jpg"
   ],
   "hair": [
-    "tw:HD6xNJeaUAAIkrC"
+    "tw:HD6xNJeaUAAIkrC",
+    {
+      "src": [
+        "db:8eb27bba3c2e4049534b24e83ea8f42d",
+        "db:68c54462f3ae9da3897f4823f9ea65e0",
+        "db:a3cac5ff305dd07319ebfec431194aaa"
+      ],
+      "title": "Refined alternate style",
+      "msg": "More refined vibe for her usual styles."
+    }
   ],
   "ecchi": [
     "NdMZ4rB.jpeg",
@@ -1465,7 +1483,8 @@
     "tw:GZev2FmaAAUVLoI",
     "db:11b33393e8016822ca45a0188fc997fd",
     "db:c3caade012f1a1c5baea03064b20297a",
-    "tw:GN1xZfeaQAAEmas"
+    "tw:GN1xZfeaQAAEmas",
+    "tw:HOeoYcTbUAEgJrc"
   ],
   "fashion": [
     "R5EAksl.jpg",
@@ -1737,7 +1756,21 @@
     "tw:HL6EnvQawAAwic8",
     "db:50f99842c52ff1d3b3d695d7d4198e8c",
     "tw:HL_TiHnaMAEdriF",
-    "tw:HMrl6TbbAAAoZr3"
+    "tw:HMrl6TbbAAAoZr3",
+    {
+      "src": "tw:HNo74mUbgAA0Xuj",
+      "title": "",
+      "msg": "The left one"
+    },
+    {
+      "src": "db:5173db50e72dd857eb8ce82bcf4119c2",
+      "title": "",
+      "msg": "Any is fine, but Rumi's (leftmost) would be nice."
+    },
+    [
+      "tw:HLKEE1JaIAAgLoT",
+      "tw:HLKEE1GaUAAjKRC"
+    ]
   ],
   "trad japanese attire": [
     "db:243e323c7fa487f26d4d50222d4dcd3e",
@@ -1791,7 +1824,8 @@
     "db:a2312fc85e2c9a404282fec71e5151d0",
     "tw:HK7-q09boAAkveD",
     "https://i0.wp.com/cdn.essential-japan.com/wp-content/uploads/2025/10/kv_4wssq32ef.jpg",
-    "tw:Gre0HNJa0AAu-jF"
+    "tw:Gre0HNJa0AAu-jF",
+    "tw:GVWNBnFa4AAmYMH"
   ],
   "sporty": [
     "Wo3vq77.jpeg",
@@ -1897,7 +1931,8 @@
     "tw:HLzR1kya4AA34vg",
     "tw:HLvDbC6bIAArH5U",
     "tw:Goy8wAlbYAEisPW",
-    "tw:HLQMiEpakAAOLjx"
+    "tw:HLQMiEpakAAOLjx",
+    "tw:HOeoYcTbUAEgJrc"
   ],
   "onsen": [
     "tw:G1IOlcRaQAE6NoN",
@@ -2039,7 +2074,8 @@
     [
       "tw:G2-1Cy_asAAF-Sw",
       "tw:G2-1DW3bkAACmVF"
-    ]
+    ],
+    "tw:HN-qLCxaoAA0dgG"
   ],
   "casual": [
     "tw:GYbzDK_a4AAQRkL",
@@ -2561,7 +2597,8 @@
     "tw:HMB5j1NawAA50Co",
     "tw:HMclivDaAAAKvFz",
     "db:1004f267a8a6201486e930a09de0ba4f",
-    "db:d499593d9073aa4f7e09a04877dd4327"
+    "db:d499593d9073aa4f7e09a04877dd4327",
+    "tw:HMDa4qoXEAAX7YW"
   ],
   "attitude": [
     "db:a7ec29972f64463534a7efbbb7963300",
@@ -2590,7 +2627,8 @@
     "tw:HGC_xMEWgAAV6fm",
     "tw:HLaUuYZaoAAON6J",
     "tw:HLQMiEpakAAOLjx",
-    "tw:HHzZ0O7a4AALvSJ"
+    "tw:HHzZ0O7a4AALvSJ",
+    "tw:GVWNBnFa4AAmYMH"
   ],
   "expressions": [
     "tloEYpn.jpeg",
@@ -2678,7 +2716,8 @@
     [
       "tw:HMdUkCjbcAA9LV-",
       "tw:HMdehxpbMAEQUPK"
-    ]
+    ],
+    "tw:HOJ0kzQakAAUs7S"
   ],
   "dynamic shots": [
     "e4BatEq.jpg",
@@ -2748,7 +2787,8 @@
       "msg": "The two on the left (top & bottom), or the right top."
     },
     "tw:HHzZ0O7a4AALvSJ",
-    "tw:HNgNyEEagAADy62"
+    "tw:HNgNyEEagAADy62",
+    "tw:HNI-MpjXYAASVbX"
   ],
   "fun and silly": [
     "db:f687448d845c30cafbd301332733ef00",
@@ -2929,7 +2969,8 @@
       ],
       "title": "Yuel (Granblue Fantasy)",
       "msg": "Grand alt."
-    }
+    },
+    "https://gbf.wiki/images/7/78/Npc_profile_3040456000_01.png"
   ],
   "animated": [
     {
