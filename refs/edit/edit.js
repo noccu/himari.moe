@@ -22,7 +22,7 @@ const HOSTS = {
     "i.imgur.com": ["", /([^\/]+)$/],
     "pbs.twimg.com": ["tw:", /media\/([^?]+)\?/],
     "cdn.donmai.us": ["db:", /([^\./\-_]+)\.(.{3,4})$/],
-    "cdn.bsky.app": ["bs:", /did:plc:([^@]+)@/]
+    "cdn.bsky.app": ["bs:", /did:plc:([^@]+)@?/]
 }
 
 
