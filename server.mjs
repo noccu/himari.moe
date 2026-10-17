@@ -41,10 +41,17 @@ async function downloadExternal(href, albName) {
         return
     }
 
-    const resp = await fetch(href)
+    const headers = {}
+    if (pUrl.host.includes("donmai")) {
+        headers["User-Agent"] = "SQA/1.0"
+    }
+    else if (pUrl.host.includes("gelbooru")) {
+        headers["Referer"] = pUrl.origin
+    }
+
+    const resp = await fetch(href, {headers})
     if (!resp.ok) {
-        console.warn("Request failed: ", href)
-        return
+        throw new Error("Request failed: ", href, `${resp.status}: ${resp.statusText}`)
     }
     const type = resp.headers.get("Content-Type")
     if (!type.startsWith("image") && !type.startsWith("video")) {
@@ -72,12 +79,16 @@ async function downloadExternal(href, albName) {
 }
 
 async function archive(data) {
+    let errors = 0
     console.log("Archiving album images")
     for (let { albName, src } of data) {
         // Don't get banned, usually few images anyway.
-        await downloadExternal(src, albName)
+        await downloadExternal(src, albName).catch(msg => {
+            console.error(msg)
+            errors++
+        })
     }
-    console.log("Archive completed")
+    console.log(`Archive completed ${errors > 0 ? "with errors" : "successfully"}.`)
 }
 
 function notFound(r) {
