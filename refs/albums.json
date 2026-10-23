@@ -691,7 +691,11 @@
     "tw:HKjOLQyaUAE6IPJ",
     "https://static.wikia.nocookie.net/blue-archive/images/5/55/Satsuki_Swimsuit_Portrait.png/revision/latest?cb=20260730162454",
     "https://static.wikitide.net/bluearchivewiki/9/9e/Rumi_%28Swimsuit%29_00.png",
-    "tw:HRaqkXZasAALTgT.jpg"
+    "tw:HRaqkXZasAALTgT.jpg",
+    [
+      "https://gbf.wiki/images/thumb/9/90/Npc_profile_3040410000_01.png/800px-Npc_profile_3040410000_01.png.webp",
+      "https://gbf.wiki/images/thumb/d/db/Npc_profile_3040410000_02.png/800px-Npc_profile_3040410000_02.png.webp"
+    ]
   ],
   "summer": [
     "LtwJuxs.jpeg",
@@ -917,7 +921,10 @@
     "tw:HKgH6X_WEAAFIOJ",
     "tw:HP7kydIbsAAhPmi",
     "db:84cbf18026953e3939fe7d3870d9fd6c",
-    "tw:HUIKNRTWsAAm9Ry"
+    "tw:HUIKNRTWsAAm9Ry",
+    "db:5c93f642eec455230846a623eae8dbc8",
+    "db:df6836141bc1b41a892592e0e53fd75e",
+    "tw:GOyOs-oaoAA9rB9"
   ],
   "autumn": [
     "tw:G1Cl317bEAAmQw0",
@@ -1191,7 +1198,9 @@
     {
       "src": "tw:HUU-pizagAA6TW1",
       "msg": "Just the top part underboob pose/angle."
-    }
+    },
+    "db:69766a750875cb84f52633406efb2e88",
+    "db:ea9972abe34de53e4669c3b3e3931d0f"
   ],
   "legs and thighs": [
     {
@@ -1274,8 +1283,7 @@
       "title": "Refined alternate style",
       "msg": "More refined vibe for her usual styles."
     },
-    "tw:HP0CtSxWQAE2dQP",
-    []
+    "tw:HP0CtSxWQAE2dQP"
   ],
   "ecchi": [
     "NdMZ4rB.jpeg",
@@ -1488,7 +1496,9 @@
     ],
     "db:1004f267a8a6201486e930a09de0ba4f",
     "tw:HRaqlMgagAADLrX.jpg",
-    "db:84cbf18026953e3939fe7d3870d9fd6c"
+    "db:84cbf18026953e3939fe7d3870d9fd6c",
+    "db:526a8718933a1074dc19fa1184cbcd9c",
+    "db:ea9972abe34de53e4669c3b3e3931d0f"
   ],
   "butt": [
     "tw:GtXnmZTa4AAhhVa",
@@ -1830,7 +1840,8 @@
     "tw:HRnJy3-aIAA4RE-",
     "tw:HR_KbVoa8AAhKm-",
     "tw:HUVv1uEbUAEDcpL",
-    "tw:HUzO92naAAALgoH"
+    "tw:HUzO92naAAALgoH",
+    "tw:HVLpDq6a4AAvpl6"
   ],
   "trad japanese attire": [
     "db:243e323c7fa487f26d4d50222d4dcd3e",
@@ -2485,7 +2496,9 @@
     "db:9d89a0e931e1bfed9e47bfcdeede9bb3",
     "tw:HSlbxohbUAAt9p-",
     "tw:HLzIY0OagAAIPng",
-    "tw:HDCSOXRaQAAmFw_"
+    "tw:HDCSOXRaQAAmFw_",
+    "tw:GuvtQTTWMAA4ifq.jpg",
+    "db:db427b65986891a819f3d44eb8eea804"
   ],
   "intimate": [
     [
@@ -2695,7 +2708,9 @@
     "db:1004f267a8a6201486e930a09de0ba4f",
     "db:d499593d9073aa4f7e09a04877dd4327",
     "tw:HMDa4qoXEAAX7YW",
-    "tw:HUREPS7aEAEdA-2"
+    "tw:HUREPS7aEAEdA-2",
+    "db:814fa8a76ec1a5a25214ad19e42c61af",
+    "db:e946cf1f639c3d748d88f13c6b0ad3f4"
   ],
   "attitude": [
     "db:a7ec29972f64463534a7efbbb7963300",
@@ -2727,7 +2742,8 @@
     "tw:HHzZ0O7a4AALvSJ",
     "tw:GVWNBnFa4AAmYMH",
     "tw:G5uTG8UbMAAcUis",
-    "tw:EYJWZYaUEAMov_w"
+    "tw:EYJWZYaUEAMov_w",
+    "db:913ef9afce5ead5348ddd26649f3f1c5"
   ],
   "expressions": [
     "tloEYpn.jpeg",
@@ -3056,7 +3072,7 @@
     },
     {
       "src": "tw:HG57G6rawAAAQ7j",
-      "msg": "No need to flash the panties!",
+      "msg": "Keep the skirt down/no panty flash.",
       "title": "Chitose, Stella Sora (alt)"
     },
     {
@@ -3071,15 +3087,41 @@
     {
       "src": [
         "db:fc59c8c34bfee98b1c761c7368eef1d3",
-        "db:55683cab0dc9f77d648a534b431b60d2",
-        "db:285852c20d00a625bfc9501f4bc37a78",
+        "https://gbf.wiki/images/thumb/9/94/Npc_profile_3040580000_01.png/800px-Npc_profile_3040580000_01.png.webp",
+        "https://gbf.wiki/images/thumb/5/51/Npc_profile_3040580000_02.png/1024px-Npc_profile_3040580000_02.png.webp",
         "db:700bb756ca8fcab9b7a9874833966e36",
         "tw:HL-ChPjbYAEYYA7"
       ],
-      "title": "Yuel (Granblue Fantasy)",
+      "title": "Yuel, Granblue Fantasy",
       "msg": "Grand alt."
     },
-    "https://gbf.wiki/images/7/78/Npc_profile_3040456000_01.png"
+    {
+      "src": "https://gbf.wiki/images/7/78/Npc_profile_3040456000_01.png",
+      "title": "Ilsa, Granblue Fantasy",
+      "msg": "Yukata alt."
+    },
+    {
+      "src": [
+        "https://gbf.wiki/images/thumb/1/12/Npc_profile_3040244000_01.png/800px-Npc_profile_3040244000_01.png.webp",
+        "https://gbf.wiki/images/thumb/1/15/Npc_profile_3040244000_02.png/800px-Npc_profile_3040244000_02.png.webp",
+        "https://gbf.wiki/images/thumb/d/de/Npc_profile_3040244000_81.png/800px-Npc_profile_3040244000_81.png.webp"
+      ],
+      "title": "Shitori, Granblue Fantasy",
+      "msg": ""
+    },
+    {
+      "src": [
+        "https://gbf.wiki/images/thumb/8/8c/Npc_profile_3040393000_01.png/800px-Npc_profile_3040393000_01.png.webp",
+        "https://gbf.wiki/images/thumb/2/21/Npc_profile_3040393000_02.png/1024px-Npc_profile_3040393000_02.png.webp"
+      ],
+      "title": "You, Granblue Fantasy",
+      "msg": ""
+    },
+    {
+      "src": "https://gbf.wiki/images/thumb/3/36/Npc_profile_3040533000_01.png/800px-Npc_profile_3040533000_01.png.webp",
+      "title": "Sato, Granblue Fantasy",
+      "msg": ""
+    }
   ],
   "animated": [
     {
@@ -3207,28 +3249,56 @@
   ],
   "halloween": [
     {
-      "src": [
-        "2tni6JU.jpeg",
-        "tw:GbNAm_SakAMi7R0",
-        "tw:G4lxmMMboAAubPY"
-      ],
-      "msg": "Any sort of mummy style with enough squish and wrap is fine."
+      "src": "UBqO89A.png",
+      "title": "Bloody ghost (clumsy)",
+      "msg": ""
     },
-    "UBqO89A.png",
     [
       "CmgDtoV.png",
       "tw:GbYFCKrbUAIA0B3"
     ],
-    "tw:Ga1_LzoaYAA8vcV",
+    {
+      "src": [
+        "tw:Ga1_LzoaYAA8vcV",
+        "2tni6JU.jpeg",
+        "tw:G4lxmMMboAAubPY",
+        "tw:GbNAm_SakAMi7R0"
+      ],
+      "title": "Mummy",
+      "msg": "Anything with enough coverage, and some squish."
+    },
     "IdpFL3Q.jpeg",
     "tw:G2P07RBaYAENNmU",
     {
-      "src": "tw:HEU4aCPbYAUo42Z",
-      "title": "",
-      "msg": "Dressed up as creepy lolita-inspired \"doll\", like."
+      "src": [
+        "tw:HEU4aCPbYAUo42Z",
+        "db:faf24940cbdb35bc8ca36eeca7ba9464"
+      ],
+      "title": "Creepy lolita-like fashion",
+      "msg": "Doll, ojou, hidden vampire, dark witch, etc."
     },
-    "tw:GbOECsIb0AAuT_q",
-    "db:faf24940cbdb35bc8ca36eeca7ba9464"
+    {
+      "src": "tw:GbOECsIb0AAuT_q",
+      "title": "Covered ghost",
+      "msg": ""
+    },
+    [
+      "https://gbf.wiki/images/thumb/7/73/Npc_profile_3040361000_01.png/800px-Npc_profile_3040361000_01.png.webp",
+      "https://gbf.wiki/images/thumb/b/bd/Npc_profile_3040361000_02.png/1024px-Npc_profile_3040361000_02.png.webp"
+    ],
+    {
+      "src": [
+        "https://gbf.wiki/images/thumb/d/db/Npc_profile_3040681000_01.png/800px-Npc_profile_3040681000_01.png.webp",
+        "https://gbf.wiki/images/thumb/8/8f/Npc_profile_3040681000_02.png/800px-Npc_profile_3040681000_02.png.webp"
+      ],
+      "title": "Demonic oni",
+      "msg": ""
+    },
+    [
+      "https://gbf.wiki/images/thumb/3/32/Npc_profile_3040301000_01.png/800px-Npc_profile_3040301000_01.png.webp",
+      "https://gbf.wiki/images/thumb/9/9d/Npc_profile_3040301000_02.png/800px-Npc_profile_3040301000_02.png.webp"
+    ],
+    "https://gbf.wiki/images/thumb/1/14/Npc_profile_3040429000_01.png/800px-Npc_profile_3040429000_01.png.webp"
   ],
   "special days": [
     "tw:G5eQglSbcAAqc4s"
@@ -3315,7 +3385,9 @@
     "db:3be5622a0b5205cd7b09b9cb6a775d7a",
     "db:0e6de3fde89e0bae3ad6a4fe86bfcc94",
     "tw:HQIg4uPakAAXLhz",
-    "tw:HULrV1FaUAAXDxU.jpg"
+    "tw:HULrV1FaUAAXDxU.jpg",
+    "db:69766a750875cb84f52633406efb2e88",
+    "db:814fa8a76ec1a5a25214ad19e42c61af"
   ],
   "misc fancy outfits": [
     "tw:GtGPt_2bUAAwhvw",
